@@ -1,10 +1,13 @@
 /* Add a black background color to the top navigation */
-
 body {
     background-color: #FFF9FB;
 }
 
-h1, h2, p, form {
+h1, h2 {
+    text-align: center;
+}
+
+p, form {
     text-align: left;
 }
 
@@ -50,13 +53,30 @@ h1, h2, p, form {
     width: 300;
 }
 
-img {
-    width: 150px;
+.film{
+    grid-area: film;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 150px 1fr 1fr;
-    
+.flexbox {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: 2em;
+    margin-right: 2em;
+    justify-content: space-evenly;
+}
+
+.flexbox img {
+    width: 300px;
+}
+
+.flexbox-assortiment {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 2em;
+    margin-right: 2em;
+    justify-content: space-evenly;
+}
+
+.flexbox-assortiment img {
+    width: 150px;
 }
