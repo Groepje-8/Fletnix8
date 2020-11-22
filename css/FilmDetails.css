@@ -46,14 +46,6 @@ h1, h2, p, form {
     float: right;
 }
 
-#poster {
-    width: 300;
-}
-
-img {
-    width: 150px;
-}
-
 .button {
     border: none;
     color: white;
@@ -68,6 +60,7 @@ img {
 }
 
 main {
+    margin: 0 5vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 150px 1fr 1fr;
@@ -97,10 +90,16 @@ main {
 .acteurgrid {
     grid-area: acteurs;
     display: grid;
-
     grid-template-columns: repeat(4, 150px);
     grid-template-rows: 222px 50px;
     column-gap: 10px;
     row-gap: 15px;
 }
 
+.poster img {
+    width: 25vw;
+}
+
+.acteurgrid img {
+    width: 150px;
+}
