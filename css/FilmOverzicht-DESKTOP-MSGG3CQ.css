@@ -45,8 +45,40 @@ p, form {
     color: white;
 }
 
-video {
-    width: 90%;
-    height: auto;
-    margin-left: 5vw;
+
+
+#Profiel {
+    float: right;
+}
+
+#poster {
+    width: 300;
+}
+
+.film{
+    grid-area: film;
+}
+
+.flexbox {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: 2em;
+    margin-right: 2em;
+    justify-content: space-evenly;
+}
+
+.flexbox img {
+    width: 300px;
+}
+
+.flexbox-assortiment {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 2em;
+    margin-right: 2em;
+    justify-content: space-evenly;
+}
+
+.flexbox-assortiment img {
+    width: 150px;
 }
