@@ -4,27 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fletnix8</title>
+    <title>Fletnix</title>
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/stylesheet.css">
-
-    <div class="topnav">
-        <a class="active" href="/index.html">Home</a>
-        <a id="Profiel" href="html/ProfielPagina.html" >Profiel</a>
-
-    </div>
-
 </head>
-<div class="loginform">
-    <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username"><br>
-    <label for="password">Password:</label><br>
-    <input type="text" id="password" name="password"><br>
-    </form>
-</div>
-<form>
-    <br>
-
     <body>
+        <header>            
+            <a class="active" href="/index.html">Home</a>
+            <a id="Profiel" href="html/ProfielPagina.html">Profiel</a>    
+        </header>
+
+        <div class="loginform">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label><br>
+            <input type="text" id="password" name="password"><br>
+            </form>
+        </div>
+
         <h1>Fletnix</h1>
         <h2>De videostreaming website voor studenten</h2>
 
@@ -35,17 +32,21 @@
         </video>
 
 
-    <p>Registeer je nu en betaal de eerste maand 0 euro!</p>
-    <form action="/html/Registreren.html">
-        <input type="submit" value="Registeer" />
-    </form>
-    <p>Of log in als je al een account hebt</p>
-    <form action="/html/Login.html">
-        <input type="submit" value="Login" />
-    </form>
-    <video width="640" height="360" controls>
-        <source src="/videos/trailer.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</body>
+        <p>Registeer je nu en betaal de eerste maand 0 euro!</p>
+
+        <form action="/html/Registreren.html">
+            <input type="submit" value="Registeer" />
+        </form>
+
+        <p>Of log in als je al een account hebt</p>
+
+        <form action="/html/Login.html">
+            <input type="submit" value="Login" />
+        </form>
+
+        <footer>
+            <p>Copyright reservered by groep 8</p>
+        </footer>
+    </body>
+
 </html>
