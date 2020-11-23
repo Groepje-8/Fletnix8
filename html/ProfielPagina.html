@@ -1,16 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProfielPagina</title>
+    <link rel="stylesheet" href="/css/stylesheet.css">
     <div class="topnav">
         <a class="active" href="/index.html">Home</a>
-        <a id="Profiel" href="html/ProfielPagina.html" >Profiel</a>
-
+        <a id="Profiel" href="html/ProfielPagina.html">Profiel</a>
     </div>
 </head>
+
 <body>
-    
+
+    <!-- Add icon library 
+      Voornaam
+    Achternaam
+    Land
+    Geboortejaar
+    Rekeningnummer
+    Wachtwoord
+    Abonnement-->
+
+    <link rel="stylesheet" href="/css/ProfielPagina.css">
+
+    <div class="card">
+        <img src="/img/pholder.jpg" alt="Test" style="width:100%">
+        <h1>Test Persoon</h1>
+        <p class="title">Abonnement plan</p>
+        <p>Standaard</p>
+        <p><button>Report</button></p>
+    </div>
+
+    <form action="AccountInstellingen.html" method="GET">
+    <label for="vnaam">Voornaam:</label>
+    <input type="text" id="vnaam" name="vnaam" value="Test" readonly><br><br>
+    <label for="anaam">Achternaam:</label>
+    <input type="text" id="lnaam" name="lnaam" value="Persoon" readonly><br><br>
+    <label for="land">Land:</label>
+    <input type="text" id="land" name="land" value="Nederland" readonly><br><br>
+    <label for="gjaar">Geboortejaar:</label>
+    <input type="text" id="gjaar" name="gjaar" value="1900" readonly><br><br>
+    <label for="rnr">Rekeningnummer:</label>
+    <input type="text" id="rnr" name="rnr" value="0123456789" readonly><br><br>
+    <label for="gnaam">Gebruikersnaam:</label>
+    <input type="text" id="gnaam" name="gnaam" value="De beste user 9000" readonly><br><br>
+    <label for="ww">Wachtwoord:</label>
+    <input type="text" id="ww" name="ww" value="********" readonly><br><br>
+    <label for="hww">Herhaal wachtwoord:</label>
+    <input type="text" id="hww" name="hww" value="********" readonly><br><br>
+    <label for="abb">Abonnement:</label>
+    <input type="text" id="abb" name="abb" value="Premium" readonly><br><br>
+    <input type="submit" value="aanpassen">
+    </form>
 </body>
+
 </html>
