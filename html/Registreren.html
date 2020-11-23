@@ -10,13 +10,11 @@
         <link rel="header" href="/html/header.html">
         <link rel="footer" href="/html/footer.html">
     -->
-    <div class="topnav">
-        <a class="active" href="/index.html">Home</a>
-        <a id="Profiel" href="html/ProfielPagina.html">Profiel</a>
-    </div>
+
 </head>
 
 <body>
+    <link rel="header" href="/html/Components/header.html">
     <h1>Registratie formulier</h1>
 
     <!-- pattern aan elk veld toegevoegd. Bij wachtwoord melding over specificaties in geval van geen goed ww-->
@@ -35,16 +33,17 @@
         <label for="gnaam">Gebruikersnaam:</label>
         <input pattern="[a-zA-Z]+" type="text" id="gnaam" name="gnaam"><br><br>
         <label for="ww">Wachtwoord:</label>
-        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="text" id="ww" name="ww"
+        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="ww" name="ww"
             title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters"><br><br>
         <label for="hww">Herhaal wachtwoord:</label>
-        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="text" id="hww" name="hww"
+        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="hww" name="hww"
             title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters"><br><br>
         <label for="abb">Abonnement:</label>
         <input type="text" id="abb" name="abb"><br><br>
         <input type="submit" value="Verzend">
     </form>
     <p> Klik op "verzend" knop en de data wordt verstuurd naar de pagina op de server genaamd "registreren.php".</p>
+    <link rel="header" href="/html/Components/footer.html">
 </body>
 
 </html>
