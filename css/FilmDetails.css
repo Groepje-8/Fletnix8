@@ -1,7 +1,7 @@
 
 .button {
     border: none;
-    color: white;
+    color: #FFFBBD;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -10,8 +10,10 @@
     margin: 4px 2px;
     cursor: pointer;
     background-color: #93A8AC;
+    min-width: 160px;
 }
-.button :hover {
+
+.button:hover {
     background-color: #DF2935
 }
 
@@ -19,13 +21,26 @@ main {
     margin: 0 5vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 150px 1fr 1fr;
+    grid-template-rows: 20px 150px 1fr 1fr;
     grid-template-areas: 
+    "terug        terug   terug"
     "titel        .       poster"
     "beschrijving knoppen poster"
     "acteurs      .       poster"
 }
 
+main a {
+    text-decoration: none;
+    color: #fffbbdb4;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+.terugknop {
+    grid-area: terug;
+}
 .poster {
     grid-area: poster;
 }
@@ -36,6 +51,10 @@ main {
 
 .beschrijving {
     grid-area: beschrijving;
+}
+
+.beschrijving h1, .beschrijving p{
+    text-align: left;
 }
 
 .knoppen {
@@ -53,7 +72,7 @@ main {
 }
 
 .poster img {
-    width: 25vw;
+    width: 28vw;
 }
 
 .acteurgrid img {
