@@ -18,12 +18,12 @@ h1, h2, p, form {
     clear: right;
 }
 
-.topnav {
+.header {
     background-color: #262626;
     overflow: hidden;
 }
 
-.topnav a {
+.header a {
     float: left;
     color: #FFF9FB;
     text-align: center;
@@ -32,12 +32,12 @@ h1, h2, p, form {
     font-size: 17px;
 }
 
-.topnav a:hover {
+.header a:hover {
     background-color: #FFF9FB;
     color: black;
 }
 
-.topnav a.active {
+.header a.active {
     background-color: #A30000;
     color: white;
 }

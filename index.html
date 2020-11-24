@@ -6,44 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fletnix</title>
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="stylesheet" href="/css/specificity.css">
+
 </head>
 
-<body>
-    <link rel="header" href="/html/Components/header.html">
+<div class="grid-container">
+
+    <body>
+
+        <header>
+            <div class="dropdown">
+                <a class="active" href="/index.html">Home</a>
+                <div class="dropdown-content">
+                    <a href="/html/FilmOverzicht.html">Filmoverzicht</a>
+                    <a href="/html/OverOns.html">Over ons</a>
+                </div>
+            </div>
+            <a id="Profiel" href="html/ProfielPagina.html">Profiel</a>
+        </header>
 
 
-    <div class="loginform">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username"><br>
-        <label for="password">Password:</label><br>
-        <input type="text" id="password" name="password"><br>
-        </form>
-    </div>
 
-    <h1>Fletnix</h1>
-    <h2>De videostreaming website voor studenten</h2>
+        <div class="title">
+            <h1>Fletnix</h1>
+            <h2>De videostreaming website voor studenten</h2>
+        </div class="title">
 
-    <!-- Fotoosss-->
-    <video controls>
-        <source src="/videos/trailer.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+        <!-- Fotoosss-->
+        <main>
+            <!-- <video controls>
+                <source src="/videos/trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+        </main>
 
+        <div class="registreerform">
+            <p>Registeer je nu en betaal de eerste maand 0 euro!</p>
 
-    <p>Registeer je nu en betaal de eerste maand 0 euro!</p>
+            <form action="/html/Registreren.html">
+                <input type="submit" value="Registeer" />
+            </form>
+        </div>
 
-    <form action="/html/Registreren.html">
-        <input type="submit" value="Registeer" />
-    </form>
+        <div class="loginform">
+            <p>Of log in als je al een account hebt</p>
 
-    <p>Of log in als je al een account hebt</p>
+            <form action="/html/Login.html">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="text" id="password" name="password"><br>
+                <input type="submit" value="Login" />
+            </form>
+        </div>
 
-    <form action="/html/Login.html">
-        <input type="submit" value="Login" />
-    </form>
+        <footer>
+            <p>Copyright reservered by groep 8</p>
+        </footer>
 
-    <link rel="header" href="/html/Components/footer.html">
-</body>
+    </body>
+</div>
+
 
 </html>
