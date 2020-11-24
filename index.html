@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/FletnixIcon.ico">
     <title>Fletnix</title>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/specificity.css">
@@ -34,10 +35,10 @@
 
         <!-- Fotoosss-->
         <main>
-            <!-- <video controls>
+            <video controls>
                 <source src="/videos/trailer.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-            </video> -->
+            </video>
         </main>
 
         <div class="registreerform">
@@ -53,9 +54,9 @@
 
             <form action="/html/Login.html">
                 <label for="username">Username:</label><br>
-                <input type="text" id="username" name="username"><br>
+                <input type="text" id="username" name="username" pattern="[a-zA-Z]+"><br>
                 <label for="password">Password:</label><br>
-                <input type="text" id="password" name="password"><br>
+                <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
                 <input type="submit" value="Login" />
             </form>
         </div>

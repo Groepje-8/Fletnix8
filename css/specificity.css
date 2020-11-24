@@ -53,7 +53,12 @@ header a:hover {
         grid-gap: 10px;
         grid-template-columns: auto;
         grid-template-rows: auto;
-        grid-template-areas: 'header header header ' 'title title title ' 'main main main' 'registreren loginform loginform ' 'footer footer footer';
+        grid-template-areas: 
+        'header header header header'
+         'title title title title'
+          'main main main main' 
+          'registreren registreren loginform loginform '
+           'footer footer footer footer';
         /* background-color: whitesmoke; */
     }
 }
@@ -66,6 +71,11 @@ main {
 .title {
     grid-area: title;
     text-align: center;
+    height: 1vh;
+    line-height: 1vh;
+    font-size: 2vh;
+    padding: 5vh;
+    margin-bottom: 2vh;
 }
 
 .registreerform {
@@ -73,21 +83,33 @@ main {
     float: right;
     padding: 1em;
     background-color: #262626;
-    margin-left: 45%;
-    margin-right: 0%;
+    /* margin-left: 45%;
+    margin-right: 0%; */
     text-align: center;
     box-shadow: 2px 2px 4px black;
+    
+    min-width:5vw;
+    line-height: 3vh;
+    font-size: 2.5vh;
+    max-width: 50%;
+    margin-left: 23vw; transform: translate(-1%); 
 }
 
 .loginform {
     grid-area: loginform;
     float: left;
     padding: 1em;
-    Margin-right: 35%;
-    margin-left: 20%;
+    /* Margin-right: 35%;
+    margin-left: 20%; */
     background-color: #262626;
     text-align: center;
     box-shadow: 2px 2px 4px black;
+    line-height: 3vh;
+    font-size: 2.5vh;
+    margin-right: 15vw; transform: translate(10%); 
+    
+    max-width: 50%;
+    
 }
 
 .loginform form label {
@@ -170,4 +192,8 @@ form input[type=submit]:hover {
     border: -5px#384d48;
     color: #A30000;
     transition: color 0.4s, background-color 0.4s;
+}
+main video{
+    margin-left: 50vw; transform: translate(-50%); 
+    max-width: 60%;
 }
