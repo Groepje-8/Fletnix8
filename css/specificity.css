@@ -1,0 +1,199 @@
+/* Add a black background color to the top navigation */
+
+/*                                                   
+Achtergrond: #343330
+Meeste andere elementen(behalve tekst) zoals balkjes e.d.: #93A8AC
+Tekst: #FFFBBD
+Alles wat eruit moet springen: #DF2935
+*/
+
+body {
+    background-color: #343330;
+}
+
+h1, h2, p, form {
+    text-align: center;
+    color: #FFFBBD
+}
+
+header {
+    grid-area: header;
+    background-color: #262626;
+    overflow: hidden;
+    box-shadow: 2px 2px 4px black;
+    margin-top: 0px;
+    width: 100%;
+}
+
+header a {
+    float: left;
+    color: #FFFBBD;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+header a:hover {
+    background-color: #ddd;
+    color: black;
+    box-shadow: 0px 0px 20px #FFFBBD;
+}
+
+#Profiel {
+    float: right;
+}
+
+@media only screen and (min-width: 760px) {
+    .grid-container {
+        display: grid;
+        width: 100%;
+        margin: 0 auto 0 auto;
+        overflow: visible;
+        grid-gap: 10px;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        'header header header header'
+         'title title title title'
+          'main main main main' 
+          'registreren registreren loginform loginform '
+           'footer footer footer footer';
+        /* background-color: whitesmoke; */
+    }
+}
+
+main {
+    grid-area: main;
+    padding: 1em;
+}
+
+.title {
+    grid-area: title;
+    text-align: center;
+    height: 1vh;
+    line-height: 1vh;
+    font-size: 2vh;
+    padding: 5vh;
+    margin-bottom: 2vh;
+}
+
+.registreerform {
+    grid-area: registreren;
+    float: right;
+    padding: 1em;
+    background-color: #262626;
+    /* margin-left: 45%;
+    margin-right: 0%; */
+    text-align: center;
+    box-shadow: 2px 2px 4px black;
+    
+    min-width:5vw;
+    line-height: 3vh;
+    font-size: 2.5vh;
+    max-width: 50%;
+    margin-left: 23vw; transform: translate(-1%); 
+}
+
+.loginform {
+    grid-area: loginform;
+    float: left;
+    padding: 1em;
+    /* Margin-right: 35%;
+    margin-left: 20%; */
+    background-color: #262626;
+    text-align: center;
+    box-shadow: 2px 2px 4px black;
+    line-height: 3vh;
+    font-size: 2.5vh;
+    margin-right: 15vw; transform: translate(10%); 
+    
+    max-width: 50%;
+    
+}
+
+.loginform form label {
+    float: left;
+    margin-left: 25%;
+}
+
+.registreerform p {
+    padding: 1em;
+}
+
+/* .loginform form {
+    clear: right;
+} */
+
+footer {
+    grid-area: footer;
+    margin-bottom: 0%;
+    padding-top: 20px;
+}
+
+.dropdown {
+    /* position: relative; */
+    /* display: inline-block; */
+    overflow: visible;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+form {
+    font-size: larger;
+}
+
+form input[type=text], [type=password] {
+    border: none;
+    border-bottom: 4px #A30000;
+    transition: width 0.8s ease-in-out;
+    box-sizing: border-box;
+}
+
+form input[type=text]:focus {
+    border: 2px solid #A30000;
+}
+
+form input[type=password]:focus {
+    border: 2px solid #A30000;
+}
+
+form input[type=submit] {
+    background-color: #A30000;
+    border: none;
+    color: #FFFBBD;
+    cursor: pointer;
+    margin: 20px 0px;
+    transition: color 0.4s, background-color 0.4s;
+}
+
+form input[type=submit]:hover {
+    background-color: whitesmoke;
+    border: -5px#384d48;
+    color: #A30000;
+    transition: color 0.4s, background-color 0.4s;
+}
+main video{
+    margin-left: 50vw; transform: translate(-50%); 
+    max-width: 60%;
+}
