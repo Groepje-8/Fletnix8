@@ -1,78 +1,3 @@
-/* Add a black background color to the top navigation */
-body {
-    background-color: #FFF9FB;
-}
-
-h1, h2 {
-    text-align: center;
-}
-
-p, form {
-    text-align: left;
-}
-
-.loginform {
-    float: right;
-    padding: 15px;
-    text-align: center;
-}
-
-.loginform form {
-    clear: right;
-}
-
-.topnav {
-    background-color: #262626;
-    overflow: hidden;
-}
-
-.topnav a {
-    float: left;
-    color: #FFF9FB;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.topnav a:hover {
-    background-color: #FFF9FB;
-    color: black;
-}
-
-.topnav a.active {
-    background-color: #A30000;
-    color: white;
-}
-
-#Profiel {
-    float: right;
-}
-
-/* Footer */
-footer {
-    display: grid;
-    grid-template-columns: 35vw 35vw;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    margin-top: 100px;
-    padding: 25px 15vw;
-    font-size: 1.2em;
-    background-color: #262626;
-    color: white;
-    text-align: left;
-}
-footer a{
-    color: white;
-    text-decoration: none;
-}
-
-footer a:hover{
-    text-decoration: underline;
-}
-
 
 #poster {
     width: 300;
@@ -116,7 +41,7 @@ footer a:hover{
 
 
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: #93A8AC;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -151,7 +76,7 @@ footer a:hover{
 }
 
   /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #93A8AC}
   
   /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -160,5 +85,5 @@ footer a:hover{
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color:  #DF2935;
 }

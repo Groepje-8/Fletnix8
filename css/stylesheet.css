@@ -1,7 +1,8 @@
 /* Add a black background color to the top navigation */
 
 body {
-    background-color: #FFF9FB;
+    background-color: #343330;
+    color: #FFFBBD;
 }
 
 h1, h2, p, form {
@@ -18,6 +19,7 @@ h1, h2, p, form {
     clear: right;
 }
 
+/* Header */
 .topnav {
     background-color: #262626;
     overflow: hidden;
@@ -45,4 +47,28 @@ h1, h2, p, form {
 #Profiel {
     float: right;
 
+}
+
+/* Footer */
+footer {
+    display: grid;
+    grid-template-columns: 35vw 35vw;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    margin-top: 100px;
+    padding: 25px 15vw;
+    font-size: 1.2em;
+    background-color: #262626;
+    text-align: left;
+}
+
+footer a{
+    text-decoration: none;
+    color: #fffbbdb4;
+}
+
+footer a:hover{
+    text-decoration: underline;
 }

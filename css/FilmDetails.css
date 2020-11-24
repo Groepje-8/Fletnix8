@@ -1,50 +1,3 @@
-/* Add a black background color to the top navigation */
-
-body {
-    background-color: #FFF9FB;
-}
-
-h1, h2, p, form {
-    text-align: left;
-}
-
-.loginform {
-    float: right;
-    padding: 15px;
-    text-align: center;
-}
-
-.loginform form {
-    clear: right;
-}
-
-.topnav {
-    background-color: #262626;
-    overflow: hidden;
-}
-
-.topnav a {
-    float: left;
-    color: #FFF9FB;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.topnav a:hover {
-    background-color: #FFF9FB;
-    color: black;
-}
-
-.topnav a.active {
-    background-color: #A30000;
-    color: white;
-}
-
-#Profiel {
-    float: right;
-}
 
 .button {
     border: none;
@@ -56,7 +9,10 @@ h1, h2, p, form {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    background-color: #262626;
+    background-color: #93A8AC;
+}
+.button :hover {
+    background-color: #DF2935
 }
 
 main {
