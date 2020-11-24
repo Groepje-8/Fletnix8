@@ -1,54 +1,7 @@
-/* Add a black background color to the top navigation */
-
-body {
-    background-color: #FFF9FB;
-}
-
-h1, h2, p, form {
-    text-align: left;
-}
-
-.loginform {
-    float: right;
-    padding: 15px;
-    text-align: center;
-}
-
-.loginform form {
-    clear: right;
-}
-
-.topnav {
-    background-color: #262626;
-    overflow: hidden;
-}
-
-.topnav a {
-    float: left;
-    color: #FFF9FB;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.topnav a:hover {
-    background-color: #FFF9FB;
-    color: black;
-}
-
-.topnav a.active {
-    background-color: #A30000;
-    color: white;
-}
-
-#Profiel {
-    float: right;
-}
 
 .button {
     border: none;
-    color: white;
+    color: #FFFBBD;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -56,20 +9,38 @@ h1, h2, p, form {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    background-color: #262626;
+    background-color: #93A8AC;
+    min-width: 160px;
+}
+
+.button:hover {
+    background-color: #A30000
 }
 
 main {
     margin: 0 5vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 150px 1fr 1fr;
+    grid-template-rows: 30px 150px 1fr 1fr;
     grid-template-areas: 
+    "terug        terug   terug"
     "titel        .       poster"
     "beschrijving knoppen poster"
     "acteurs      .       poster"
 }
 
+main a {
+    text-decoration: none;
+    color: #fffbbdb4;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+.terugknop {
+    grid-area: terug;
+}
 .poster {
     grid-area: poster;
 }
@@ -82,6 +53,10 @@ main {
     grid-area: beschrijving;
 }
 
+.beschrijving h1, .beschrijving p{
+    text-align: left;
+}
+
 .knoppen {
     grid-area: knoppen;
     margin: auto;
@@ -90,16 +65,14 @@ main {
 .acteurgrid {
     grid-area: acteurs;
     display: grid;
-    grid-template-columns: repeat(4, 150px);
-    grid-template-rows: 222px 50px;
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 10px;
-    row-gap: 15px;
 }
 
 .poster img {
-    width: 25vw;
+    width: 28vw;
 }
 
 .acteurgrid img {
-    width: 150px;
+    width: 7vw;
 }
