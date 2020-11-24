@@ -45,11 +45,34 @@ p, form {
     color: white;
 }
 
-
-
 #Profiel {
     float: right;
 }
+
+/* Footer */
+footer {
+    display: grid;
+    grid-template-columns: 35vw 35vw;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    margin-top: 100px;
+    padding: 25px 15vw;
+    font-size: 1.2em;
+    background-color: #262626;
+    color: white;
+    text-align: left;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
 
 #poster {
     width: 300;

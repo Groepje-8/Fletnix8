@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filmoverzicht</title>
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/FilmOverzicht.css">
-
+    
 </head>
-
 <body>
-    <link rel="header" href="/html/Components/header.html">
+    <header>
+        <div class="topnav">
+            <a class="active" href="/index.html">Home</a>
+            <a id="Profiel" href="html/ProfielPagina.html">Profiel</a>
+        </div>
+    </header>
 
     <h1>Nieuwe Films</h1>
     <div class="flexbox">
@@ -35,25 +39,26 @@
         <div class="dropdown">
             <button class="dropbtn">Genres</button>
             <div class="dropdown-content">
-                <a href="#">Alle Genres</a>
-                <a href="#Actie">Actie</a>
-                <a href="#Animatie">Animatie</a>
-                <a href="#Drama">Drama</a>
-                <a href="#Familiefilm">Familiefilm</a>
-                <a href="#Fantasy">Fantasy</a>
-                <a href="#Horror">Horror</a>
-                <a href="#Komedie">Komedie</a>
-                <a href="#Mystery">Mystery</a>
-                <a href="#Oorlog">Oorlog</a>
-                <a href="#Romantisch">Romantisch</a>
-                <a href="#Sciencefiction">Sciencefiction</a>
-                <a href="#Thriller">Thriller</a>
-                <a href="#Western">Western</a>
+            <a href="#">Alle Genres</a>
+            <a href="#Actie">Actie</a>
+            <a href="#Animatie">Animatie</a>
+            <a href="#Drama">Drama</a>
+            <a href="#Familiefilm">Familiefilm</a>
+            <a href="#Fantasy">Fantasy</a>
+            <a href="#Horror">Horror</a>
+            <a href="#Komedie">Komedie</a>
+            <a href="#Mystery">Mystery</a>
+            <a href="#Oorlog">Oorlog</a>
+            <a href="#Romantisch">Romantisch</a>
+            <a href="#Sciencefiction">Sciencefiction</a>
+            <a href="#Thriller">Thriller</a>
+            <a href="#Western">Western</a>
             </div>
         </div>
     </div>
+    
     <div class="flexbox-assortiment">
-        <div>
+        <div> 
             <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
@@ -108,7 +113,18 @@
             <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
     </div>
-    <link rel="header" href="/html/Components/footer.html">
-</body>
 
+    <footer>
+        <div>
+            Vragen? Bel 0800-123-4567 <br>
+            <a href="OverOns.html">Over ons</a> <br>
+            <a href="ProfielPagina.html">Account</a> <br>
+            <a href="#">veelgestelde vragen</a> 
+        </div>
+        <div>
+            Alle rechten voorbehouden door Fletnix&#169; inc. 
+            Het kopiëren/distribueren van ons assortiment is ten strikste verboden en daders zullen strafrechtelijk vervolgd worden.
+        </div>
+    </footer>
+</body>
 </html>
