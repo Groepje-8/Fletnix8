@@ -14,14 +14,14 @@
 }
 
 .button:hover {
-    background-color: #DF2935
+    background-color: #A30000
 }
 
 main {
     margin: 0 5vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 20px 150px 1fr 1fr;
+    grid-template-rows: 30px 150px 1fr 1fr;
     grid-template-areas: 
     "terug        terug   terug"
     "titel        .       poster"
@@ -65,10 +65,8 @@ main a:hover {
 .acteurgrid {
     grid-area: acteurs;
     display: grid;
-    grid-template-columns: repeat(4, 150px);
-    grid-template-rows: 222px 50px;
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 10px;
-    row-gap: 15px;
 }
 
 .poster img {
@@ -76,5 +74,5 @@ main a:hover {
 }
 
 .acteurgrid img {
-    width: 150px;
+    width: 7vw;
 }
