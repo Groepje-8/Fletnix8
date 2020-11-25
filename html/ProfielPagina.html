@@ -1,54 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- kaart links van rest met flexbox en grid. 
-Navragen welke data er precies zichtbaar moet zijn zoals wachtwoord en instellingen !!! 
-divs plaatsen en css aanpassen. 
--->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProfielPagina</title>
-    <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/specificity.css">
     <link rel="stylesheet" href="/css/ProfielPagina.css">
-
 </head>
 
 <body>
-    <link rel="header" href="/html/Components/header.html">
-
-
-    <div class="card">
-        <img src="/img/pholder.jpg" alt="Test" style="width:100%">
-        <h1>Test Persoon</h1>
-        <p class="title">Abonnement plan</p>
-        <p>Standaard</p>
-        <p><button>Report</button></p>
-    </div>
-
-    <form action="AccountInstellingen.html" method="GET">
-        <label for="vnaam">Voornaam:</label>
-        <input type="text" id="vnaam" name="vnaam" value="Test" readonly><br><br>
-        <label for="anaam">Achternaam:</label>
-        <input type="text" id="lnaam" name="lnaam" value="Persoon" readonly><br><br>
-        <label for="land">Land:</label>
-        <input type="text" id="land" name="land" value="Nederland" readonly><br><br>
-        <label for="gjaar">Geboortejaar:</label>
-        <input type="text" id="gjaar" name="gjaar" value="1900" readonly><br><br>
-        <label for="rnr">Rekeningnummer:</label>
-        <input type="text" id="rnr" name="rnr" value="0123456789" readonly><br><br>
-        <label for="gnaam">Gebruikersnaam:</label>
-        <input type="text" id="gnaam" name="gnaam" value="De beste user 9000" readonly><br><br>
-        <label for="ww">Wachtwoord:</label>
-        <input type="text" id="ww" name="ww" value="********" readonly><br><br>
-        <label for="hww">Herhaal wachtwoord:</label>
-        <input type="text" id="hww" name="hww" value="********" readonly><br><br>
-        <label for="abb">Abonnement:</label>
-        <input type="text" id="abb" name="abb" value="Premium" readonly><br><br>
-        <input type="submit" value="aanpassen">
-    </form>
-    <link rel="header" href="/html/Components/footer.html">
+    <header>
+        <nav>
+            <a class="active" href="/index.html">Home</a>
+            <a id="Profiel" href="ProfielPagina.html">Profiel</a>
+        </nav>
+    </header>
+    <main>
+        <div class="Beschrijving">
+            <h1> Profielpagina van gebruiker </h1>
+        </div>
+        <div class="card">
+            <img src="/img/pholder.jpg" alt="Test" style="width:100%">
+            <h1>Test Persoon</h1>
+            <p class="title">Abonnement plan</p>
+            <p>Standaard</p>
+            <p><button>Help</button></p>
+        </div>
+        <div class="Accountdetails">
+            <form action="AccountInstellingen.html" method="GET">
+                <label for="vnaam">Voornaam:</label>
+                <input type="text" id="vnaam" name="vnaam" value="Test" readonly><br><br>
+                <label for="anaam">Achternaam:</label>
+                <input type="text" id="lnaam" name="lnaam" value="Persoon" readonly><br><br>
+                <label for="land">Land:</label>
+                <input type="text" id="land" name="land" value="Nederland" readonly><br><br>
+                <label for="gjaar">Geboortejaar:</label>
+                <input type="text" id="gjaar" name="gjaar" value="1900" readonly><br><br>
+                <label for="rnr">Rekeningnummer:</label>
+                <input type="text" id="rnr" name="rnr" value="0123456789" readonly><br><br>
+                <label for="gnaam">Gebruikersnaam:</label>
+                <input type="text" id="gnaam" name="gnaam" value="De beste user 9000" readonly><br><br>
+                <label for="ww">Wachtwoord:</label>
+                <input type="text" id="ww" name="ww" value="********" readonly><br><br>
+                <label for="hww">Herhaal wachtwoord:</label>
+                <input type="text" id="hww" name="hww" value="********" readonly><br><br>
+                <label for="abb">Abonnement:</label>
+                <input type="text" id="abb" name="abb" value="Premium" readonly><br><br>
+                <div class="Aanpassen">
+                <input type="submit" value="aanpassen">
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        Vragen? Bel 0800-123-4567 <br>
+        <a href="OverOns.html">Over ons</a> <br>
+        <a href="ProfielPagina.html">Account</a> <br>
+        <a href="#">veelgestelde vragen</a>
+        Alle rechten voorbehouden door Fletnix&#169; inc.
+        Het kopiëren/distribueren van ons assortiment is ten strikste verboden en daders zullen strafrechtelijk vervolgd
+        worden.
+    </footer>
 </body>
-
 </html>

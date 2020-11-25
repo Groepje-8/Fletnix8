@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registreren</title>
-    <link rel="stylesheet" href="/css/stylesheet.css">
-    <!--
-        <link rel="header" href="/html/header.html">
-        <link rel="footer" href="/html/footer.html">
-    -->
-
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/specificity.css">
+    <link rel="stylesheet" href="/css/Registreren.css">
 </head>
 
 <body>
-    <link rel="header" href="/html/Components/header.html">
-    <h1>Registratie formulier</h1>
+    <header>
+        <nav>
+            <a class="active" href="/index.html">Home</a>
+            <a id="Profiel" href="ProfielPagina.html">Profiel</a>
+        </nav>
+    </header>
 
-    <!-- pattern aan elk veld toegevoegd. Bij wachtwoord melding over specificaties in geval van geen goed ww-->
+    <h1>Registratie formulier</h1>
 
     <form action="ProfielPagina.html" method="GET">
         <label for="vnaam">Voornaam:</label>
@@ -42,8 +43,18 @@
         <input type="text" id="abb" name="abb"><br><br>
         <input type="submit" value="Verzend">
     </form>
+
     <p> Klik op "verzend" knop en de data wordt verstuurd naar de pagina op de server genaamd "registreren.php".</p>
     <link rel="header" href="/html/Components/footer.html">
 </body>
 
+<footer>
+    Vragen? Bel 0800-123-4567 <br>
+    <a href="OverOns.html">Over ons</a> <br>
+    <a href="ProfielPagina.html">Account</a> <br>
+    <a href="#">veelgestelde vragen</a>
+    Alle rechten voorbehouden door Fletnix&#169; inc.
+    Het kopiëren/distribueren van ons assortiment is ten strikste verboden en daders zullen strafrechtelijk vervolgd
+    worden.
+</footer>
 </html>

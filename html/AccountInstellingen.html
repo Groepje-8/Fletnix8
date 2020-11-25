@@ -5,69 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AccountInstellingen</title>
-    <link rel="stylesheet" href="/css/stylesheet.css">
-    <!--
-        <link rel="header" href="/html/header.html">
-        <link rel="footer" href="/html/footer.html">
-    -->
-
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/specificity.css">
+    <link rel="stylesheet" href="/css/AccountInstellingen.css">
 </head>
 
 <body>
-
-    <link rel="header" href="/html/Components/header.html">
-    <h1>Account instellingen opties</h1>
-    <br><br>
-    <h2> Instellingen</h2>
-    <br><br>
-    <form action="AccountInstellingen.html" method="GET">
-        <label for="lang">Kies een taal:</label>
-        <select name="lang" id="lang">
-            <option value="nederlands">Nederlands</option>
-            <option value="frans">Frans</option>
-            <option value="duits">Duits</option>
-            <option value="engels">Engels</option>
-        </select> <br><br>
-        <label for="ov">Ondertiteling voorkeur:</label>
-        <select name="ov" id="ov">
-            <option value="nederlands">Nederlands</option>
-            <option value="frans">Frans</option>
-            <option value="duits">Duits</option>
-            <option value="engels">Engels</option>
-        </select> <br><br>
-        <label for="og">Ondertiteling grootte:</label>
-        <select name="og" id="og">
-            <option value="normaal">Normaal</option>
-            <option value="klein">Klein</option>
-            <option value="groot">Groot</option>
-        </select> <br><br>
-        <label for="beeldk">Beeldkwaliteit:</label>
-        <select name="beeldk" id="beeldk">
-            <option value="normaal">Normaal</option>
-            <option value="hd">HD</option>
-            <option value="1080p">1080p</option>
-        </select> <br><br>
-        <input type="submit" value="Update">
-    </form>
-    <br><br>
-    <h2> Account details </h2>
-    <br><br>
-    <form action="AccountInstellingen.html" method="GET">
-        <label for="gnaam verander">Gebruikersnaam veranderen:</label>
-        <input pattern="[a-zA-Z]+" type="text" id="gnaam verander" name="gnaam verander"><br><br>
-        <label for="nww">Nieuw wachtwoord:</label>
-        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="text" id="nww" name="nww"
-            title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters"><br><br>
-
-        <!-- Weet niet zeker wat bij betaal informatie moet komen !!! 
-      Mist pattern voor die reden (Na input)-->
-
-        <label for="betaalinfo">Betaalinformatie:</label>
-        <input type="text" id="betaalinfo" name="betaalinfo"><br><br>
-        <input type="submit" value="Update">
-    </form>
-    <p> Klik op de "Update" knop en de nieuwe data wordt opgeslagen.</p>
-    <link rel="header" href="/html/Components/footer.html">
+    <header>
+        <nav>
+            <a class="active" href="/index.html">Home</a>
+            <a id="Profiel" href="ProfielPagina.html">Profiel</a>
+        </nav>
+    </header>
+    <main>
+        <div class="Beschrijving">
+            <h1>Account instellingen opties</h1>
+        </div>
+        <div class="Instellingen">
+            <h2> Instellingen</h2>
+            <form action="AccountInstellingen.html" method="GET">
+                <label for="lang">Kies een taal:</label>
+                <select name="lang" id="lang">
+                    <option value="nederlands">Nederlands</option>
+                    <option value="frans">Frans</option>
+                    <option value="duits">Duits</option>
+                    <option value="engels">Engels</option>
+                </select> <br><br>
+                <label for="ov">Ondertiteling voorkeur:</label>
+                <select name="ov" id="ov">
+                    <option value="nederlands">Nederlands</option>
+                    <option value="frans">Frans</option>
+                    <option value="duits">Duits</option>
+                    <option value="engels">Engels</option>
+                </select> <br><br>
+                <label for="og">Ondertiteling grootte:</label>
+                <select name="og" id="og">
+                    <option value="normaal">Normaal</option>
+                    <option value="klein">Klein</option>
+                    <option value="groot">Groot</option>
+                </select> <br><br>
+                <label for="beeldk">Beeldkwaliteit:</label>
+                <select name="beeldk" id="beeldk">
+                    <option value="normaal">Normaal</option>
+                    <option value="hd">HD</option>
+                    <option value="1080p">1080p</option>
+                </select> <br><br>
+                <input type="submit" value="Update">
+            </form>
+        </div>
+        <div class="Accountdetails">
+            <h2> Account details </h2>
+            <form action="AccountInstellingen.html" method="GET">
+                <label for="gnaam verander">Gebruikersnaam veranderen:</label>
+                <input pattern="[a-zA-Z]+" type="text" id="gnaam verander" name="gnaam verander"><br><br>
+                <label for="nww">Nieuw wachtwoord:</label>
+                <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="text" id="nww" name="nww"
+                    title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters"><br><br>
+                <!-- Weet niet zeker wat bij betaal informatie moet komen !!! 
+            Mist pattern voor die reden (Na input)-->
+                <label for="betaalinfo">Betaalinformatie:</label>
+                <!-- bank 0123456789-->
+                <input type="text" id="betaalinfo" name="betaalinfo"><br><br>
+                <input type="submit" value="Update">
+            </form>
+        </div>
+        <div class="Verzenden">
+            <h1> Klik op de "Update" knop en de nieuwe data wordt opgeslagen.</h1>
+            <link rel="header" href="/html/Components/footer.html">
+        </div>
+    </main>
+    <footer>
+        <div>
+            Vragen? Bel 0800-123-4567 <br>
+            <a href="OverOns.html">Over ons</a> <br>
+            <a href="ProfielPagina.html">Account</a> <br>
+            <a href="#">veelgestelde vragen</a> 
+        </div>
+        <div>
+            Alle rechten voorbehouden door Fletnix&#169; inc. 
+            Het kopiëren/distribueren van ons assortiment is ten strikste verboden en daders zullen strafrechtelijk vervolgd worden.
+        </div>
+    </footer>
 </body>
-
 </html>
