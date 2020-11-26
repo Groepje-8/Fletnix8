@@ -1,24 +1,16 @@
-/* To do :
-Lettertype opmaak keuze vb
-.sansserif {
-  font-family: Arial, Helvetica, sans-serif;
-Kleuren 
-
-}*/
-
 /* vw is percentage van rand. 
    .   = voor leeg veld */
    
 main {
   margin: 0 5vw; 
   display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows:  100px 1fr 1fr 100px;
   grid-template-areas: 
-  " .  Beschrijving  Beschrijving  .  "
-  " .  Instellingen  Accountdetails .  "
-  " .  Instellingen  Accountdetails .  "
-  " .  Verzenden     Verzenden .  "
+  "Beschrijving  Beschrijving"
+  "Instellingen  Accountdetails"
+  "Instellingen  Accountdetails"
+  "Verzenden     Verzenden"
 }
 
 .Beschrijving {
@@ -37,10 +29,46 @@ main {
   grid-area: Verzenden;
 } 
 
+.Instellingen h2 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
 h2, form {
   text-align: left;
 }
 
-footer {
-  text-align: center;
+li {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+	align-content: space-around;
+  min-width: 20vh;
+  margin-right: 1em; 
+  margin-bottom:0.2em;
+}
+
+select {
+  min-width: 20vh;
+  margin-right: 1em;
+}
+
+input {
+  float: right;
+  min-width: 20vh;
+  margin-right: 1em;
+}
+
+input[type=submit] {
+  float: left;
+}
+
+label, input, select {
+  display: inline-block;
+}
+
+ul{
+  list-style: none;
 }
