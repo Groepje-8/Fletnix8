@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- notes toevoegen -->
 
 <head>
     <meta charset="UTF-8">
@@ -17,73 +18,84 @@
             <a id="Profiel" href="ProfielPagina.html">Profiel</a>
         </nav>
     </header>
+
     <main>
         <div class="Beschrijving">
             <h1>Account instellingen opties</h1>
         </div>
-        <div class="Instellingen">
-            <h2> Instellingen</h2>
-            <form action="AccountInstellingen.html" method="GET">
-                <label for="lang">Kies een taal:</label>
-                <select name="lang" id="lang">
-                    <option value="nederlands">Nederlands</option>
-                    <option value="frans">Frans</option>
-                    <option value="duits">Duits</option>
-                    <option value="engels">Engels</option>
-                </select> <br><br>
-                <label for="ov">Ondertiteling voorkeur:</label>
-                <select name="ov" id="ov">
-                    <option value="nederlands">Nederlands</option>
-                    <option value="frans">Frans</option>
-                    <option value="duits">Duits</option>
-                    <option value="engels">Engels</option>
-                </select> <br><br>
-                <label for="og">Ondertiteling grootte:</label>
-                <select name="og" id="og">
-                    <option value="normaal">Normaal</option>
-                    <option value="klein">Klein</option>
-                    <option value="groot">Groot</option>
-                </select> <br><br>
-                <label for="beeldk">Beeldkwaliteit:</label>
-                <select name="beeldk" id="beeldk">
-                    <option value="normaal">Normaal</option>
-                    <option value="hd">HD</option>
-                    <option value="1080p">1080p</option>
-                </select> <br><br>
-                <input type="submit" value="Update">
-            </form>
-        </div>
-        <div class="Accountdetails">
-            <h2> Account details </h2>
-            <form action="AccountInstellingen.html" method="GET">
-                <label for="gnaam verander">Gebruikersnaam veranderen:</label>
-                <input pattern="[a-zA-Z]+" type="text" id="gnaam verander" name="gnaam verander"><br><br>
-                <label for="nww">Nieuw wachtwoord:</label>
-                <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="text" id="nww" name="nww"
-                    title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters"><br><br>
-                <!-- Weet niet zeker wat bij betaal informatie moet komen !!! 
-            Mist pattern voor die reden (Na input)-->
-                <label for="betaalinfo">Betaalinformatie:</label>
-                <!-- bank 0123456789-->
-                <input type="text" id="betaalinfo" name="betaalinfo"><br><br>
-                <input type="submit" value="Update">
-            </form>
-        </div>
+
         <div class="Verzenden">
             <h1> Klik op de "Update" knop en de nieuwe data wordt opgeslagen.</h1>
-            <link rel="header" href="/html/Components/footer.html">
+        </div>
+
+        <div class="Accountdetails">
+            <ul>
+                <h2> Account details </h2>
+                <form action="AccountInstellingen.html" method="GET">
+                    <li> <label for="gnaam verander">Gebruikersnaam veranderen:</label>
+                        <input pattern="[a-zA-Z]+" type="text" id="gnaam verander" name="gnaam verander"></li>
+                    <li><label for="nww">Nieuw wachtwoord:</label>
+                        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="text" id="nww" name="nww"
+                            title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters"></li>
+                    <li><label for="betaalinfo">Betaalinformatie:</label>
+                        <input type="text" id="betaalinfo" name="betaalinfo"></li>
+                    <div class="Verzenden">
+                        <input type="submit" value="Update">
+                    </div>
+                </form>
+            </ul>
+        </div>
+
+        <div class="Instellingen">
+            <ul>
+                <h2> Instellingen</h2>
+                <form action="AccountInstellingen.html" method="GET">
+                    <li><label for="lang">Kies een taal:</label>
+                        <select name="lang" id="lang">
+                            <option value="nederlands">Nederlands</option>
+                            <option value="frans">Frans</option>
+                            <option value="duits">Duits</option>
+                            <option value="engels">Engels</option>
+                        </select></li>
+                    <li><label for="ov">Ondertiteling voorkeur:</label>
+                        <select name="ov" id="ov">
+                            <option value="nederlands">Nederlands</option>
+                            <option value="frans">Frans</option>
+                            <option value="duits">Duits</option>
+                            <option value="engels">Engels</option>
+                        </select></li>
+                    <li><label for="og">Ondertiteling grootte:</label>
+                        <select name="og" id="og">
+                            <option value="normaal">Normaal</option>
+                            <option value="klein">Klein</option>
+                            <option value="groot">Groot</option>
+                        </select></li>
+                    <li><label for="beeldk">Beeldkwaliteit:</label>
+                        <select name="beeldk" id="beeldk">
+                            <option value="normaal">Normaal</option>
+                            <option value="hd">HD</option>
+                            <option value="1080p">1080p</option>
+                        </select></li>
+                    <div class="Verzenden">
+                        <input type="submit" value="Update">
+                    </div>
+                </form>
+            </ul>
         </div>
     </main>
+
     <footer>
         <div>
+            <!-- lijst ordered list (ul) 
+            br weg en vervangen door lijst -->
             Vragen? Bel 0800-123-4567 <br>
             <a href="OverOns.html">Over ons</a> <br>
             <a href="ProfielPagina.html">Account</a> <br>
-            <a href="#">veelgestelde vragen</a> 
-        </div>
-        <div>
-            Alle rechten voorbehouden door Fletnix&#169; inc. 
-            Het kopiëren/distribueren van ons assortiment is ten strikste verboden en daders zullen strafrechtelijk vervolgd worden.
+            <a href="#">veelgestelde vragen</a>
+            <!-- paragraaf past beter -->
+            Alle rechten voorbehouden door Fletnix&#169; inc.
+            Het kopiëren/distribueren van ons assortiment is ten strikste verboden en daders zullen strafrechtelijk
+            vervolgd worden.
         </div>
     </footer>
 </body>
