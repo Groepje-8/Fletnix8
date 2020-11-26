@@ -1,86 +1,82 @@
 
 .film{
-    grid-area: film;
+  grid-area: film;
 }
 
 .flexbox {
-    display: flex;
-    flex-flow: row nowrap;
-    margin-left: 2em;
-    margin-right: 2em;
-    justify-content: space-evenly;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-left: 2em;
+  margin-right: 2em;
+  justify-content: space-evenly;
 }
 
 .flexbox img {
-    width: 19vw;
-    min-width: 100px;
+  width: 19vw;
+  min-width: 100px;
 }
 
 .flexbox-assortiment {
-    display: flex;
-    flex-flow: row wrap;
-    margin-left: 2em;
-    margin-right: 2em;
-    justify-content: space-evenly;
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: 2em;
+  margin-right: 2em;
+  justify-content: space-evenly;
 }
 
 .flexbox-assortiment img {
-    width: 12vw;
-    min-width: 100px;
-    margin: 0 20px 0;
+  width: 12vw;
+  min-width: 100px;
+  margin: 0 20px 0;
 }
 
 .flexbox-titel {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 
 .dropbtn {
-    background-color: #93A8AC;
-    color: #FFFBBD;
-    padding: 16px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
+  background-color: #93A8AC;
+  color: #FFFBBD;
+  padding: 16px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
 }
   
   /* The container <div> - needed to position the dropdown content */
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
   
   /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #f9f9f9;
-    width: 420px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 500px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.dropdown-content input {
-    color: black;
-    padding: 12px 16px;
-    display: block;
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.filter-header {
+  background-color: black;  
 }
 
 .filter-header input {
-  width: 90%;
+  width: 100%;
 }
-  /* Change color of dropdown links on hover */
-.dropdown-content input:hover {background-color: #93A8AC}
-  
-  /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    background-color: #A30000;
+
+.row input {
+  color: black;
+  padding: 12px 16px;
+  display: block;
 }
 
 .column {
