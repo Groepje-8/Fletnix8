@@ -1,5 +1,6 @@
 # Fletnix8
-Beroepsproduct 'Fletnix' Groepje8
+Beroepsproduct 'Fletnix' Groepje8 BP1
+Een statische website met pure HTML en CSS op basis van wireframes.
 
 # WTUX beroepsproduct omschrijving
 [Beroepsproduct omschrijving](https://hanaim-webtech.github.io/webtech/UX/beroepsproduct_UX.html)
@@ -39,3 +40,29 @@ Beroepsproduct 'Fletnix' Groepje8
     <section>
     <summary>
     <time>
+
+
+## Takenverdeling
+
+### Jorian
+1. Index
+1. Abbonementen
+1. OverOns
+1. Header
+1. Footer
+
+### Levi
+1. FilmDetails
+1. FilmOverzicht
+1. mediaplayer
+1. Footer
+
+### Benjamin
+1. Accountinstellingen
+1. Registreren
+1. ProfielPagina
+
+### Easter Egg
+We hebben overwogen om FletniXXX te maken DE naaktemensen website van de HAN.
+Een categorie die erg populair is onder onze doelgroep. 
+Helaas is er vanwege mogelijke repercussies besloten om dit toch niet te doen.
