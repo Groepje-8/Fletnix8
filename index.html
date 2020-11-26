@@ -17,13 +17,14 @@
 
         <header>
             <div class="dropdown">
-                <a class="active" href="/index.html">Home</a>
+                <a class="active" href="/index.html">&#9776</a>
                 <div class="dropdown-content">
-                    <a href="/html/FilmOverzicht.html">Filmoverzicht</a>
+                    <a href="/html/Abbonement.html">Abbonementen</a>
+                    <a href="/html/FilmOverzicht.html">Filmoverzicht</a>                   
                     <a href="/html/OverOns.html">Over ons</a>
                 </div>
             </div>
-            <a id="Profiel" href="html/ProfielPagina.html">Profiel</a>
+            <a id="Profiel" href="html/ProfielPagina.html">$Naam</a>
         </header>
 
 
@@ -52,17 +53,25 @@
         <div class="loginform">
             <p>Of log in als je al een account hebt</p>
 
-            <form action="/html/Login.html">
-                <label for="username">Username:</label><br>
-                <input type="text" id="username" name="username" pattern="[a-zA-Z]+"><br>
-                <label for="password">Password:</label><br>
-                <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
+            <form action="/html/FilmOverzicht.html">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" pattern="[a-zA-Z]+">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                 <input type="submit" value="Login" />
             </form>
         </div>
 
         <footer>
-            <p>Copyright reservered by groep 8</p>
+            <ul>
+                <li><a href="/html/OverOns.html">Over ons</a> </li>
+                <li><a href="/html/ProfielPagina.html">Account</a> </li>
+                <li><a href="#">veelgestelde vragen</a> </li>
+            </ul>
+            <p>Vragen? Bel 0800-123-4567 </p>
+            <p> Alle rechten voorbehouden door Fletnix&#169; inc. </p>
+            <p> Het kopiëren/distribueren van ons assortiment is ten strikste verboden en daders zullen strafrechtelijk
+                vervolgd worden.</p>
         </footer>
 
     </body>
