@@ -62,3 +62,19 @@
   h2, form {
     text-align: left;
   }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: space-around;
+    min-width: 20vh;
+    margin-right: 15em; 
+    margin-bottom:0.6em;
+  }
+
+  ul{
+    list-style: none;
+  }
