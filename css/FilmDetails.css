@@ -3,7 +3,7 @@ h3 {
     text-align: center;
 }
 
-.button {
+.button ,.knoppen a{
     border: none;
     color: #FFFBBD;
     padding: 15px 32px;
@@ -13,12 +13,13 @@ h3 {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    background-color: #93A8AC;
+    background-color: #262626;
     min-width: 160px;
 }
 
-.button:hover {
-    background-color: #A30000
+.button:hover ,.knoppen a:hover{
+    background-color: #A30000;
+    text-decoration:none;
 }
 
 main {

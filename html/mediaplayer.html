@@ -9,21 +9,31 @@
     <link rel="stylesheet" href="/css/MediaPlayer.css">
     <title>MediaPlayer</title>
 </head>
+
 <body>
     <header>
         <div class="dropdown">
             <a class="active" href="/index.html">&#9776;</a>
             <div class="dropdown-content">
                 <a href="/html/Abbonement.html">Abbonementen</a>
-                <a href="/html/FilmOverzicht.html">Filmoverzicht</a>                   
+                <a href="/html/FilmOverzicht.html">Filmoverzicht</a>
             </div>
         </div>
         <a id="Profiel" href="/html/ProfielPagina.html">$Naam</a>
     </header>
     <main>
-        <a href="FilmDetails.html"><button class="button">Terug naar overzicht</button></a>
-        <a href="MediaPlayer.html"><button class="button-right">Volgende aflevering</button></a>
-        <a href="MediaPlayer.html"><button class="button-right">Vorige aflevering</button></a>
+
+        <form action="/html/FilmDetails.html">
+            <input type="submit" value="Terug naar overzicht" />
+        </form>
+
+        <form action="/html/MediaPlayer.html">
+            <input type="submit" value="Volgende aflevering" />
+        </form>
+
+        <form action="/html/MediaPlayer.html">
+            <input type="submit" value="Vorige aflevering" />
+        </form>
 
         <video controls>
             <source src="/videos/trailer.mp4" type="video/mp4">
@@ -32,7 +42,7 @@
 
         <h1>Titel - aflevering</h1>
     </main>
-    
+
     <footer>
         <ul>
             <li><a href="/html/OverOns.html">Over ons</a> </li>
