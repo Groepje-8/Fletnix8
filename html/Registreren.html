@@ -20,7 +20,7 @@
 
     <h1>Registratie formulier</h1>
     
-    <table>
+    <table id="registreren">
         <form action="ProfielPagina.html" method="GET" id="my_form"></form>
         <tr>
             <td>
@@ -72,6 +72,14 @@
         </tr>
         <tr>
             <td>
+                <label for="abb">Abonnement:</label>
+            </td>
+            <td>
+                <input type="text" id="abb" name="abb" from="my_form">
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <label for="ww">Wachtwoord:</label>
             </td>
             <td>
@@ -86,14 +94,6 @@
             <td>   
         <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="hww" name="hww"
         title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters" from="my_form">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="abb">Abonnement:</label>
-            </td>
-            <td>
-                <input type="text" id="abb" name="abb" from="my_form">
             </td>
         </tr>
         <tr>
