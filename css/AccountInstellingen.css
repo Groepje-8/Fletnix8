@@ -5,7 +5,7 @@ main {
   margin: 0 5vw; 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows:  100px 1fr 1fr 100px;
+  grid-template-rows:  150px 1fr 1fr 100px;
   grid-template-areas: 
   "Beschrijving  Beschrijving"
   "Instellingen  Accountdetails"
@@ -51,6 +51,7 @@ li {
 }
 
 select {
+  float: right;
   min-width: 20vh;
   margin-right: 1em;
 }
@@ -71,4 +72,8 @@ label, input, select {
 
 ul{
   list-style: none;
+}
+
+form input[type=text], [type=password], select {
+  width: 30%;
 }

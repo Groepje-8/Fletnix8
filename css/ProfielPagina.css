@@ -13,16 +13,17 @@
   }
   
   button {
+    background-color: #A30000;
     border: none;
     outline: 0;
     display: inline-block;
     padding: 8px;
-    color: rgb(63, 28, 28);
-    background-color: #000;
+    color: #FFFBBD;
     text-align: center;
     cursor: pointer;
     width: 100%;
     font-size: 18px;
+    transition: color 0.4s, background-color 0.4s;
   }
   
   a {
@@ -77,4 +78,8 @@
 
   ul{
     list-style: none;
+  }
+
+  form input[type=text], [type=password], select {
+    width: 40%;
   }
