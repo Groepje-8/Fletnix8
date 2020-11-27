@@ -1,0 +1,7 @@
+table {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+  }
+
+  #my_form tr:nth-child(even){background-color: #f2f2f2;}

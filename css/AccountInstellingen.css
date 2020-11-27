@@ -46,7 +46,7 @@ li {
 	align-items: baseline;
 	align-content: space-around;
   min-width: 20vh;
-  margin-right: 1em; 
+  margin-right: 7em; 
   margin-bottom:0.2em;
 }
 
@@ -62,7 +62,7 @@ input {
 }
 
 input[type=submit] {
-  float: left;
+   float: left; 
 }
 
 label, input, select {

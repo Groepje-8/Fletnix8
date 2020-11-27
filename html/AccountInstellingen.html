@@ -29,27 +29,27 @@
         </div>
 
         <div class="Accountdetails">
-            <ul>
-                <h2> Account details </h2>
-                <form action="AccountInstellingen.html" method="GET">
-                    <li> <label for="gnaam verander">Gebruikersnaam veranderen:</label>
-                        <input pattern="[a-zA-Z]+" type="text" id="gnaam verander" name="gnaam verander"></li>
+            <h2> Account details </h2>
+            <form action="AccountInstellingen.html" method="GET">
+                <ul>
+                    <li> <label for="gnaamVerander">Gebruikersnaam veranderen:</label>
+                        <input pattern="[a-zA-Z]+" type="text" id="gnaamVerander" name="gnaamVerander"></li>
                     <li><label for="nww">Nieuw wachtwoord:</label>
                         <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="text" id="nww" name="nww"
                             title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters"></li>
                     <li><label for="betaalinfo">Betaalinformatie:</label>
-                        <input type="text" id="betaalinfo" name="betaalinfo"></li>
-                    <div class="Verzenden">
-                        <input type="submit" value="Update">
-                    </div>
-                </form>
-            </ul>
+                        <input pattern="[a-zA-Z0-9]+" type="text" id="betaalinfo" name="betaalinfo"></li>
+                </ul>
+                <div class="Verzenden">
+                    <input type="submit" value="Update">
+                </div>
+            </form>
         </div>
 
         <div class="Instellingen">
-            <ul>
-                <h2> Instellingen</h2>
-                <form action="AccountInstellingen.html" method="GET">
+            <h2> Instellingen</h2>
+            <form action="AccountInstellingen.html" method="GET">
+                <ul>
                     <li><label for="lang">Kies een taal:</label>
                         <select name="lang" id="lang">
                             <option value="nederlands">Nederlands</option>
@@ -76,11 +76,11 @@
                             <option value="hd">HD</option>
                             <option value="1080p">1080p</option>
                         </select></li>
-                    <div class="Verzenden">
-                        <input type="submit" value="Update">
-                    </div>
-                </form>
-            </ul>
+                </ul>
+                <div class="Verzenden">
+                    <input type="submit" value="Update">
+                </div>
+            </form>
         </div>
     </main>
 
@@ -96,4 +96,5 @@
             vervolgd worden.</p>
     </footer>
 </body>
+
 </html>

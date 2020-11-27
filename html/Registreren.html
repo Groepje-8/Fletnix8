@@ -20,32 +20,90 @@
 
     <h1>Registratie formulier</h1>
     
-    <form action="ProfielPagina.html" method="GET">
-        <label for="vnaam">Voornaam:</label>
-        <input pattern="[a-zA-Z]+" type="text" id="vnaam" name="vnaam"><br><br>
-        <label for="anaam">Achternaam:</label>
-        <input pattern="[a-zA-Z]+" type="text" id="lnaam" name="lnaam"><br><br>
-        <label for="land">Land:</label>
-        <input pattern="[a-zA-Z]+" type="text" id="land" name="land"><br><br>
-        <label for="gjaar">Geboortejaar:</label>
-        <input pattern="[0-9]+" type="text" id="gjaar" name="gjaar"><br><br>
-        <label for="rnr">Rekeningnummer:</label>
-        <input pattern="[0-9]+" type="text" id="rnr" name="rnr"><br><br>
-        <label for="gnaam">Gebruikersnaam:</label>
-        <input pattern="[a-zA-Z]+" type="text" id="gnaam" name="gnaam"><br><br>
-        <label for="ww">Wachtwoord:</label>
-        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="ww" name="ww"
-            title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters"><br><br>
-        <label for="hww">Herhaal wachtwoord:</label>
+    <table>
+        <form action="ProfielPagina.html" method="GET" id="my_form"></form>
+        <tr>
+            <td>
+                <label for="vnaam">Voornaam:</label>
+            </td>
+            <td>
+                <input pattern="[a-zA-Z]+" type="text" id="vnaam" name="vnaam" from="my_form">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="anaam">Achternaam:</label>
+            </td>
+            <td>
+                <input pattern="[a-zA-Z]+" type="text" id="anaam" name="anaam" from="my_form">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="land">Land:</label>
+            </td>
+            <td>
+                <input pattern="[a-zA-Z]+" type="text" id="land" name="land" from="my_form">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="gjaar">Geboortejaar:</label>
+            </td>
+            <td>
+                <input pattern="[0-9]+" type="text" id="gjaar" name="gjaar" from="my_form">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="rnr">Rekeningnummer:</label>
+            </td>
+            <td>
+                <input pattern="[0-9]+" type="text" id="rnr" name="rnr" from="my_form">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="gnaam">Gebruikersnaam:</label>
+            </td>
+            <td>
+                <input pattern="[a-zA-Z]+" type="text" id="gnaam" name="gnaam" from="my_form">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="ww">Wachtwoord:</label>
+            </td>
+            <td>
+                <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="ww" name="ww"
+            title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters" from="my_form">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="hww">Herhaal wachtwoord:</label>
+            </td>
+            <td>   
         <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="hww" name="hww"
-            title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters"><br><br>
-        <label for="abb">Abonnement:</label>
-        <input type="text" id="abb" name="abb"><br><br>
-        <input type="submit" value="Verzend">
-    </form>
-
-    <p> Klik op "verzend" knop en de data wordt verstuurd naar de pagina op de server genaamd "registreren.php".</p>
-    <link rel="header" href="/html/Components/footer.html">
+        title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters" from="my_form">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="abb">Abonnement:</label>
+            </td>
+            <td>
+                <input type="text" id="abb" name="abb" from="my_form">
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <input type="submit" value="Verzend" from="my_form">
+        </td>
+        </tr>
+    </table>
+    <form><input type="submit" value="Verzend" from="my_form"></form>
+<p> Klik op "verzend" knop en de data wordt verstuurd naar de pagina op de server genaamd "registreren.php".</p>
 </body>
 
 
