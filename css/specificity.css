@@ -183,7 +183,7 @@ form {
 form input[type=text], [type=password] {
     border: none;
     transition: width 0.8s ease-in-out;
-     box-sizing: border-box; 
+    box-sizing: border-box;
     margin-bottom: 2vh;
     width: 80%;
 }
@@ -211,4 +211,41 @@ main video {
     margin-left: 50vw;
     transform: translate(-50%);
     max-width: 60%;
+}
+
+@media only screen and (max-width: 1300px) {
+    header {
+        height: 3vw;
+    }
+    header a {
+        padding:0.5vw;
+        font-size:2vw;
+    }
+}
+@media only screen and (max-width: 720px) {
+    header {
+        height: 5vw;
+    }
+    header a {
+        padding:1vw;
+        font-size:3vw;
+    }
+    .dropdown-content a{
+        padding: 1vw 1.2vw;
+    }
+}
+@media only screen and (max-width: 480px) {
+    header {
+        height: 10vw;
+    }
+    header a {
+        padding:2vw;
+        font-size:5vw;
+    }
+    .dropdown-content a{
+        padding: 2vw 2.4vw;
+        max-width: 80px;
+        overflow: hidden;
+    }
+  
 }

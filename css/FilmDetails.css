@@ -53,7 +53,7 @@ main a:hover {
     grid-area: titel;
 }
 
-.titel h1, .titel h2, .titel a p, .titel h3 {
+.titel h1, .titel h2, .titel a p, .titel h3  {
     margin: 0px;
 }
 
