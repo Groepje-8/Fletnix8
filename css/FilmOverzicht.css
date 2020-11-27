@@ -41,6 +41,7 @@
   font-size: 18px;
   border: none;
   cursor: pointer;
+  margin-left: 170vh;
 }
 
 .dropbtn:hover {
@@ -62,11 +63,19 @@
   right: 0;
   width: 500px;
   box-shadow: 5px 5px 20px 30px rgba(0, 0, 0, 0.2);
-  background-color: #343330;
+  background-color: #262626;
   color: #FFFBBD;
 }
 
 /* Show the dropdown menu on hover */
+
+.dropdown button {
+  float: right;
+  margin-bottom: 5vh;
+  background-color: #A30000;
+  border: none;
+  color: #FFFBBD;
+}
 
 .flexbox-titel .dropdown:hover .flexbox-titel .dropdown-content {
   display: flex;
@@ -79,6 +88,7 @@
 .flexbox-titel .dropdown input[type='checkbox'] {
   border-radius: 7px;
   display: inline-block;
+  cursor: pointer;
 }
 
 .flexbox-titel .dropdown label::after {
@@ -113,4 +123,11 @@
 
 .column label {
   opacity: 0.9;
+}
+
+@media only screen and (max-width: 720px) {
+  .dropbtn{
+    margin-left: 170vh;
+  }
+
 }
