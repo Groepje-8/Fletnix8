@@ -1,25 +1,34 @@
 table {
-    display: flex;
-	flex-direction: row;
-	justify-content: center;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
-  #registreren td {
-    border: 1px #ddd;
-    padding: 8px;
-    color: #FFFBBD;
-  }
+#registreren td {
+  border: 1px #ddd;
+  padding: 8px;
+  color: #FFFBBD;
+}
+
+#registreren tr:hover {
+  background-color: #A30000;
+  transition: color 0.4s, background-color 0.4s;
+}
+
+#registreren input:focus {
+  box-shadow: 0px 0px 3px 3px #3b3b3b;
+  transition: color 0.4s, background-color 0.4s;
+}
+
+#registreren form input[type=text], [type=password], select {
+  width: 100%;
+}
+
+input[type=submit]{
+  background-color: #A30000;
+  border: none;
+  color: #FFFBBD;
+  cursor: pointer;
+  padding: 1vh;
   
-  #registreren tr:hover {
-     background-color: #A30000;
-  }
-  #registreren input:focus{
-    /* border: 3px solid #A30000; */
-    box-shadow: 0px 0px 3px 3px #A30000;
-  }
-
-
-    form input[type=text], [type=password], select {
-      width: 100%;
-   }
-
+}
