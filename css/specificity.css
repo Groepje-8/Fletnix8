@@ -1,19 +1,32 @@
-/* Add a black background color to the top navigation */
-
 /*                                                   
 Achtergrond: #343330
-Meeste andere elementen(behalve tekst) zoals balkjes e.d.: #93A8AC
+Meeste andere elementen(behalve tekst) zoals balkjes e.d.: #262626
 Tekst: #FFFBBD
 Alles wat eruit moet springen: #DF2935
 */
 
+@import url(/font/Roboto-Regular.ttf);
 body {
     background-color: #343330;
 }
 
 h1, h2, p, form {
     text-align: center;
-    color: #FFFBBD
+    color: #FFFBBD;
+    padding: 1vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    width: 100%;
+    margin: 0 auto 0 auto;
+    overflow: visible;
+    grid-gap: 10px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 'header header header header' 'title title title title' 'main main main main' 'registreren registreren loginform loginform ' 'footer footer footer footer';
+    /* background-color: whitesmoke; */
 }
 
 header {
@@ -22,6 +35,7 @@ header {
     overflow: hidden;
     box-shadow: 2px 2px 4px black;
     margin-top: 0px;
+    height: 5vh;
     width: 100%;
 }
 
@@ -29,9 +43,15 @@ header a {
     float: left;
     color: #FFFBBD;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1.5vh 1.5vh;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 2vh;
+}
+
+.dropdown:hover .dropdown-content:hover+header a {
+    background-color: #f1f1f1;
+    color: black;
+    box-shadow: 0px 0px 20px #FFFBBD;
 }
 
 header a:hover {
@@ -40,32 +60,86 @@ header a:hover {
     box-shadow: 0px 0px 20px #FFFBBD;
 }
 
+.dropdown {
+    position: relative;
+    overflow: visible;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: inline-block;
+}
+
 #Profiel {
     float: right;
 }
 
-@media only screen and (min-width: 760px) {
-    .grid-container {
-        display: grid;
-        width: 100%;
-        margin: 0 auto 0 auto;
-        overflow: visible;
-        grid-gap: 10px;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        'header header header header'
-         'title title title title'
-          'main main main main' 
-          'registreren registreren loginform loginform '
-           'footer footer footer footer';
-        /* background-color: whitesmoke; */
-    }
+footer {
+    grid-area: footer;
+    margin-bottom: 0%;
+    margin-top: 10vh;
+    background-color: #262626;
+    overflow: hidden;
+    font-size: 2vh;
+    text-align: center;
+    margin-bottom: 0px;
+   
+
+}
+
+footer a {
+    color: #FFFBBD;
+    text-decoration: underline;
+    position: relative;
+}
+
+footer a::after {
+    content: "";
+    background: #FFFBBD;
+    mix-blend-mode: exclusion;
+    width: calc(100% + 20px);
+    height: 0;
+    position: absolute;
+    bottom: -4px;
+    left: -10px;
+    transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+footer a:hover::after {
+    height: calc(100% + 8px);
+}
+
+footer p {
+    margin: 0px;
+    padding: 2px;
+}
+
+footer li {
+    display: inline-block;
+    list-style: none;
+    padding-left: 2vh;
+    padding-right: 2vh;
 }
 
 main {
     grid-area: main;
-    padding: 1em;
+    padding: 1vh;
+    margin-top: 3vh;
 }
 
 .title {
@@ -78,104 +152,46 @@ main {
     margin-bottom: 2vh;
 }
 
+form {
+    font-size: larger;
+}
+
 .registreerform {
     grid-area: registreren;
     float: right;
-    padding: 1em;
     background-color: #262626;
-    /* margin-left: 45%;
-    margin-right: 0%; */
     text-align: center;
     box-shadow: 2px 2px 4px black;
-    
-    min-width:5vw;
     line-height: 3vh;
     font-size: 2.5vh;
-    max-width: 50%;
-    margin-left: 23vw; transform: translate(-1%); 
+    width: 45%;
+    height: 25vh;
+    margin-left: 20vw;
+    /* transform: translate(-1%); */
 }
 
 .loginform {
     grid-area: loginform;
     float: left;
-    padding: 1em;
-    /* Margin-right: 35%;
-    margin-left: 20%; */
     background-color: #262626;
     text-align: center;
     box-shadow: 2px 2px 4px black;
     line-height: 3vh;
     font-size: 2.5vh;
-    margin-right: 15vw; transform: translate(10%); 
-    
-    max-width: 50%;
-    
-}
-
-.loginform form label {
-    float: left;
-    margin-left: 25%;
-}
-
-.registreerform p {
-    padding: 1em;
-}
-
-/* .loginform form {
-    clear: right;
-} */
-
-footer {
-    grid-area: footer;
-    margin-bottom: 0%;
-    padding-top: 20px;
-}
-
-.dropdown {
-    /* position: relative; */
-    /* display: inline-block; */
-    overflow: visible;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 14px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Show the dropdown menu on hover */
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-form {
-    font-size: larger;
+    width: 45%;
+    /* transform: translate(10%); */
 }
 
 form input[type=text], [type=password] {
     border: none;
-    border-bottom: 4px #A30000;
     transition: width 0.8s ease-in-out;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    margin-bottom: 2vh;
+    width: 80%;
 }
 
-form input[type=text]:focus {
-    border: 2px solid #A30000;
-}
-
-form input[type=password]:focus {
-    border: 2px solid #A30000;
+form input[type=text]:focus, [type=password]:focus {
+    border: 3px solid #A30000;
 }
 
 form input[type=submit] {
@@ -189,11 +205,12 @@ form input[type=submit] {
 
 form input[type=submit]:hover {
     background-color: whitesmoke;
-    border: -5px#384d48;
     color: #A30000;
     transition: color 0.4s, background-color 0.4s;
 }
-main video{
-    margin-left: 50vw; transform: translate(-50%); 
+
+main video {
+    margin-left: 50vw;
+    transform: translate(-50%);
     max-width: 60%;
 }
