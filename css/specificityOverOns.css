@@ -8,23 +8,25 @@
     grid-template-rows: auto;
     grid-template-areas: 'header header header ' 'main main main' 'footer footer footer';
 }
-h1{
-    font-size: 2vh;
-}
-p{
-    font-size:1vh;
-    
+
+h1 {
+    font-size: 2vw;
 }
 
-main{
-    grid-area: main;
-    display:flex;
-    flex-direction:column;
-    margin-left: 15vw;
-    margin-right:15vw;
-  
+p {
+    font-size: 1vw;
+    min-width: font;
 }
-img{
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+img {
     float: left;
     height: auto;
     min-width: 10%;
@@ -32,16 +34,16 @@ img{
     margin-right: 10px;
 }
 
-
-.top ,.middle ,.bottom {
+.top, .middle, .bottom {
     margin-bottom: 20px;
     background: #262626;
 }
 
 @media only screen and (max-width: 1300px) {
-    footer{
-    position: absolute;
-    bottom:0;
-    width: 100%;
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
 }
-  }
+
