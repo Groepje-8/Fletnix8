@@ -125,9 +125,16 @@
   opacity: 0.9;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 1100px) {
   .dropbtn{
-    margin-left: 170vh;
+    margin-left: 80vh;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+  .dropbtn{
+    margin-left: 40vh;
   }
 
 }
