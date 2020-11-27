@@ -186,7 +186,8 @@ form input[type=text], [type=password] {
     width: 80%;
 }
 
-form input[type=text]:focus, [type=password]:focus {
+
+.loginform form input[type=text]:focus, .loginform input [type=password]:focus {
     border: 3px solid #A30000;
 }
 
