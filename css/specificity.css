@@ -165,7 +165,6 @@ form {
     width: 45%;
     height: 25vh;
     margin-left: 20vw;
-    /* transform: translate(-1%); */
 }
 
 .loginform {
@@ -177,7 +176,6 @@ form {
     line-height: 3vh;
     font-size: 2.5vh;
     width: 45%;
-    /* transform: translate(10%); */
 }
 
 form input[type=text], [type=password] {
@@ -218,34 +216,35 @@ main video {
         height: 3vw;
     }
     header a {
-        padding:0.5vw;
-        font-size:2vw;
+        padding: 0.5vw;
+        font-size: 2vw;
     }
 }
+
 @media only screen and (max-width: 720px) {
     header {
         height: 5vw;
     }
     header a {
-        padding:1vw;
-        font-size:3vw;
+        padding: 1vw;
+        font-size: 3vw;
     }
-    .dropdown-content a{
+    .dropdown-content a {
         padding: 1vw 1.2vw;
     }
 }
+
 @media only screen and (max-width: 480px) {
     header {
         height: 10vw;
     }
     header a {
-        padding:2vw;
-        font-size:5vw;
+        padding: 2vw;
+        font-size: 5vw;
     }
-    .dropdown-content a{
+    .dropdown-content a {
         padding: 2vw 2.4vw;
         max-width: 80px;
         overflow: hidden;
     }
-  
 }
