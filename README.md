@@ -64,7 +64,6 @@ Een statische website met pure HTML en CSS op basis van wireframes.
     <summary>
     <time>
 
-
 ## Takenverdeling
 
 ### Jorian
