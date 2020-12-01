@@ -1,5 +1,4 @@
-
-.film{
+.film {
   grid-area: film;
 }
 
@@ -35,7 +34,6 @@
   justify-content: space-evenly;
 }
 
-
 .dropbtn {
   background-color: #93A8AC;
   color: #FFFBBD;
@@ -43,32 +41,59 @@
   font-size: 18px;
   border: none;
   cursor: pointer;
+  margin-left: 170vh;
 }
 
 .dropbtn:hover {
   background-color: #DF2935;
 }
 
-  /* The container <div> - needed to position the dropdown content */
-.dropdown {
+/* The container <div> - needed to position the dropdown content */
+
+.flexbox-titel .dropdown {
   position: relative;
   display: inline-block;
 }
 
-  /* Dropdown Content (Hidden by Default) */
-.dropdown-content {
+/* Dropdown Content (Hidden by Default) */
+
+.flexbox-titel .dropdown-content {
   display: none;
   position: absolute;
   right: 0;
   width: 500px;
-  box-shadow: 5px 5px 20px 30px rgba(0,0,0,0.2);
-  background-color: #343330;
+  box-shadow: 5px 5px 20px 30px rgba(0, 0, 0, 0.2);
+  background-color: #262626;
   color: #FFFBBD;
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
+
+.dropdown button {
+  float: right;
+  margin-bottom: 5vh;
+  background-color: #A30000;
+  border: none;
+  color: #FFFBBD;
+}
+
+.flexbox-titel .dropdown:hover .flexbox-titel .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: left;
+  padding: 2px;
+}
+
+.flexbox-titel .dropdown input[type='checkbox'] {
+  border-radius: 7px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.flexbox-titel .dropdown label::after {
+  content: "\a";
+  white-space: pre;
 }
 
 .filter-header input {
@@ -98,4 +123,18 @@
 
 .column label {
   opacity: 0.9;
+}
+
+@media only screen and (max-width: 1100px) {
+  .dropbtn{
+    margin-left: 80vh;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+  .dropbtn{
+    margin-left: 40vh;
+  }
+
 }

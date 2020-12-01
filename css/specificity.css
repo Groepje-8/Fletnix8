@@ -17,17 +17,7 @@ h1, h2, p, form {
     font-family: 'Roboto', sans-serif;
 }
 
-.grid-container {
-    display: grid;
-    width: 100%;
-    margin: 0 auto 0 auto;
-    overflow: visible;
-    grid-gap: 10px;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: 'header header header header' 'title title title title' 'main main main main' 'registreren registreren loginform loginform ' 'footer footer footer footer';
-    /* background-color: whitesmoke; */
-}
+
 
 header {
     grid-area: header;
@@ -84,10 +74,10 @@ header a:hover {
 .dropdown:hover .dropdown-content {
     display: inline-block;
 }
-
 #Profiel {
     float: right;
 }
+
 
 footer {
     grid-area: footer;
@@ -154,29 +144,7 @@ form {
     font-size: larger;
 }
 
-.registreerform {
-    grid-area: registreren;
-    float: right;
-    background-color: #262626;
-    text-align: center;
-    box-shadow: 2px 2px 4px black;
-    line-height: 3vh;
-    font-size: 2.5vh;
-    width: 45%;
-    height: 25vh;
-    margin-left: 20vw;
-}
 
-.loginform {
-    grid-area: loginform;
-    float: left;
-    background-color: #262626;
-    text-align: center;
-    box-shadow: 2px 2px 4px black;
-    line-height: 3vh;
-    font-size: 2.5vh;
-    width: 45%;
-}
 
 form input[type=text], [type=password] {
     border: none;
@@ -186,9 +154,8 @@ form input[type=text], [type=password] {
     width: 80%;
 }
 
-form input[type=text]:focus, [type=password]:focus {
-    border: 3px solid #A30000;
-}
+
+
 
 form input[type=submit] {
     background-color: #A30000;

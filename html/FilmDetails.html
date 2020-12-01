@@ -13,28 +13,31 @@
 <body>
     <header>
         <div class="dropdown">
-            <a class="active" href="/index.html">&#9776</a>
+            <a class="active" href="/index.html">&#9776;</a>
             <div class="dropdown-content">
                 <a href="/html/Abbonement.html">Abbonementen</a>
-                <a href="/html/FilmOverzicht.html">Filmoverzicht</a>                   
+                <a href="/html/FilmOverzicht.html">Filmoverzicht</a>
             </div>
         </div>
         <a id="Profiel" href="/html/ProfielPagina.html">$Naam</a>
     </header>
     <main>
         <div class="terugknop">
-            <a href="FilmOverzicht.html"><button class="button">Terug naar assortiment</button></a>
+
+            <form action="/html/FilmOverzicht.html">
+                <input type="submit" value="Terug naar assortiment" />
+            </form>
         </div>
         <div class="titel">
             <h1>Tenet</h1>
             <h2>2020 - Christopher Nolan</h2>
-            <a href="FilmOverzicht.html#specifiekeregisseur">
+            <a href="/html/FilmOverzicht.html">
                 <p>Meer van deze regisseur</p>
             </a>
             <h3>Actie - Sciencefiction</h3>
         </div>
         <div class="beschrijving">
-            
+
             <h2>Samenvatting</h2>
             <p>Bewapend met maar een woord, Tenet, en vechtend voor het overleven van de hele wereld reist onze
                 hoofdpersoon
@@ -51,8 +54,14 @@
             <img src="/img/poster.jpg" alt="Poster">
         </div>
         <div class="knoppen">
-            <a href="MediaPlayer.html"><button class="button">Bekijk Trailer</button></a> <br>
-            <a href="MediaPlayer.html"><button class="button">Bekijk Film</button></a>
+            <a href="/html/MediaPlayer.html">
+                <p>Bekijk Trailer</p>
+            </a>
+            <br>
+            <a href="/html/MediaPlayer.html">
+                <p>Bekijk Film</p>
+            </a>
+
         </div>
         <div class="acteurgrid">
             <div>
@@ -73,7 +82,7 @@
             </div>
         </div>
     </main>
- 
+
     <footer>
         <ul>
             <li><a href="/html/OverOns.html">Over ons</a> </li>

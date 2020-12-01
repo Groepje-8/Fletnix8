@@ -1,0 +1,51 @@
+.grid-container {
+    display: grid;
+    width: 100%;
+    margin: 0 auto 0 auto;
+    overflow: visible;
+    grid-gap: 10px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 'header header header header' 'title title title title' 'main main main main' 'registreren registreren loginform loginform ' 'footer footer footer footer';
+    /* background-color: whitesmoke; */
+}
+
+.registreerform {
+    grid-area: registreren;
+    background-color: #262626;
+    text-align: center;
+    box-shadow: 2px 2px 4px black;
+    line-height: 3vh;
+    font-size: 2.5vh;
+    width: 45%;
+    margin-left: 49%;
+}
+
+.loginform {
+    grid-area: loginform;
+    background-color: #262626;
+    text-align: center;
+    box-shadow: 2px 2px 4px black;
+    line-height: 3vh;
+    font-size: 2.5vh;
+    width: 45%;
+    height: 100%;
+    margin-left: 20%;
+}
+
+.loginform form input[type=text]:focus, .loginform input [type=password]:focus {
+    border: 3px solid #A30000;
+}
+
+@media only screen and (max-width: 630px) {
+    h2{
+        font-size: 1.8vh;
+    }
+    .grid-container {
+        grid-template-areas: 'header header header header' 'title title title title' 'main main main main' 'registreren registreren registreren registreren ' 'loginform loginform loginform loginform''footer footer footer footer';
+    }
+    .registreerform , .loginform{
+        margin-left: 30%;
+        width: 50%;
+    }
+}
