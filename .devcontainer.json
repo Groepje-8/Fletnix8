@@ -1,0 +1,12 @@
+{
+    "name": "Fletnix",
+    "dockerComposeFile": ["docker-compose.yml"],
+    "forwardPorts": [8080],
+    "service": "webserver",
+    "workspaceFolder": "/srv/webserver",
+    "shutdownAction": "none",
+    "extensions": [
+        "sleistner.vscode-fileutils",
+        "timonwong.shellcheck",
+    ]
+}
