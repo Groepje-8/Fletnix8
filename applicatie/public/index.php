@@ -12,8 +12,6 @@
 
 </head>
 
-
-
 <body>
     <div class="grid-container">
         <?=include "html/Components/header.php";?>
@@ -33,7 +31,7 @@
         <div class="registreerform">
             <p>Registeer je nu en betaal de eerste maand 0 euro!</p>
 
-            <form action="/html/Abbonement.html">
+            <form action="/html/Abbonement.php">
                 <input type="submit" value="Registeer" />
             </form>
         </div>
@@ -41,7 +39,7 @@
         <div class="loginform">
             <p>Of log in als je al een account hebt</p>
 
-            <form action="/html/FilmOverzicht.html">
+            <form action="/html/FilmOverzicht.php">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" pattern="[a-zA-Z]+">
                 <label for="password">Password:</label>

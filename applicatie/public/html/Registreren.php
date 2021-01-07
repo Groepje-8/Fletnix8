@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    var_dump($_SESSION);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,9 +18,8 @@
     <?=include "Components/header.php";?>
 
     <h1>Registratie formulier</h1>
-    <form action="/html/ProfielPagina.php" method="GET" id="profielform">
+    <form action=Components/registreerSession.php method="POST" id="profielform">
         <table id="registreren">
-
             <tr>
                 <td>
                     <label for="vnaam">Voornaam:</label>
@@ -70,7 +73,11 @@
                     <label for="abb">Abonnement:</label>
                 </td>
                 <td>
-                    <input type="text" id="abb" name="abb">
+                    <select id="abb" name="abb">
+                        <option value="beginner" <?php if($_GET['abb']=="beginner") {echo "selected";}?> >Beginner</option>
+                        <option value="standaard" <?php if($_GET['abb']=="standaard") {echo "selected";}?> >Standaard</option>
+                        <option value="professioneel" <?php if($_GET['abb']=="professioneel") {echo "selected";}?> >Professioneel</option>
+                    </select>
                 </td>
             </tr>
             <tr>
@@ -94,17 +101,15 @@
             <tr>
                 <td>
                     <input type="submit" value="Verzend">
-
-
                 </td>
             </tr>
 
         </table>
     </form>
+    <p><?php echo $_SESSION['errormessage'];?></p>
     <p> Klik op "verzend" knop om U account aan te maken en door te gaan naar U profielpagina.<br>
         Hier kunt U de informatie nalezen en controleren op eventuelen fouten.</p>
 
     <?=include "Components/footer.php";?>
 </body>
-
 </html>

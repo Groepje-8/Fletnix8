@@ -14,9 +14,10 @@
 <body>
     <div class="grid-container">
         <?=include "Components/header.php";?>
+
         <main>
             <h1>Selecteer je gewenste abbonement</h1>
-        <a href="/html/Registreren.php">
+        <a href="/html/Registreren.php?abb=beginner">
         <div class="Abbonement1">
             
             <img src="/img/placeholder.png" width="80" height="80" alt="Abbo1">
@@ -25,7 +26,7 @@
                 zien!</p>
         </div>
     </a>
-    <a href="/html/Registreren.php">
+    <a href="/html/Registreren.php?abb=standaard">
         <div class="Abbonement2">
             
             <img src="/img/placeholder.png" width="80" height="80" alt="Abbo2">
@@ -33,7 +34,7 @@
             <p>Met het standaard abbonement kun je alle films zien die niet meer in de bioscoop draaien en series een week voordat ze op tv komen!</p>
         </div>
     </a>
-    <a href="/html/Registreren.php">
+    <a href="/html/Registreren.php?abb=professioneel">
         <div class="Abbonement3">
             
             <img src="/img/placeholder.png" width="80" height="80" alt="Abbo3">
@@ -47,6 +48,5 @@
     <?=include "Components/footer.php";?>
     </div>
 </body>
-
-
+ 
 </html>
