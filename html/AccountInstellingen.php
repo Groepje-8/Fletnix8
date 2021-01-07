@@ -26,7 +26,7 @@
 
         <div class="Accountdetails">
             <h2> Account details </h2>
-            <form action="AccountInstellingen.html" method="GET">
+            <form action="AccountInstellingen.php" method="GET">
                 <ul>
                     <li> <label for="gnaamVerander">Gebruikersnaam veranderen:</label>
                         <input pattern="[a-zA-Z]+" type="text" id="gnaamVerander" name="gnaamVerander"></li>
@@ -44,7 +44,7 @@
 
         <div class="Instellingen">
             <h2> Instellingen</h2>
-            <form action="AccountInstellingen.html" method="GET">
+            <form action="AccountInstellingen.php" method="GET">
                 <ul>
                     <li><label for="lang">Kies een taal:</label>
                         <select name="lang" id="lang">

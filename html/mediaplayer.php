@@ -15,15 +15,15 @@
 
     <main>
 
-        <form action="/html/FilmDetails.html">
+        <form action="/html/FilmDetails.php">
             <input type="submit" value="Terug naar overzicht" />
         </form>
 
-        <form action="/html/MediaPlayer.html">
+        <form action="/html/MediaPlayer.php">
             <input type="submit" value="Volgende aflevering" />
         </form>
 
-        <form action="/html/MediaPlayer.html">
+        <form action="/html/MediaPlayer.php">
             <input type="submit" value="Vorige aflevering" />
         </form>
 

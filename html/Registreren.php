@@ -14,7 +14,7 @@
     <?=include "Components/header.php";?>
 
     <h1>Registratie formulier</h1>
-    <form action="/html/ProfielPagina.html" method="GET" id="profielform">
+    <form action="/html/ProfielPagina.php" method="GET" id="profielform">
         <table id="registreren">
 
             <tr>

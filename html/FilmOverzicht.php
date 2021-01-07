@@ -15,16 +15,16 @@
     <h1>Nieuwe Films</h1>
     <div class="flexbox">
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
     </div>
     <h2>Assortiment</h2>
@@ -118,58 +118,58 @@
     
     <div class="flexbox-assortiment">
         <div> 
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
-            <a href="FilmDetails.html"><img src="/img/placeholder.png" alt="Poster"></a>
+            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
     </div>
 

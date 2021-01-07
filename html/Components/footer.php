@@ -1,7 +1,7 @@
 <footer>
     <ul>
-        <li><a href="/html/OverOns.html">Over ons</a> </li>
-        <li><a href="/html/ProfielPagina.html">Account</a> </li>
+        <li><a href="/html/OverOns.php">Over ons</a> </li>
+        <li><a href="/html/ProfielPagina.php">Account</a> </li>
         <li><a href="#">veelgestelde vragen</a> </li>
     </ul>
     <p>Vragen? Bel 0800-123-4567 </p>

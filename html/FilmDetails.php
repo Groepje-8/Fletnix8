@@ -16,14 +16,14 @@
     <main>
         <div class="terugknop">
 
-            <form action="/html/FilmOverzicht.html">
+            <form action="/html/FilmOverzicht.php">
                 <input type="submit" value="Terug naar assortiment" />
             </form>
         </div>
         <div class="titel">
             <h1>Tenet</h1>
             <h2>2020 - Christopher Nolan</h2>
-            <a href="/html/FilmOverzicht.html">
+            <a href="/html/FilmOverzicht.php">
                 <p>Meer van deze regisseur</p>
             </a>
             <h3>Actie - Sciencefiction</h3>
@@ -46,11 +46,11 @@
             <img src="/img/poster.jpg" alt="Poster">
         </div>
         <div class="knoppen">
-            <a href="/html/MediaPlayer.html">
+            <a href="/html/MediaPlayer.php">
                 <p>Bekijk Trailer</p>
             </a>
             <br>
-            <a href="/html/MediaPlayer.html">
+            <a href="/html/MediaPlayer.php">
                 <p>Bekijk Film</p>
             </a>
 

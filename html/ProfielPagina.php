@@ -26,7 +26,7 @@
         </div>
 
         <div class="Accountdetails">
-                <form action="AccountInstellingen.html" method="GET">
+                <form action="AccountInstellingen.php" method="GET">
                     <ul>
                     <li><label for="vnaam">Voornaam:</label>
                     <input type="text" id="vnaam" name="vnaam" value="Test" readonly></li>

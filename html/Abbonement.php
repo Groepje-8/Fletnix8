@@ -16,7 +16,7 @@
         <?=include "Components/header.php";?>
         <main>
             <h1>Selecteer je gewenste abbonement</h1>
-        <a href="/html/Registreren.html">
+        <a href="/html/Registreren.php">
         <div class="Abbonement1">
             
             <img src="/img/placeholder.png" width="80" height="80" alt="Abbo1">
@@ -25,7 +25,7 @@
                 zien!</p>
         </div>
     </a>
-    <a href="/html/Registreren.html">
+    <a href="/html/Registreren.php">
         <div class="Abbonement2">
             
             <img src="/img/placeholder.png" width="80" height="80" alt="Abbo2">
@@ -33,7 +33,7 @@
             <p>Met het standaard abbonement kun je alle films zien die niet meer in de bioscoop draaien en series een week voordat ze op tv komen!</p>
         </div>
     </a>
-    <a href="/html/Registreren.html">
+    <a href="/html/Registreren.php">
         <div class="Abbonement3">
             
             <img src="/img/placeholder.png" width="80" height="80" alt="Abbo3">
@@ -41,8 +41,6 @@
             <p>Met het professional abbonement kun je alle films zien VOORDAT ze in de bioscoop draaien, voor series geld het zelfde als het standaard abbonement</p>
         </div>
         </a>
-
-        
 
     </main>
 
