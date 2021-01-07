@@ -80,7 +80,7 @@
         </div>
     </main>
 
-    
+    <?=include "Components/footer.php";?>
 </body>
 
 </html>

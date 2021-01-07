@@ -107,7 +107,4 @@
     <?=include "Components/footer.php";?>
 </body>
 
-
-
-
 </html>
