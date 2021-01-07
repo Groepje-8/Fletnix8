@@ -12,16 +12,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="dropdown">
-            <a class="active" href="/index.html">&#9776;</a>
-            <div class="dropdown-content">
-                <a href="/html/Abbonement.html">Abbonementen</a>
-                <a href="/html/FilmOverzicht.html">Filmoverzicht</a>                   
-            </div>
-        </div>
-        <a id="Profiel" href="/html/ProfielPagina.html">$Naam</a>
-    </header>
+    <?=include "Components/header.php";?>
 
     <main>
         <div class="Beschrijving">
@@ -43,7 +34,7 @@
                         <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="text" id="nww" name="nww"
                             title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters"></li>
                     <li><label for="betaalinfo">Betaalinformatie:</label>
-                        <input pattern="[a-zA-Z0-9]+" type="text" id="betaalinfo" name="betaalinfo"></li>
+                        <input pattern="[a-zA-Z0-9]+" type="text" id="betaalinfo" name="betaalinfo"></li>øó
                 </ul>
                 <div class="Verzenden">
                     <input type="submit" value="Update">
@@ -89,17 +80,7 @@
         </div>
     </main>
 
-    <footer>
-        <ul>
-            <li><a href="/html/OverOns.html">Over ons</a> </li>
-            <li><a href="/html/ProfielPagina.html">Account</a> </li>
-            <li><a href="#">veelgestelde vragen</a> </li>
-        </ul>
-        <p>Vragen? Bel 0800-123-4567 </p>
-        <p> Alle rechten voorbehouden door Fletnix&#169; inc. </p>
-        <p> Het kopiëren/distribueren van ons assortiment is ten strikste verboden en daders zullen strafrechtelijk
-            vervolgd worden.</p>
-    </footer>
+    
 </body>
 
 </html>
