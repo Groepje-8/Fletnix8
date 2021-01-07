@@ -11,27 +11,19 @@
 </head>
 
 <body>
-    <header>
-        <div class="dropdown">
-            <a class="active" href="/index.html">&#9776;</a>
-            <div class="dropdown-content">
-                <a href="/html/Abbonement.html">Abbonementen</a>
-                <a href="/html/FilmOverzicht.html">Filmoverzicht</a>
-            </div>
-        </div>
-        <a id="Profiel" href="/html/ProfielPagina.html">$Naam</a>
-    </header>
+    <?=include "Components/header.php";?>
+
     <main>
         <div class="terugknop">
 
-            <form action="/html/FilmOverzicht.html">
+            <form action="/html/FilmOverzicht.php">
                 <input type="submit" value="Terug naar assortiment" />
             </form>
         </div>
         <div class="titel">
             <h1>Tenet</h1>
             <h2>2020 - Christopher Nolan</h2>
-            <a href="/html/FilmOverzicht.html">
+            <a href="/html/FilmOverzicht.php">
                 <p>Meer van deze regisseur</p>
             </a>
             <h3>Actie - Sciencefiction</h3>
@@ -54,11 +46,11 @@
             <img src="/img/poster.jpg" alt="Poster">
         </div>
         <div class="knoppen">
-            <a href="/html/MediaPlayer.html">
+            <a href="/html/MediaPlayer.php">
                 <p>Bekijk Trailer</p>
             </a>
             <br>
-            <a href="/html/MediaPlayer.html">
+            <a href="/html/MediaPlayer.php">
                 <p>Bekijk Film</p>
             </a>
 
@@ -83,17 +75,7 @@
         </div>
     </main>
 
-    <footer>
-        <ul>
-            <li><a href="/html/OverOns.html">Over ons</a> </li>
-            <li><a href="/html/ProfielPagina.html">Account</a> </li>
-            <li><a href="#">veelgestelde vragen</a> </li>
-        </ul>
-        <p>Vragen? Bel 0800-123-4567 </p>
-        <p> Alle rechten voorbehouden door Fletnix&#169; inc. </p>
-        <p> Het kopiëren/distribueren van ons assortiment is ten strikste verboden en daders zullen strafrechtelijk
-            vervolgd worden.</p>
-    </footer>
+    <?=include "Components/footer.php";?>
 </body>
 
 </html>

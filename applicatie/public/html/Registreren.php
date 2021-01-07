@@ -11,19 +11,10 @@
 </head>
 
 <body>
-    <header>
-        <div class="dropdown">
-            <a class="active" href="/index.html">&#9776;</a>
-            <div class="dropdown-content">
-                <a href="/html/Abbonement.html">Abbonementen</a>
-                <a href="/html/FilmOverzicht.html">Filmoverzicht</a>
-            </div>
-        </div>
-        <a id="Profiel" href="/html/ProfielPagina.html">$Naam</a>
-    </header>
+    <?=include "Components/header.php";?>
 
     <h1>Registratie formulier</h1>
-    <form action="/html/ProfielPagina.html" method="GET" id="profielform">
+    <form action="/html/ProfielPagina.php" method="GET" id="profielform">
         <table id="registreren">
 
             <tr>
@@ -113,20 +104,7 @@
     <p> Klik op "verzend" knop om U account aan te maken en door te gaan naar U profielpagina.<br>
         Hier kunt U de informatie nalezen en controleren op eventuelen fouten.</p>
 
-    <footer>
-        <ul>
-            <li><a href="/html/OverOns.html">Over ons</a> </li>
-            <li><a href="/html/ProfielPagina.html">Account</a> </li>
-            <li><a href="#">veelgestelde vragen</a> </li>
-        </ul>
-        <p>Vragen? Bel 0800-123-4567 </p>
-        <p> Alle rechten voorbehouden door Fletnix&#169; inc. </p>
-        <p> Het kopiëren/distribueren van ons assortiment is ten strikste verboden en daders zullen strafrechtelijk
-            vervolgd worden.</p>
-    </footer>
+    <?=include "Components/footer.php";?>
 </body>
-
-
-
 
 </html>
