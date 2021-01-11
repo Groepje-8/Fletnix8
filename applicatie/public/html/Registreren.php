@@ -1,6 +1,12 @@
 <?php
-    session_start();
-    var_dump($_SESSION);
+include "Components/sessionStart.php";
+    
+if(isset($_SESSION['errormessage'])){
+    $errormessage = $_SESSION['errormessage'];
+}
+else {
+    $errormessage = "";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -106,7 +112,7 @@
 
         </table>
     </form>
-    <p><?php echo $_SESSION['errormessage'];?></p>
+    <p><?= $errormessage;?></p>
     <p> Klik op "verzend" knop om U account aan te maken en door te gaan naar U profielpagina.<br>
         Hier kunt U de informatie nalezen en controleren op eventuelen fouten.</p>
 

@@ -1,3 +1,7 @@
+<?php
+include "Components/sessionStart.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 

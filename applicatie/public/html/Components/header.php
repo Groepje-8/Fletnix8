@@ -3,7 +3,7 @@ if (isset($_SESSION['gnaam'])){
     $naam = $_SESSION['gnaam'];
 }
 else {
-    $naam = "profiel";
+    $naam = "profiel"; 
 }
 ?>
 <header>

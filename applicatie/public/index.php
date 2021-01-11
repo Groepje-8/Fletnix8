@@ -1,3 +1,6 @@
+<?php
+include "Components/sessionStart.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +42,7 @@
         <div class="loginform">
             <p>Of log in als je al een account hebt</p>
 
-            <form action="/html/FilmOverzicht.php">
+            <form action="Components/inlogSession.php" method="POST">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" pattern="[a-zA-Z]+">
                 <label for="password">Password:</label>
