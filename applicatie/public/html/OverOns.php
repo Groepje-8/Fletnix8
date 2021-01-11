@@ -1,22 +1,18 @@
 <?php
 include "Components/sessionStart.php";
-
-?>
-
-<?php
-    require_once "Components/header.php";
-    header_function("OverOns");
+require_once "Components/header.php";
+header_function("OverOns");
 ?>
 
 <body>
 
     <div class="grid-container">
-    <?php require_once "Components/navbar.php";  ?>
+        <?php require_once "Components/navbar.php";  ?>
 
         <main>
-            
+
             <div class="top">
-                <img src="/img/placeholder.png" alt="top" >
+                <img src="/img/placeholder.png" alt="top">
                 <h1> Wie wij zijn </h1>
                 <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
@@ -51,7 +47,7 @@ include "Components/sessionStart.php";
 
 
             <div class="bottom">
-                <img src="/img/placeholder.png" alt="bottom" >
+                <img src="/img/placeholder.png" alt="bottom">
                 <h1> Wat ons doel is </h1>
                 <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
@@ -68,7 +64,7 @@ include "Components/sessionStart.php";
             </div>
 
         </main>
-        <?php include "Components/footer.php";?>
+        <?php include "Components/footer.php"; ?>
     </div>
 </body>
 
