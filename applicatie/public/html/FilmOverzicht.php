@@ -168,7 +168,7 @@ header_function("FilmOverzicht");
         </div>
     </div>
 
-    <?phphp include "Components/footer.php"; ?>
+    <?php include "Components/footer.php"; ?>
 </body>
 
 </html>

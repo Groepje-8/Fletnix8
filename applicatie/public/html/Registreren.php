@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registreren</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/specificity.css">
-    <link rel="stylesheet" href="/css/Registreren.css">
-</head>
+<?php
+require_once "Components/header.php";
+header_function("Registreren");
+?>
 
 <body>
-    <?=include "Components/header.php";?>
+    <?php include "Components/header.php"; ?>
 
     <h1>Registratie formulier</h1>
     <form action="/html/Includes/Registratie.php" method="POST" id="profielform">
@@ -77,8 +70,7 @@
                     <label for="ww">Wachtwoord:</label>
                 </td>
                 <td>
-                    <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="ww" name="ww"
-                        title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters">
+                    <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="ww" name="ww" title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters">
                 </td>
             </tr>
             <tr>
@@ -86,8 +78,7 @@
                     <label for="hww">Herhaal wachtwoord:</label>
                 </td>
                 <td>
-                    <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="hww" name="hww"
-                        title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters">
+                    <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="hww" name="hww" title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters">
                 </td>
             </tr>
             <tr>
@@ -101,7 +92,7 @@
     <p> Klik op "verzend" knop om U account aan te maken en door te gaan naar U profielpagina.<br>
         Hier kunt U de informatie nalezen en controleren op eventuelen fouten.</p>
 
-    <?=include "Components/footer.php";?>
+    <?= include "Components/footer.php"; ?>
 </body>
 
 </html>
