@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/img/FletnixIcon.ico">
-    <title>Fletnix</title>
+    <title>Fletnix!</title>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/specificity.css">
     <link rel="stylesheet" href="/css/specificityIndex.css">
@@ -18,13 +18,13 @@
     <div class="grid-container">
         <header>
             <div class="dropdown">
-                <a class="active" href="/index.html">&#9776;</a>
+                <a class="active" href="/index.php">&#9776;</a>
                 <div class="dropdown-content">
-                    <a href="/html/Abbonement.html">Abbonementen</a>
-                    <a href="/html/FilmOverzicht.html">Filmoverzicht</a>
+                    <a href="/html/Abbonement.php">Abbonementen</a>
+                    <a href="/html/FilmOverzicht.php">Filmoverzicht</a>
                 </div>
             </div>
-            <a id="Profiel" href="/html/ProfielPagina.html">$Naam</a>
+            <a id="Profiel" href="/html/ProfielPagina.php">$Naam</a>
         </header>
 
 
@@ -44,7 +44,7 @@
         <div class="registreerform">
             <p>Registeer je nu en betaal de eerste maand 0 euro!</p>
 
-            <form action="/html/Abbonement.html">
+            <form action="/html/Abbonement.php">
                 <input type="submit" value="Registeer" />
             </form>
         </div>
@@ -52,7 +52,7 @@
         <div class="loginform">
             <p>Of log in als je al een account hebt</p>
 
-            <form action="/html/FilmOverzicht.html">
+            <form action="/html/FilmOverzicht.php">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" pattern="[a-zA-Z]+">
                 <label for="password">Password:</label>
@@ -63,8 +63,8 @@
 
         <footer>
             <ul>
-                <li><a href="/html/OverOns.html">Over ons</a> </li>
-                <li><a href="/html/ProfielPagina.html">Account</a> </li>
+                <li><a href="/html/OverOns.php">Over ons</a> </li>
+                <li><a href="/html/ProfielPagina.php">Account</a> </li>
                 <li><a href="#">veelgestelde vragen</a> </li>
             </ul>
             <p>Vragen? Bel 0800-123-4567 </p>

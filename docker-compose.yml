@@ -2,12 +2,13 @@ version: "3.7"
 services:
   webserver:
     build: .
+    dockerfile: Dockerfile
     command: |-
-      php -S 0.0.0.0:8080 -t /srv/webserver/applicatie/public/
+      php -S 0.0.0.0:8000 -t /srv/webserver/applicatie/public/
     working_dir: "/srv/webserver/applicatie"
     # TODO: check how to restrict to localhost
     ports:
-      - "8080"
+      - "8000"
         protocol: tcp
         mode: bridge
     healthcheck:
@@ -17,4 +18,4 @@ services:
       retries: 3
       start_period: 40s
     volumes:
-      - ./:/srv/webserver/:cached
+      - ./applicatie/public:/srv/webserver/

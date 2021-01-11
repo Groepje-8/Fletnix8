@@ -9,7 +9,7 @@ Een statische website met pure HTML en CSS op basis van wireframes.
 
 # Beoordelingsmodel
 
-[Beoordelingsmodel](https://isas.han.nl/Default.aspx?F=BekijkProtocol&Eigenaar=AIM&OWE=WTUX&Toets=BP_WTUX&Jaar=2020&Nr=8)
+[Beoordelingsmodel]()
 
 # Github link
 
@@ -21,7 +21,7 @@ Een statische website met pure HTML en CSS op basis van wireframes.
 
 # OpleverDocument
 
-[Opleverdocument](https://onedrive.live.com/view.aspx?resid=1C3ECD607C98C336!9079&ithint=file%2cdocx&authkey=!AEQO2UnNbCqpmSw)
+[Opleverdocument](nog in te vullen)
 
 ## Verbeteringen van de Leraar
 
@@ -86,9 +86,3 @@ Een statische website met pure HTML en CSS op basis van wireframes.
 1. Accountinstellingen
 1. Registreren
 1. ProfielPagina
-
-### Easter Egg
-
-We hebben overwogen om FletniXXX te maken DE naaktemensen website van de HAN.
-Een categorie die erg populair is onder onze doelgroep. 
-Helaas is er vanwege mogelijke repercussies besloten om dit toch niet te doen.
