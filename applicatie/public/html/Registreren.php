@@ -1,7 +1,7 @@
 <?php
     session_start();
     var_dump($_SESSION);
-    include "html/Components/header.php";
+    require_once "Components/header.php";
     header_function("Registeren");
 ?>
 

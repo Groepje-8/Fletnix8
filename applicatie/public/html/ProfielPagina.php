@@ -6,7 +6,7 @@ if(isset($_SESSION['gnaam'])){
 else {
     $data = ["-", "-", "-", "-", "-", "-", "-", "-"];
 }
-    include "html/Components/header.php";
+    require_once "Components/header.php";
     header_function("ProfielPagina");
 ?>
 

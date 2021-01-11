@@ -1,10 +1,10 @@
 <?=
-    include "html/Components/header.php";
-    Header("Abbonementen");
+    require_once "Components/header.php";
+    header_function("Abbonementen");
 ?>
 <body>
     <div class="grid-container">
-        <?=include "Components/header.php";?>
+        
 
         <main>
             <h1>Selecteer je gewenste abbonement</h1>
