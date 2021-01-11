@@ -1,26 +1,12 @@
 <?php
 include "Components/sessionStart.php";
-
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filmoverzicht</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/specificity.css">
-    <link rel="stylesheet" href="/css/FilmOverzicht.css">
-    
-</head>
-<?php
-    require_once "Components/header.php"; 
-    header_function("FilmOverzicht");
+require_once "Components/header.php";
+header_function("FilmOverzicht");
 ?>
 
 <body>
 
-<?php require_once "Components/navbar.php";  ?>
+    <?php require_once "Components/navbar.php";  ?>
     <h1>Nieuwe Films</h1>
     <div class="flexbox">
         <div>
@@ -182,7 +168,7 @@ include "Components/sessionStart.php";
         </div>
     </div>
 
-    <?php include "Components/footer.php"; ?>
+    <?phphp include "Components/footer.php"; ?>
 </body>
 
 </html>

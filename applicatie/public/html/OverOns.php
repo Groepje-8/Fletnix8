@@ -1,35 +1,18 @@
 <?php
 include "Components/sessionStart.php";
-
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/img/FletnixIcon.ico">
-    <title>Over Ons</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/specificity.css">
-    <link rel="stylesheet" href="/css/specificityOverOns.css">
-
-
-</head>
-<?php
-    require_once "Components/header.php";
-    header_function("OverOns");
+require_once "Components/header.php";
+header_function("OverOns");
 ?>
 
 <body>
 
     <div class="grid-container">
-    <?php require_once "Components/navbar.php";  ?>
+        <?php require_once "Components/navbar.php";  ?>
 
         <main>
-            
+
             <div class="top">
-                <img src="/img/placeholder.png" alt="top" >
+                <img src="/img/placeholder.png" alt="top">
                 <h1> Wie wij zijn </h1>
                 <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
@@ -64,7 +47,7 @@ include "Components/sessionStart.php";
 
 
             <div class="bottom">
-                <img src="/img/placeholder.png" alt="bottom" >
+                <img src="/img/placeholder.png" alt="bottom">
                 <h1> Wat ons doel is </h1>
                 <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
@@ -81,7 +64,7 @@ include "Components/sessionStart.php";
             </div>
 
         </main>
-        <?php include "Components/footer.php";?>
+        <?php include "Components/footer.php"; ?>
     </div>
 </body>
 
