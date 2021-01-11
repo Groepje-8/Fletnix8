@@ -15,7 +15,7 @@ include "Components/sessionStart.php";
     <link rel="stylesheet" href="/css/specificityAbbonementen.css">
 </head>
 
-<?=
+<?php
     require_once "Components/header.php";
     header_function("Abbonementen");
 ?>

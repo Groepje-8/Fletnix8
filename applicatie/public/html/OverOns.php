@@ -16,7 +16,7 @@ include "Components/sessionStart.php";
 
 
 </head>
-<?=
+<?php
     require_once "Components/header.php";
     header_function("OverOns");
 ?>

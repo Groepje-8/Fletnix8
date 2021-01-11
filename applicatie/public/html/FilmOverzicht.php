@@ -13,7 +13,7 @@ include "Components/sessionStart.php";
     <link rel="stylesheet" href="/css/FilmOverzicht.css">
     
 </head>
-<?=
+<?php
     require_once "Components/header.php"; 
     header_function("FilmOverzicht");
 ?>
