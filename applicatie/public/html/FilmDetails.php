@@ -13,9 +13,13 @@ include "Components/sessionStart.php";
     <link rel="stylesheet" href="/css/FilmDetails.css">
     <title>FilmDetails</title>
 </head>
+<?=
+    require_once "Components/header.php";
+    header_function("FilmDetails");
+?>
 
 <body>
-    <?=include "Components/header.php";?>
+  
 
     <main>
         <div class="terugknop">

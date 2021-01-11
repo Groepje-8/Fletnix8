@@ -6,21 +6,12 @@ if(isset($_SESSION['gnaam'])){
 else {
     $data = ["-", "-", "-", "-", "-", "-", "-", "-"];
 }
+    require_once "Components/header.php";
+    header_function("ProfielPagina");
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProfielPagina</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/specificity.css">
-    <link rel="stylesheet" href="/css/ProfielPagina.css">
-</head>
 
 <body>
-    <?=include "Components/header.php";?>
+    
     
     <main>
         <div class="Beschrijving">

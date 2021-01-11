@@ -13,8 +13,13 @@ include "Components/sessionStart.php";
     <link rel="stylesheet" href="/css/FilmOverzicht.css">
     
 </head>
+<?=
+    require_once "Components/header.php"; 
+    header_function("FilmOverzicht");
+?>
+
 <body>
-    <?=include "Components/header.php";?>
+
 
     <h1>Nieuwe Films</h1>
     <div class="flexbox">
@@ -33,9 +38,9 @@ include "Components/sessionStart.php";
     </div>
     <h2>Assortiment</h2>
     <div class="flexbox-titel">
-      
-          
-        
+
+
+
         <div class="dropdown">
             <button class="dropbtn">Filters</button>
             <div class="dropdown-content">
@@ -48,7 +53,7 @@ include "Components/sessionStart.php";
                         <h3>Genres</h3>
                         <input type="checkbox" name="Genres" value="Actie" id="Actie">
                         <label for="Actie">Actie</label>
-                        <input type="checkbox" name="Genres" value="Animatie" id ="Animatie">
+                        <input type="checkbox" name="Genres" value="Animatie" id="Animatie">
                         <label for="Animatie">Animatie</label>
                         <input type="checkbox" name="Genres" value="Drama" id="Drama">
                         <label for="Drama">Drama</label>
@@ -56,13 +61,13 @@ include "Components/sessionStart.php";
                         <label for="Familiefilm">Familiefilm</label>
                         <input type="checkbox" name="Genres" value="Fantasy" id="Fantasy">
                         <label for="Fantasy">Fantasy</label>
-                        <input type="checkbox" name="Genres" value="Horror"  id="Horror">
+                        <input type="checkbox" name="Genres" value="Horror" id="Horror">
                         <label for="Horror">Horror</label>
                         <input type="checkbox" name="Genres" value="Komedie" id="Komedie">
                         <label for="Komedie">Komedie</label>
                         <input type="checkbox" name="Genres" value="Mystery" id="Mystery">
                         <label for="Mystery">Mystery</label>
-                        <input type="checkbox" name="Genres" value="Oorlog" id="Oorlog"> 
+                        <input type="checkbox" name="Genres" value="Oorlog" id="Oorlog">
                         <label for="Oorlog">Oorlog</label>
                         <input type="checkbox" name="Genres" value="Romantisch" id="Romantisch">
                         <label for="Romantisch">Romantisch</label>
@@ -97,7 +102,7 @@ include "Components/sessionStart.php";
                         <label for="Woody_Allen">Woody Allen</label>
                     </div>
                     <div class="column">
-                        <h3>Publicatiejaar</h3> 
+                        <h3>Publicatiejaar</h3>
                         <input type="checkbox" name="periode" value="'20s'" id="20">
                         <label for="20">'20s'</label>
                         <input type="checkbox" name="periode" value="'20s'" id="10">
@@ -115,13 +120,13 @@ include "Components/sessionStart.php";
                         <input type="checkbox" name="periode" value="'20s'" id="50">
                         <label for="50">'50s'</label>
                     </div>
-                </div>  
+                </div>
             </div>
         </div>
     </div>
-    
+
     <div class="flexbox-assortiment">
-        <div> 
+        <div>
             <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
         </div>
         <div>
@@ -177,6 +182,7 @@ include "Components/sessionStart.php";
         </div>
     </div>
 
-    <?=include "Components/footer.php";?>
+    <?= include "Components/footer.php"; ?>
 </body>
+
 </html>

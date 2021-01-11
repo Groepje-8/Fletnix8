@@ -7,5 +7,5 @@
     <p>Vragen? Bel 0800-123-4567 </p>
     <p> Alle rechten voorbehouden door Fletnix&#169; inc. </p>
     <p> Het kopiëren/distribueren van ons assortiment is ten strikste verboden en daders zullen strafrechtelijk
-            vervolgd worden.</p>
+        vervolgd worden.</p>
 </footer>

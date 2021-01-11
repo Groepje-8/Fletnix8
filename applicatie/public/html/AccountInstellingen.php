@@ -15,8 +15,12 @@ include "Components/sessionStart.php";
     <link rel="stylesheet" href="/css/AccountInstellingen.css">
 </head>
 
+<?=
+    require_once "Components/header.php";
+    header_function("AccountInstellingen");
+?>
 <body>
-    <?=include "Components/header.php";?>
+   
 
     <main>
         <div class="Beschrijving">
