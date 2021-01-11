@@ -21,7 +21,7 @@ header_function("AccountInstellingen");
             <h2> Account details </h2>
             <form action="AccountInstellingen.php" method="GET">
                 <ul>
-                    <li> <label for="gnaamVerander">Gebruikersnaam veranderen:</label>
+                    <li><label for="gnaamVerander">Gebruikersnaam veranderen:</label>
                         <input pattern="[a-zA-Z]+" type="text" id="gnaamVerander" name="gnaamVerander">
                     </li>
                     <li><label for="nww">Nieuw wachtwoord:</label>
@@ -29,7 +29,7 @@ header_function("AccountInstellingen");
                     </li>
                     <li><label for="betaalinfo">Betaalinformatie:</label>
                         <input pattern="[a-zA-Z0-9]+" type="text" id="betaalinfo" name="betaalinfo">
-                    </li>øó
+                    </li>
                 </ul>
                 <div class="Verzenden">
                     <input type="submit" value="Update">

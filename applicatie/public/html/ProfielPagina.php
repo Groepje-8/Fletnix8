@@ -1,18 +1,19 @@
 <?php
+
 include "Components/sessionStart.php";
-if(isset($_SESSION['gnaam'])){
-    $data = [$_SESSION['vnaam'], $_SESSION['anaam'], $_SESSION['land'], $_SESSION['gjaar'], $_SESSION['rnr'], $_SESSION['gnaam'], $_SESSION['ww'], $_SESSION['abb']];
+var_dump($_SESSION);
+if(isset($_SESSION['usernaam'])){
+    $data = [$_SESSION['mail'], $_SESSION['vnaam'], $_SESSION['anaam'], $_SESSION['land'], $_SESSION['gdatum'], $_SESSION['username'], $_SESSION['abonnemnt']];
 }
 else {
     $data = ["-", "-", "-", "-", "-", "-", "-", "-"];
 }
-    require_once "Components/header.php";
-    header_function("ProfielPagina");
+require_once "Components/header.php";
+header_function("ProfielPagina");
 ?>
 
 <body>
 <?php require_once "Components/navbar.php";  ?>
-    
     
     <main>
         <div class="Beschrijving">
@@ -20,8 +21,8 @@ else {
         </div>
         <div class="card">
             <img src="/img/placeholdercard.png" alt="Test" style="width:100%">
-            <h1>Test Persoon</h1>
-            <p class="title">Abonnement plan</p>
+            <h1><?="$data[1] $data[2]"?></h1>
+            <p class="title"><?=$abonnement?></p>
             <p>Standaard</p>
             <p><button>Help</button></p>
         </div>
@@ -29,16 +30,16 @@ else {
         <div class="Accountdetails">
             <form action="AccountInstellingen.php" method="GET">
                 <ul>
+                    <li><label for="mail">e-mailadres:</label>
+                    <input type="text" id="mail" name="mail" value=<?=$data[0];?> readonly></li>
                     <li><label for="vnaam">Voornaam:</label>
-                    <input type="text" id="vnaam" name="vnaam" value=<?=$data[0];?> readonly></li>
+                    <input type="text" id="vnaam" name="vnaam" value=<?=$data[1];?> readonly></li>
                     <li><label for="anaam">Achternaam:</label>
-                    <input type="text" id="anaam" name="anaam" value=<?=$data[1];?> readonly></li>
+                    <input type="text" id="anaam" name="anaam" value=<?=$data[2];?> readonly></li>
                     <li><label for="land">Land:</label>
-                    <input type="text" id="land" name="land" value=<?=$data[2];?> readonly></li>
-                    <li><label for="gjaar">Geboortejaar:</label>
-                    <input type="text" id="gjaar" name="gjaar" value=<?=$data[3];?> readonly></li>
-                    <li><label for="rnr">Rekeningnummer:</label>
-                    <input type="password" id="rnr" name="rnr" value=<?=$data[4];?> readonly></li>
+                    <input type="text" id="land" name="land" value=<?=$data[3];?> readonly></li>
+                    <li><label for="gdatum">Geboortedatum:</label>
+                    <input type="text" id="gdatum" name="gdatum" value=<?=$data[4];?> readonly></li>
                     <li><label for="gnaam">Gebruikersnaam:</label>
                     <input type="text" id="gnaam" name="gnaam" value=<?=$data[5];?> readonly></li>
                     <li><label for="ww">Wachtwoord:</label>

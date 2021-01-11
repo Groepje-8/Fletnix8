@@ -10,7 +10,7 @@ header_function("Abbonementen");
 
         <main>
             <h1>Selecteer je gewenste abbonement</h1>
-            <a href="/html/Registreren.php?abb=beginner">
+            <a href="/html/Registreren.php?abo=beginner">
                 <div class="Abbonement1">
 
                     <img src="/img/placeholder.png" width="80" height="80" alt="Abbo1">
@@ -19,7 +19,7 @@ header_function("Abbonementen");
                         zien!</p>
                 </div>
             </a>
-            <a href="/html/Registreren.php?abb=standaard">
+            <a href="/html/Registreren.php?abo=standaard">
                 <div class="Abbonement2">
 
                     <img src="/img/placeholder.png" width="80" height="80" alt="Abbo2">
@@ -27,7 +27,7 @@ header_function("Abbonementen");
                     <p>Met het standaard abbonement kun je alle films zien die niet meer in de bioscoop draaien en series een week voordat ze op tv komen!</p>
                 </div>
             </a>
-            <a href="/html/Registreren.php?abb=professioneel">
+            <a href="/html/Registreren.php?abo=professioneel">
                 <div class="Abbonement3">
 
                     <img src="/img/placeholder.png" width="80" height="80" alt="Abbo3">

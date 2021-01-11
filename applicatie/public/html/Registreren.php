@@ -4,7 +4,7 @@ header_function("Registreren");
 ?>
 
 <body>
-    <?php include "Components/header.php"; ?>
+    <?php include "Components/navbar.php"; ?>
 
     <h1>Registratie formulier</h1>
     <form action="/html/Includes/Registratie.php" method="POST" id="profielform">
@@ -43,10 +43,10 @@ header_function("Registreren");
             </tr>
             <tr>
                 <td>
-                    <label for="rekeningnummer">Rekeningnummer:</label>
+                    <label for="mail">E-mailadres:</label>
                 </td>
                 <td>
-                    <input pattern="[0-9]+" type="text" id="rekeningnummer" name="rekeningnummer">
+                    <input pattern="[0-9]+" type="text" id="mail" name="mail">
                 </td>
             </tr>
             <tr>
@@ -61,8 +61,11 @@ header_function("Registreren");
                 <td>
                     <label for="abonnement">Abonnement:</label>
                 </td>
-                <td>
-                    <input type="text" id="abonnoment" name="abonnoment">
+                <td> 
+                    <select id="abb" name="abb">
+                    <option value="beginner" <?php if($_GET['abo']=="beginner") {echo "selected";}?> >Beginner</option>
+                    <option value="standaard" <?php if($_GET['abo']=="standaard") {echo "selected";}?> >Standaard</option>
+                    <option value="professioneel" <?php if($_GET['abo']=="professioneel") {echo "selected";}?> >Professioneel</option>
                 </td>
             </tr>
             <tr>
