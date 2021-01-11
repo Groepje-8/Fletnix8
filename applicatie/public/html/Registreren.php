@@ -1,38 +1,35 @@
-<?php
-include "Components/sessionStart.php";
-    
-if(isset($_SESSION['errormessage'])){
-    $errormessage = $_SESSION['errormessage'];
-}
-else {
-    $errormessage = "";
-}
-    session_start();
-    var_dump($_SESSION);
-    require_once "Components/header.php";
-    header_function("Registeren");
-?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registreren</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/specificity.css">
+    <link rel="stylesheet" href="/css/Registreren.css">
+</head>
 
 <body>
-<?php require_once "Components/navbar.php";  ?>
+    <?=include "Components/header.php";?>
 
     <h1>Registratie formulier</h1>
-    <form action=Components/registreerSession.php method="POST" id="profielform">
+    <form action="/html/Includes/Registratie.php" method="POST" id="profielform">
         <table id="registreren">
             <tr>
                 <td>
-                    <label for="vnaam">Voornaam:</label>
+                    <label for="voornaam">Voornaam:</label>
                 </td>
                 <td>
-                    <input pattern="[a-zA-Z]+" type="text" id="vnaam" name="vnaam">
+                    <input pattern="[a-zA-Z]+" type="text" id="voornaam" name="voornaam">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="anaam">Achternaam:</label>
+                    <label for="achternaam">Achternaam:</label>
                 </td>
                 <td>
-                    <input pattern="[a-zA-Z]+" type="text" id="anaam" name="anaam">
+                    <input pattern="[a-zA-Z]+" type="text" id="achternaam" name="achternaam">
                 </td>
             </tr>
             <tr>
@@ -45,38 +42,34 @@ else {
             </tr>
             <tr>
                 <td>
-                    <label for="gjaar">Geboortejaar:</label>
+                    <label for="geboortejaar">Geboortejaar:</label>
                 </td>
                 <td>
-                    <input pattern="[0-9]+" type="text" id="gjaar" name="gjaar">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="rnr">Rekeningnummer:</label>
-                </td>
-                <td>
-                    <input pattern="[0-9]+" type="text" id="rnr" name="rnr">
+                    <input pattern="[0-9]+" type="text" id="geboortejaar" name="geboortejaar">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="gnaam">Gebruikersnaam:</label>
+                    <label for="rekeningnummer">Rekeningnummer:</label>
                 </td>
                 <td>
-                    <input pattern="[a-zA-Z]+" type="text" id="gnaam" name="gnaam">
+                    <input pattern="[0-9]+" type="text" id="rekeningnummer" name="rekeningnummer">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="abb">Abonnement:</label>
+                    <label for="gebruikersnaam">Gebruikersnaam:</label>
                 </td>
                 <td>
-                    <select id="abb" name="abb">
-                        <option value="beginner" <?php if($_GET['abb']=="beginner") {echo "selected";}?> >Beginner</option>
-                        <option value="standaard" <?php if($_GET['abb']=="standaard") {echo "selected";}?> >Standaard</option>
-                        <option value="professioneel" <?php if($_GET['abb']=="professioneel") {echo "selected";}?> >Professioneel</option>
-                    </select>
+                    <input pattern="[a-zA-Z]+" type="text" id="gebruikersnaam" name="gebruikersnaam">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="abonnement">Abonnement:</label>
+                </td>
+                <td>
+                    <input type="text" id="abonnoment" name="abonnoment">
                 </td>
             </tr>
             <tr>
@@ -99,16 +92,16 @@ else {
             </tr>
             <tr>
                 <td>
-                    <input type="submit" value="Verzend">
+                    <button type="submit" name="submit">Verzend</button>
                 </td>
             </tr>
 
         </table>
     </form>
-    <p><?= $errormessage;?></p>
     <p> Klik op "verzend" knop om U account aan te maken en door te gaan naar U profielpagina.<br>
         Hier kunt U de informatie nalezen en controleren op eventuelen fouten.</p>
 
-    <?php include "Components/footer.php";?>
+    <?=include "Components/footer.php";?>
 </body>
+
 </html>
