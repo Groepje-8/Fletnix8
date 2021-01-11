@@ -1,26 +1,11 @@
 <?php
 include "Components/sessionStart.php";
-
+require_once "Components/header.php";
+header_function("AccountInstellingen");
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<!-- notes toevoegen -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AccountInstellingen</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/specificity.css">
-    <link rel="stylesheet" href="/css/AccountInstellingen.css">
-</head>
-
-<?php
-    require_once "Components/header.php";
-    header_function("AccountInstellingen");
-?>
 <body>
-<?php require_once "Components/navbar.php";  ?>
+    <?php require_once "Components/navbar.php";  ?>
 
     <main>
         <div class="Beschrijving">
@@ -37,12 +22,14 @@ include "Components/sessionStart.php";
             <form action="AccountInstellingen.php" method="GET">
                 <ul>
                     <li> <label for="gnaamVerander">Gebruikersnaam veranderen:</label>
-                        <input pattern="[a-zA-Z]+" type="text" id="gnaamVerander" name="gnaamVerander"></li>
+                        <input pattern="[a-zA-Z]+" type="text" id="gnaamVerander" name="gnaamVerander">
+                    </li>
                     <li><label for="nww">Nieuw wachtwoord:</label>
-                        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="text" id="nww" name="nww"
-                            title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters"></li>
+                        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="text" id="nww" name="nww" title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters">
+                    </li>
                     <li><label for="betaalinfo">Betaalinformatie:</label>
-                        <input pattern="[a-zA-Z0-9]+" type="text" id="betaalinfo" name="betaalinfo"></li>øó
+                        <input pattern="[a-zA-Z0-9]+" type="text" id="betaalinfo" name="betaalinfo">
+                    </li>øó
                 </ul>
                 <div class="Verzenden">
                     <input type="submit" value="Update">
@@ -60,26 +47,30 @@ include "Components/sessionStart.php";
                             <option value="frans">Frans</option>
                             <option value="duits">Duits</option>
                             <option value="engels">Engels</option>
-                        </select></li>
+                        </select>
+                    </li>
                     <li><label for="ov">Ondertiteling voorkeur:</label>
                         <select name="ov" id="ov">
                             <option value="nederlands">Nederlands</option>
                             <option value="frans">Frans</option>
                             <option value="duits">Duits</option>
                             <option value="engels">Engels</option>
-                        </select></li>
+                        </select>
+                    </li>
                     <li><label for="og">Ondertiteling grootte:</label>
                         <select name="og" id="og">
                             <option value="normaal">Normaal</option>
                             <option value="klein">Klein</option>
                             <option value="groot">Groot</option>
-                        </select></li>
+                        </select>
+                    </li>
                     <li><label for="beeldk">Beeldkwaliteit:</label>
                         <select name="beeldk" id="beeldk">
                             <option value="normaal">Normaal</option>
                             <option value="hd">HD</option>
                             <option value="1080p">1080p</option>
-                        </select></li>
+                        </select>
+                    </li>
                 </ul>
                 <div class="Verzenden">
                     <input type="submit" value="Update">
@@ -88,7 +79,7 @@ include "Components/sessionStart.php";
         </div>
     </main>
 
-    <?php include "Components/footer.php";?>
+    <?php include "Components/footer.php"; ?>
 </body>
 
 </html>

@@ -1,25 +1,11 @@
 <?php
 include "Components/sessionStart.php";
-
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/specificity.css">
-    <link rel="stylesheet" href="/css/MediaPlayer.css">
-    <title>MediaPlayer</title>
-</head>
-<?php
-    require_once "Components/header.php";
-    header_function("mediaplayer");
+require_once "Components/header.php";
+header_function("mediaplayer");
 ?>
 
 <body>
-<?php require_once "Components/navbar.php";  ?>
+    <?php require_once "Components/navbar.php";  ?>
 
     <main>
 
@@ -43,7 +29,7 @@ include "Components/sessionStart.php";
         <h1>Titel - aflevering</h1>
     </main>
 
-    <?php include "Components/footer.php";?>
+    <?php include "Components/footer.php"; ?>
 </body>
 
 </html>
