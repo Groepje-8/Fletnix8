@@ -6,7 +6,7 @@
 ?>
 
 <body>
-  
+<?php require_once "Components/navbar.php";  ?>
 
     <h1>Registratie formulier</h1>
     <form action=Components/registreerSession.php method="POST" id="profielform">
@@ -101,6 +101,6 @@
     <p> Klik op "verzend" knop om U account aan te maken en door te gaan naar U profielpagina.<br>
         Hier kunt U de informatie nalezen en controleren op eventuelen fouten.</p>
 
-    <?=include "Components/footer.php";?>
+    <?php include "Components/footer.php";?>
 </body>
 </html>

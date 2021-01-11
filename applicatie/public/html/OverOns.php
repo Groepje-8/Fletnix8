@@ -1,11 +1,12 @@
-<?=
+<?php
     require_once "Components/header.php";
     header_function("OverOns");
 ?>
 
 <body>
+
     <div class="grid-container">
-      
+    <?php require_once "Components/navbar.php";  ?>
 
         <main>
             
@@ -62,7 +63,7 @@
             </div>
 
         </main>
-        <?=include "Components/footer.php";?>
+        <?php include "Components/footer.php";?>
     </div>
 </body>
 

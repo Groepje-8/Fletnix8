@@ -1,11 +1,11 @@
-<?=
+<?php
     require_once "Components/header.php"; 
     header_function("FilmOverzicht");
 ?>
 
 <body>
 
-
+<?php require_once "Components/navbar.php";  ?>
     <h1>Nieuwe Films</h1>
     <div class="flexbox">
         <div>
@@ -167,7 +167,7 @@
         </div>
     </div>
 
-    <?= include "Components/footer.php"; ?>
+    <?php include "Components/footer.php"; ?>
 </body>
 
 </html>

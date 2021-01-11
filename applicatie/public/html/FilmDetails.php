@@ -1,10 +1,10 @@
-<?=
+<?php
     require_once "Components/header.php";
     header_function("FilmDetails");
 ?>
 
 <body>
-  
+<?php require_once "Components/navbar.php";  ?>
 
     <main>
         <div class="terugknop">
@@ -68,7 +68,7 @@
         </div>
     </main>
 
-    <?=include "Components/footer.php";?>
+    <?php include "Components/footer.php";?>
 </body>
 
 </html>

@@ -1,9 +1,10 @@
-<?=
+<?php
     require_once "Components/header.php";
     header_function("mediaplayer");
 ?>
 
 <body>
+<?php require_once "Components/navbar.php";  ?>
 
     <main>
 
@@ -27,7 +28,7 @@
         <h1>Titel - aflevering</h1>
     </main>
 
-    <?=include "Components/footer.php";?>
+    <?php include "Components/footer.php";?>
 </body>
 
 </html>
