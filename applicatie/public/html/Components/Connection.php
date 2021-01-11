@@ -2,9 +2,9 @@
 // Naam van server
 $hostname = 'host.docker.internal';
 // Naam van database
-$dbname = 'FLETNIX_DBRP';
+$dbname = 'FLETNIX';
 // Hier je eigen gebruikersnaam
-$username = 'Applicatie';
+$username = 'tijdelijkusername';
 // Hier je eigen password.
 // Zet het wachtwoord in het echt nooit letterlijk in de broncode.
 $pw = 'tijdelijkwachtwoord';

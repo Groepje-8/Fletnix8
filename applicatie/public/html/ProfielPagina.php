@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION['gnaam'])){
+    $data = [$_SESSION['vnaam'], $_SESSION['anaam'], $_SESSION['land'], $_SESSION['gjaar'], $_SESSION['rnr'], $_SESSION['gnaam'], $_SESSION['ww'], $_SESSION['abb']];
+}
+else {
+    $data = ["-", "-", "-", "-", "-", "-", "-", "-"];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,25 +37,27 @@
         <div class="Accountdetails">
                 <form action="AccountInstellingen.php" method="GET">
                     <ul>
-                    <li><label for="vnaam">Voornaam:</label>
-                    <input type="text" id="vnaam" name="vnaam" value="Test" readonly></li>
-                    <li><label for="anaam">Achternaam:</label>
-                    <input type="text" id="anaam" name="anaam" value="Persoon" readonly></li>
-                    <li><label for="land">Land:</label>
-                    <input type="text" id="land" name="land" value="Nederland" readonly></li>
-                    <li><label for="gjaar">Geboortejaar:</label>
-                    <input type="text" id="gjaar" name="gjaar" value="1900" readonly></li>
-                    <li><label for="rnr">Rekeningnummer:</label>
-                    <input type="password" id="rnr" name="rnr" value="0123456789" readonly></li>
-                    <li><label for="gnaam">Gebruikersnaam:</label>
-                    <input type="text" id="gnaam" name="gnaam" value="De beste user 9000" readonly></li>
-                    <li><label for="ww">Wachtwoord:</label>
-                    <input type="password" id="ww" name="ww" value="pass123F" readonly></li>
-                    <li><label for="abb">Abonnement:</label>
-                    <input type="text" id="abb" name="abb" value="Premium" readonly></li>
-                    
-                </ul>
-                <input type="submit" value="Aanpassen">
+                        <li><label for="vnaam">Voornaam:</label>
+                        <input type="text" id="vnaam" name="vnaam" value=<?=$data[0];?> readonly></li>
+                        <li><label for="anaam">Achternaam:</label>
+                        <input type="text" id="anaam" name="anaam" value=<?=$data[1];?> readonly></li>
+                        <li><label for="land">Land:</label>
+                        <input type="text" id="land" name="land" value=<?=$data[2];?> readonly></li>
+                        <li><label for="gjaar">Geboortejaar:</label>
+                        <input type="text" id="gjaar" name="gjaar" value=<?=$data[3];?> readonly></li>
+                        <li><label for="rnr">Rekeningnummer:</label>
+                        <input type="password" id="rnr" name="rnr" value=<?=$data[4];?> readonly></li>
+                        <li><label for="gnaam">Gebruikersnaam:</label>
+                        <input type="text" id="gnaam" name="gnaam" value=<?=$data[5];?> readonly></li>
+                        <li><label for="ww">Wachtwoord:</label>
+                        <input type="password" id="ww" name="ww" value=<?=$data[6];?> readonly></li>
+                        <li><label for="abb">Abonnement:</label>
+                        <input type="text" id="abb" name="abb" value=<?=$data[7];?> readonly></li>
+                    </ul>
+                    <input type="submit" value="Aanpassen">
+                </form>
+                <form action="Components/loguitSession.php" method="GET">
+                    <input type="submit" value="Uitloggen">
                 </form>
         </div>
     </main>
