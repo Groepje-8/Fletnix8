@@ -1,21 +1,12 @@
 <?php
     session_start();
     var_dump($_SESSION);
+    include "html/Components/header.php";
+    header_function("Registeren");
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registreren</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/specificity.css">
-    <link rel="stylesheet" href="/css/Registreren.css">
-</head>
 
 <body>
-    <?=include "Components/header.php";?>
+  
 
     <h1>Registratie formulier</h1>
     <form action=Components/registreerSession.php method="POST" id="profielform">

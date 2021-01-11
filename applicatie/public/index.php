@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/img/FletnixIcon.ico">
-    <title>Fletnix!</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/specificity.css">
-    <link rel="stylesheet" href="/css/specificityIndex.css">
-
-</head>
+<?=
+    require_once "html/Components/header.php";
+    header_function("Index");
+?>
 
 <body>
     <div class="grid-container">
-        <?=include "html/Components/header.php";?>
+        <?= include "html/Components/navbar.php"; ?>
 
         <div class="title">
             <h1>Fletnix</h1>
@@ -48,7 +39,7 @@
             </form>
         </div>
 
-        <?=include "html/Components/footer.php";?>
+        <?= include "html/Components/footer.php"; ?>
     </div>
 </body>
 

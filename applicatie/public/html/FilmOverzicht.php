@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filmoverzicht</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/specificity.css">
-    <link rel="stylesheet" href="/css/FilmOverzicht.css">
-    
-</head>
+<?=
+    include "html/Components/header.php";
+    header_function("FilmOverzicht");
+?>
 <body>
-    <?=include "Components/header.php";?>
+   
 
     <h1>Nieuwe Films</h1>
     <div class="flexbox">
