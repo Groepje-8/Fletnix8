@@ -21,7 +21,7 @@ include "Components/sessionStart.php";
 ?>
 <body>
     <div class="grid-container">
-        
+    <?php require_once "Components/navbar.php";  ?>
 
         <main>
             <h1>Selecteer je gewenste abbonement</h1>
@@ -53,7 +53,7 @@ include "Components/sessionStart.php";
 
     </main>
 
-    <?=include "Components/footer.php";?>
+    <?php include "Components/footer.php";?>
     </div>
 </body>
  

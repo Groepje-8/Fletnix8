@@ -19,7 +19,7 @@ include "Components/sessionStart.php";
 ?>
 
 <body>
-  
+<?php require_once "Components/navbar.php";  ?>
 
     <main>
         <div class="terugknop">
@@ -83,7 +83,7 @@ include "Components/sessionStart.php";
         </div>
     </main>
 
-    <?=include "Components/footer.php";?>
+    <?php include "Components/footer.php";?>
 </body>
 
 </html>

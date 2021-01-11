@@ -11,6 +11,7 @@ else {
 ?>
 
 <body>
+<?php require_once "Components/navbar.php";  ?>
     
     
     <main>
@@ -53,7 +54,7 @@ else {
         </div>
     </main>
    
-    <?=include "Components/footer.php";?>
+    <?php include "Components/footer.php";?>
 </body>
 
 </html>

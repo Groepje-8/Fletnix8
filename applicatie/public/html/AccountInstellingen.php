@@ -20,7 +20,7 @@ include "Components/sessionStart.php";
     header_function("AccountInstellingen");
 ?>
 <body>
-   
+<?php require_once "Components/navbar.php";  ?>
 
     <main>
         <div class="Beschrijving">
@@ -88,7 +88,7 @@ include "Components/sessionStart.php";
         </div>
     </main>
 
-    <?=include "Components/footer.php";?>
+    <?php include "Components/footer.php";?>
 </body>
 
 </html>

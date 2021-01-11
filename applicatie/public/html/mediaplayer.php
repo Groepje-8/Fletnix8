@@ -19,6 +19,7 @@ include "Components/sessionStart.php";
 ?>
 
 <body>
+<?php require_once "Components/navbar.php";  ?>
 
     <main>
 
@@ -42,7 +43,7 @@ include "Components/sessionStart.php";
         <h1>Titel - aflevering</h1>
     </main>
 
-    <?=include "Components/footer.php";?>
+    <?php include "Components/footer.php";?>
 </body>
 
 </html>

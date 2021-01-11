@@ -22,8 +22,9 @@ include "Components/sessionStart.php";
 ?>
 
 <body>
+
     <div class="grid-container">
-      
+    <?php require_once "Components/navbar.php";  ?>
 
         <main>
             
@@ -80,7 +81,7 @@ include "Components/sessionStart.php";
             </div>
 
         </main>
-        <?=include "Components/footer.php";?>
+        <?php include "Components/footer.php";?>
     </div>
 </body>
 

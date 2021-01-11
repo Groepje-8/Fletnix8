@@ -20,7 +20,7 @@ include "Components/sessionStart.php";
 
 <body>
 
-
+<?php require_once "Components/navbar.php";  ?>
     <h1>Nieuwe Films</h1>
     <div class="flexbox">
         <div>
@@ -182,7 +182,7 @@ include "Components/sessionStart.php";
         </div>
     </div>
 
-    <?= include "Components/footer.php"; ?>
+    <?php include "Components/footer.php"; ?>
 </body>
 
 </html>
