@@ -1,6 +1,6 @@
 <?php
 require_once "html/Components/header.php";
-header_function("Index");
+maak_header("Index");
 
 ?>
 
@@ -12,13 +12,6 @@ header_function("Index");
             <h1>Fletnix</h1>
             <h2>DÉ videostreaming website voor studenten</h2>
         </div>
-
-        <main>
-            <video controls>
-                <source src="/videos/trailer.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </main>
 
         <div class="registreerform">
             <p>Registeer je nu en betaal de eerste maand 0 euro!</p>
@@ -39,8 +32,16 @@ header_function("Index");
                 <input type="submit" value="Login" />
             </form>
         </div>
+        <main>
+            <video controls>
+                <source src="/videos/trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </main>
 
-        <?= include "html/Components/footer.php"; ?>
+        
+
+        <?php include "html/Components/footer.php"; ?>
     </div>
 </body>
 

@@ -21,3 +21,12 @@ function haalFilmsOp()
     $data = $query->fetchall();
     return $data;
 }
+
+function printFilms(){
+
+    foreach (haalFilmsOp() as $film) {
+        echo "<div>
+        <a href='FilmDetails.php'><img src='/img/posters/".$film['movie_id'].".jpg' alt='Poster'></a>
+    </div>";
+    }
+}

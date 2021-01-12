@@ -2,7 +2,7 @@
 include "Components/sessionStart.php";
 include "Actions/haalFilmsOp.php";
 require_once "Components/header.php";
-header_function("FilmOverzicht");
+maak_header("FilmOverzicht");
 ?>
 
 <body>
@@ -113,19 +113,10 @@ header_function("FilmOverzicht");
     </div>
 
     <div class="flexbox-assortiment">
-    <?php 
-    foreach (haalFilmsOp() as $film) {
-            echo "<div>
-            <a href='FilmDetails.php'><img src='/img/posters/".$film['movie_id'].".jpg' alt='Poster'></a>
-        </div>";
-        }
-        ?>
+        <?php printFilms(); ?>
     </div>
 
-    <?php include "Components/footer.php";
-    
-    
-    ?>
+    <?php include "Components/footer.php"; ?>
 </body>
 
 </html>

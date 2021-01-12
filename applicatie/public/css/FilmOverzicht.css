@@ -138,3 +138,10 @@
   }
 
 }
+img {
+  float: left;
+  width:  15vw;
+  height: 40vh;
+  object-fit: cover;
+  padding-bottom: 25px;
+}

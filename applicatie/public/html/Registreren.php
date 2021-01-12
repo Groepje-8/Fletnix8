@@ -1,6 +1,6 @@
 <?php
 require_once "Components/header.php";
-header_function("Registreren");
+maak_header("Registreren");
 ?>
 
 <body>
@@ -61,11 +61,17 @@ header_function("Registreren");
                 <td>
                     <label for="abonnement">Abonnement:</label>
                 </td>
-                <td> 
+                <td>
                     <select id="abb" name="abb">
-                    <option value="beginner" <?php if($_GET['abo']=="beginner") {echo "selected";}?> >Beginner</option>
-                    <option value="standaard" <?php if($_GET['abo']=="standaard") {echo "selected";}?> >Standaard</option>
-                    <option value="professioneel" <?php if($_GET['abo']=="professioneel") {echo "selected";}?> >Professioneel</option>
+                        <option value="beginner" <?php if ($_GET['abo'] == "beginner") {
+                                                        echo "selected";
+                                                    } ?>>Beginner</option>
+                        <option value="standaard" <?php if ($_GET['abo'] == "standaard") {
+                                                        echo "selected";
+                                                    } ?>>Standaard</option>
+                        <option value="professioneel" <?php if ($_GET['abo'] == "professioneel") {
+                                                            echo "selected";
+                                                        } ?>>Professioneel</option>
                 </td>
             </tr>
             <tr>

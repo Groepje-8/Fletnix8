@@ -1,7 +1,7 @@
 <?php
 include "Components/sessionStart.php";
 require_once "Components/header.php";
-header_function("Abonnementen");
+maak_header("Abonnementen");
 ?>
 
 <body>
