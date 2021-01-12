@@ -23,7 +23,7 @@ CREATE TABLE [Films]
  [movie_id]         int NOT NULL ,
  [title]            varchar(255) NOT NULL ,
  [duration]         int NULL ,
- [publication_year] date NOT NULL ,
+ [publication_year] int NOT NULL ,
  [cover_image]      varbinary(max) NULL ,
  [previous_part]    int NULL ,
  [price]            decimal(5,2) NULL ,
@@ -192,12 +192,12 @@ GO
 
 CREATE TABLE [content]
 (
- [content_id] int NOT NULL ,
- [pagina_id]  int NOT NULL ,
- [text]       nvarchar(500) NOT NULL ,
+ [pagina_id] int NOT NULL ,
+ [content_id] int NOT NULL ,  
+ [text]       NVARCHAR(MAX) NOT NULL ,
 
 
- CONSTRAINT [PK_content] PRIMARY KEY CLUSTERED ([content_id] ASC)
+ CONSTRAINT [PK_content] PRIMARY KEY CLUSTERED ([content_id] ASC,[pagina_id] ASC)
 );
 GO
 
