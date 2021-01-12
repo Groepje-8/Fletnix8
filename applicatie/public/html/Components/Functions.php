@@ -12,14 +12,7 @@ function emptyInputSignup($voornaam, $achternaam, $land, $geboortejaar, $rekenin
 }
 
 function invalidUid($username) {
-    $result;
-    if (!preg_match("/^[a-zA-Z0-9]*$/", $username)){
-        $result = true;
-    }
-    else {
-        $result = false;
-    }
-    return $result;
+    return !preg_match("/^[a-zA-Z0-9]*$/", $username)
 }
 
 function invalidEmail($email) {
@@ -87,4 +80,43 @@ function createUser($conn, $voornaam, $achternaam, $land, $geboortejaar, $rekeni
     exit();
 }
 
+$resultmessage = "";
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['username'], $_POST['email']) && !isset($_SESSION['Gebruikersnaam'], $_SESSION['Email'])) {
+        $result = Classes\Query\Query::getUser($_POST['email'], $_POST['username']);
+        if ($result->count() > 0) {
+            $resultmessage = "Er is al een gebruiker met dat emailadres of die gebruikersnaam geregistreerd.";
+        } else {
+            $_SESSION['Gebruikersnaam'] = $_POST['username'];
+            $_SESSION['Email'] = $_POST['email'];
+
+            Classes\Registration::sendVerificationEmail($_SESSION["Gebruikersnaam"], $_SESSION["Email"]);
+        }
+    }
+    if (isset($_POST['verifieer'])) {
+        $_SESSION['codeIsCorrect'] = $_POST['verifieer'];
+    }
+    if (isset($_POST['username'], $_POST['password'], $_POST['passwordRepeat'], $_POST['email'], $_POST['firstName'], $_POST['lastName'], $_POST['addressLine1'], $_POST['placeName'], $_POST['zipCode'], $_POST['country'], $_POST['birthDate'], $_POST['secretQuestionID'], $_POST['secretQuestionAnswer'])) {
+        $resultmessage = Classes\Registration::register();
+        if ($resultmessage == "success") {
+            $_SESSION['statusMessage'] = "Account successvol aangemaakt, u kunt nu inloggen.";
+            header("location: login.php");
+            exit();
+        }
+    }
+}
+
+if (Query::get('Gebruiker')->where('gebruikersnaam', $username)->count() > 0) {
+    //account met ingevulde username bestaat al
+    return "Er bestaat al een account met deze gebruikersnaam.";
+} else if (Query::get('Gebruiker')->where('mailbox', $email)->count() > 0) {
+    //account met ingevulde email bestaat al
+    return "Er bestaat al een account met dit e-mailadres.";
+}
+
+if (Query::insert('Gebruiker', $columns, $values)) {
+    return "success";
+} else {
+    return "Er is iets fout gegaan, probeer het a.u.b. later opnieuw.";
+}
 ?>
