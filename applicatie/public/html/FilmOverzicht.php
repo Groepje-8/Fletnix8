@@ -113,10 +113,19 @@ header_function("FilmOverzicht");
     </div>
 
     <div class="flexbox-assortiment">
-    <?php haalFilmsOp() ?>
+    <?php 
+    foreach (haalFilmsOp() as $film) {
+            echo "<div>
+            <a href='FilmDetails.php'><img src='/img/posters/".$film['movie_id'].".jpg' alt='Poster'></a>
+        </div>";
+        }
+        ?>
     </div>
 
-    <?php include "Components/footer.php"; ?>
+    <?php include "Components/footer.php";
+    
+    
+    ?>
 </body>
 
 </html>
