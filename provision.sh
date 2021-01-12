@@ -60,7 +60,8 @@ session.use_trans_sid = Off
 ' >>/usr/local/etc/php/conf.d/security.ini
 
 printf '%s\n' '[XDebug]
-xdebug.mode=debug
+xdebug.remote_mode = debug
+xdebug.start_with_request = trigger
 # Required to extend beyond localhost, because of Docker networking.
 xdebug.client_host = "0.0.0.0"
 ' >>/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini

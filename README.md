@@ -69,7 +69,7 @@ Een statische website met pure HTML en CSS op basis van wireframes.
 ### Jorian
 
 1. Index
-1. Abbonementen
+1. Abonnementen
 1. OverOns
 1. Header
 1. Footer

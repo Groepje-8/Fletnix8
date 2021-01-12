@@ -40,7 +40,7 @@ CREATE TABLE [gebruikers]
  [emailadres]    varchar(90) NOT NULL ,
  [achternaam]    varchar(50) NOT NULL ,
  [voornaam]      varchar(50) NOT NULL ,
- [abbonement]    int NOT NULL ,
+ [abonnement]    int NOT NULL ,
  [startDatumSub] date NOT NULL ,
  [endDatumSub]   date NOT NULL ,
  [username]      varchar(50) NOT NULL ,
