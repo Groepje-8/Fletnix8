@@ -1,5 +1,6 @@
 <?php
 include "Components/sessionStart.php";
+include "Actions/haalFilmsOp.php";
 require_once "Components/header.php";
 header_function("FilmOverzicht");
 ?>
@@ -112,60 +113,7 @@ header_function("FilmOverzicht");
     </div>
 
     <div class="flexbox-assortiment">
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
-        <div>
-            <a href="FilmDetails.php"><img src="/img/placeholder.png" alt="Poster"></a>
-        </div>
+    <?php haalFilmsOp() ?>
     </div>
 
     <?php include "Components/footer.php"; ?>
