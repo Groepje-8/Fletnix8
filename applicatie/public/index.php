@@ -1,6 +1,7 @@
 <?php
 require_once "html/Components/header.php";
 header_function("Index");
+
 ?>
 
 <body>

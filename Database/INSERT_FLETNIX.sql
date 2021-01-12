@@ -1,16 +1,5 @@
 USE FLETNIX
 
--- Pagina ID 1 = Index
--- Pagina ID 2 = Abonnementen
--- Pagina ID 3 = Accountinstellingen
--- Pagina ID 4 = FilmDetails
--- Pagina ID 5 = FilmOverzicht
--- Pagina ID 6 = mediaplayer
--- Pagina ID 7 = Header
--- Pagina ID 8 = Footer
--- Pagina ID 9 = ProfielPagina
--- Pagina ID 10 = OverOns
-
 INSERT INTO content
 VALUES (10,1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' ),
        (10,2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' ),
@@ -42,4 +31,3 @@ VALUES (1,'Tenet',150,2020),
        (18,'Hunter Killer',121,2018),
        (19,'A Clockwork Orange',136,1971),
        (20,'American Sniper',133,2014);
-

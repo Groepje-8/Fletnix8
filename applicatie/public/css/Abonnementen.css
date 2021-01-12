@@ -28,13 +28,13 @@ a {
     text-decoration: none;
 }
 
-.Abbonement1, .Abbonement2, .Abbonement3 {
+.Abonnement1, .Abonnement2, .Abonnement3 {
     height: 20vh;
     background: #262626;
     margin-bottom: 20px;
 }
 
-.Abbonement1:hover, .Abbonement2:hover, .Abbonement3:hover {
+.Abonnement1:hover, .Abonnement2:hover, .Abonnement3:hover {
     box-shadow: 0px 0px 4px 4px #DF2935;
 }
 
@@ -43,7 +43,7 @@ a {
         margin-left: 15vw;
         margin-right: 15vw;
     }
-    .Abbonement1, .Abbonement2, .Abbonement3 {
+    .Abonnement1, .Abonnement2, .Abonnement3 {
         height: 30vh;
     }
 }
