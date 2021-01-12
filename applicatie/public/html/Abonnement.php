@@ -15,8 +15,7 @@ header_function("Abonnementen");
 
                     <img src="/img/placeholder.png" width="80" height="80" alt="Abbo1">
                     <h2>Beginner</h2>
-                    <p>Met het beginner abbonement kun je gemakkelijk en goedkoop de nieuwste films en series van vorig jaar
-                        zien!</p>
+                    <p>Met het beginner abbonement kun je gemakkelijk en goedkoop de nieuwste films en series van vorig jaar zien!</p>
                 </div>
             </a>
             <a href="/html/Registreren.php?abo=standaard">
@@ -32,7 +31,7 @@ header_function("Abonnementen");
 
                     <img src="/img/placeholder.png" width="80" height="80" alt="Abbo3">
                     <h2>Professional </h2>
-                    <p>Met het professional abbonement kun je alle films zien VOORDAT ze in de bioscoop draaien, voor series geld het zelfde als het standaard abbonement</p>
+                    <p>Met het professional abbonement kun je alle films zien VOORDAT ze in de bioscoop draaien, voor series geld het zelfde als het standaard abbonement!</p>
                 </div>
             </a>
 
