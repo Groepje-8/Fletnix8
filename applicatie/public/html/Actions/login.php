@@ -4,7 +4,7 @@ include "connection.php";
 $username = $_POST['username'];
 $submittedPassword = $_POST['password'];
 $submittedPassword .= "Groepje8";
-$hashedSubmittedPassword = password_hash($submittedpassword, PASSWORD_DEFAULT);
+//$hashedSubmittedPassword = password_hash($submittedpassword, PASSWORD_DEFAULT);
 
 $sql = "SELECT wachtwoord FROM gebruikers WHERE username = :username";
 $query = $dbh->prepare($sql);
@@ -13,7 +13,7 @@ $data = $query->fetchall();
 
 
 //Moet nog gekoppeld worden aan de database
-if (password_verify($hashedSubmittedPassword, $data['password'])) {
+if (password_verify($SubmittedPassword, $data['password'])) {
     session_start();
 
     $sql = "SELECT emailadres, voornaam, achternaam, land, geboortedatum, username, abonnement FROM gebruikers WHERE username = :username";

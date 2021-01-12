@@ -1,9 +1,13 @@
 <?php
 include "Components/sessionStart.php";
+include "Actions/haalFilmDetails.php";
 require_once "Components/header.php";
 maak_header("FilmDetails");
-?>
 
+//$_GET['movie_id'];
+$filmData = haalFilmDetails(1);
+var_dump($filmData);
+?>
 <body>
     <?php require_once "Components/navbar.php";  ?>
 

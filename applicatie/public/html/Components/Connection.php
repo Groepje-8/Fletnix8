@@ -1,6 +1,4 @@
 <?php
-
-
 // Connectie met de database ofwel de Database Handler (dbh).
 function getConn()
 {

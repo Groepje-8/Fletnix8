@@ -1,9 +1,48 @@
 USE FLETNIX
+DELETE FROM content
+DELETE FROM Films
+
+/*
+1:  Index.php
+2:  Abonnement.php
+3:  AccountInstellingen.php
+
+4:  FilmDetails.php
+5:  FilmOverzicht.php
+6:  mediaplayer.php
+7:  header.php
+
+8:  footer.php
+9:  Registreren.php
+10: OverOns.php
+*/
+
+
+INSERT INTO content
+VALUES (1,1,'DÉ videostreaming website voor studenten'),
+       (1,2,'Registeer je nu en betaal de eerste maand 0 euro!'),
+	   (1,3,'Of log in als je al een account hebt');
+
+INSERT INTO content
+VALUES (2,1,'Met het beginner abbonement kun je gemakkelijk en goedkoop de nieuwste films en series van vorig jaar zien!'),
+       (2,2,'Met het standaard abbonement kun je alle films zien die niet meer in de bioscoop draaien en series een week voordat ze op tv komen!'),
+       (2,3,'Met het professional abbonement kun je alle films zien VOORDAT ze in de bioscoop draaien, voor series geld het zelfde als het standaard abbonement!');
+
+INSERT INTO content
+VALUES (3,1,'Klik op de "Update" knop en de nieuwe data wordt opgeslagen.');
+
+-- 4, 5, 6, 7
+
+INSERT INTO content
+VALUES (8,1,'Vragen? Bel 0800-123-4567.'),
+       (8,2,'Alle rechten voorbehouden door Fletnix&#169; inc.'),
+       (8,3,'Het kopiëren/distribueren van ons assortiment is ten strikste verboden en daders zullen strafrechtelijk vervolgd worden.');
 
 INSERT INTO content
 VALUES (10,1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' ),
        (10,2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' ),
 	   (10,3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' );
+
 
 
 INSERT INTO Films (movie_id,title,duration,publication_year)
