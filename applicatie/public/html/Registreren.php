@@ -7,7 +7,7 @@ header_function("Registreren");
     <?php include "Components/navbar.php"; ?>
 
     <h1>Registratie formulier</h1>
-    <form action="/html/Includes/Registratie.php" method="POST" id="profielform">
+    <form action="/html/Copmponents/RegistratiePOST.php" method="POST" id="profielform">
         <table id="registreren">
             <tr>
                 <td>
