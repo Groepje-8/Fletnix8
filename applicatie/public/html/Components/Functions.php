@@ -12,7 +12,7 @@ function emptyInputSignup($voornaam, $achternaam, $land, $geboortejaar, $rekenin
 }
 
 function invalidUid($username) {
-    return !preg_match("/^[a-zA-Z0-9]*$/", $username)
+    return !preg_match("/^[a-zA-Z0-9]*$/", $username);
 }
 
 function invalidEmail($email) {
@@ -46,7 +46,7 @@ function uidExists($conn, $username, $email) {
         exit();
      }
 
-     mysqli_stmt_bind_param($stmt, "ss", $username, $email)
+     mysqli_stmt_bind_param($stmt, "ss", $username, $email);
      sqlsrv_execute($stmt);
 
      $resultData = mysqli_stmt_get_result($stmt);
@@ -73,7 +73,7 @@ function createUser($conn, $voornaam, $achternaam, $land, $geboortejaar, $rekeni
 
     $hashedWachtwoord = password_hash($ww, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "sssssssss", $emailadres, $achternaam, $voornaam, $abbonement, $username, $wachtwoord, $land, $geslacht, $geboortedatum)
+    mysqli_stmt_bind_param($stmt, "sssssssss", $emailadres, $achternaam, $voornaam, $abbonement, $username, $wachtwoord, $land, $geslacht, $geboortedatum);
     sqlsrv_execute($stmt);
     sqlsrv_close($stmt);
     header("location: ../Registreren.php?error=none");
