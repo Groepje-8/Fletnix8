@@ -10,7 +10,7 @@ else {
     <div class="dropdown">
         <a class="active" href="/index.php">&#9776;</a>
         <div class="dropdown-content">
-            <a href="/html/Abbonement.php">Abonnementen</a>
+            <a href="/html/Abonnement.php">Abonnementen</a>
             <a href="/html/FilmOverzicht.php">Filmoverzicht</a>                   
         </div>
     </div>
