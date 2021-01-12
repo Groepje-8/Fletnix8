@@ -1,12 +1,11 @@
 <?php
 
 include "Components/sessionStart.php";
-var_dump($_SESSION);
 if(isset($_SESSION['usernaam'])){
     $data = [$_SESSION['mail'], $_SESSION['vnaam'], $_SESSION['anaam'], $_SESSION['land'], $_SESSION['gdatum'], $_SESSION['username'], $_SESSION['abonnemnt']];
 }
 else {
-    $data = ["-", "-", "-", "-", "-", "-", "-", "-"];
+    $data = ["mail", "voornaam", "achternaam", "land", "geboortedatum", "gebruikersnaam", "-", "abonnement"];
 }
 require_once "Components/header.php";
 header_function("ProfielPagina");
@@ -22,7 +21,7 @@ header_function("ProfielPagina");
         <div class="card">
             <img src="/img/placeholdercard.png" alt="Test" style="width:100%">
             <h1><?="$data[1] $data[2]"?></h1>
-            <p class="title"><?=$abonnement?></p>
+            <p class="title"><?=$data[7]?></p>
             <p>Standaard</p>
             <p><button>Help</button></p>
         </div>
@@ -49,7 +48,7 @@ header_function("ProfielPagina");
                 </ul>
                 <input type="submit" value="Aanpassen">
             </form>
-            <form action="Components/loguitSession.php" method="GET">
+            <form action="Actions/loguit.php" method="GET">
                 <input type="submit" value="Uitloggen">
             </form>
         </div>
