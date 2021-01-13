@@ -4,8 +4,11 @@ include "Actions/haalFilmDetails.php";
 require_once "Components/header.php";
 maak_header("FilmDetails");
 
-//$_GET['movie_id'];
-$filmData = haalFilmDetails(1);
+$movie_id = 1; //$_GET['movie_id'];
+$filmData = haalFilmDetails($movie_id);
+$filmGenres = haalFilmGenres($movie_id);
+$filmRegisseurs = haalFilmRegisseurs($movie_id);
+$filmCast = haalFilmCast($movie_id);
 ?>
 <body>
     <?php require_once "Components/navbar.php";  ?>
@@ -19,11 +22,11 @@ $filmData = haalFilmDetails(1);
         </div>
         <div class="titel">
             <h1><?=$filmData['title']?></h1>
-            <h2><?=$filmData['publication_year']?> - Regisseur</h2>
+            <h2><?=$filmData['publication_year']?> - <?=formatDetailString($filmRegisseurs);?></h2>
             <a href="/html/FilmOverzicht.php">
                 <p>Meer van deze regisseur</p>
             </a>
-            <h3>Genres</h3>
+            <h3><?=formatDetailString($filmGenres);?></h3>
         </div>
         <div class="beschrijving">
 
@@ -32,7 +35,7 @@ $filmData = haalFilmDetails(1);
             <p>Speelduur: <?=minutenNaarUur($filmData['duration'])?></p>
         </div>
         <div class="poster">
-            <img src="/img/poster.jpg" alt="Poster">
+            <img src="/img/Posters/<?=$movie_id?>.jpg" alt="Poster">
         </div>
         <div class="knoppen">
             <a href="/html/MediaPlayer.php">
@@ -45,22 +48,7 @@ $filmData = haalFilmDetails(1);
 
         </div>
         <div class="acteurgrid">
-            <div>
-                <img src="/img/placeholder.png" alt="acteur">
-                <h3>John David Washington</h3>
-            </div>
-            <div>
-                <img src="/img/placeholder.png" alt="acteur">
-                <h3>Robert Pattinson</h3>
-            </div>
-            <div>
-                <img src="/img/placeholder.png" alt="acteur">
-                <h3>Elizabeth Debicki</h3>
-            </div>
-            <div>
-                <img src="/img/placeholder.png" alt="acteur">
-                <h3>Michael Caine</h3>
-            </div>
+            <?=printActeurGrid($filmCast)?>
         </div>
     </main>
 
