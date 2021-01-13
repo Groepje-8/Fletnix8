@@ -39,12 +39,21 @@ Voor het gebruiken van de database moet je:
 1. als 1x voorkomt moet het een id zijn
 1. alle onnodige div's weg
 
+## Verbeteringen van studenten
+
+1. Login en Registeren zichtbaarder maken
+
+
 ## Folderstructuur
 
 1. ROOT
    1. Index.html
    1. Html
       1. Hierin staan alle html files
+      1. Actions
+          1. Hier staan alle functies
+      1. Components
+          1. Hierin staan alle PHP/HTML Componenten
    1. Font
       1. Hierin staan de fonts die we gebruiken voor lokaal gebruik
    1. Documentatie

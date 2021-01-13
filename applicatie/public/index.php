@@ -1,6 +1,6 @@
 <?php
 include "html/Components/sessionStart.php";
-include "html/actions/haalTekstOp.php";
+require_once $_SERVER["DOCUMENT_ROOT"]."/html/Actions/haalTekstOp.php";
 require_once "html/Components/header.php";
 maak_header("Index");
 // pagina ID 1
@@ -53,7 +53,7 @@ maak_header("Index");
             }
         ?>
           
-        <?= include "html/Components/footer.php"; ?>
+        <?php require_once "html/Components/footer.php"; ?>
     </div>
 </body>
 

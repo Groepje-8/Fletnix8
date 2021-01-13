@@ -1,16 +1,16 @@
 <?php
 include "getData.php";
 
-function printAlleFilms($genre, $regisseur, $jaar)
+function printAlleFilms($genre, $regisseur, $jaar,$titel)
 {
-    foreach (HaalFilmsMetGenreFilter($genre, $regisseur, $jaar) as $film) {
+    foreach (HaalFilmsMetGenreFilter($genre, $regisseur, $jaar,$titel) as $film) {
         echo "<div>
         <a href='FilmDetails.php/?movie_id=" . $film['movie_id'] . "'><img src='/img/posters/" . $film['movie_id'] . ".jpg' alt='Poster'></a>
     </div>";
     }
 }
 
-function HaalFilmsMetGenreFilter($genre, $regisseur, $jaar)
+function HaalFilmsMetGenreFilter($genre, $regisseur, $jaar,$titel)
 {
 
 
@@ -25,6 +25,7 @@ function HaalFilmsMetGenreFilter($genre, $regisseur, $jaar)
     WHERE filmgenre.genrename LIKE '$genre'
     AND persoon.naam LIKE '$regisseur' 
     AND Films.publication_year LIKE '$jaar'
+    AND Films.title LIKE '$titel'
     GROUP BY Films.movie_id";
     return (krijgData($sql));
 }
@@ -39,3 +40,4 @@ function printNieuwsteFilms()
     </div>";
     }
 }
+

@@ -1,10 +1,10 @@
 <?php
+// Pagina ID 5
 require_once "Components/sessionStart.php";
 require_once "Actions/haalFilmsOp.php";
 require_once "Actions/haalFilmDetails.php";
 require_once "Components/header.php";
 maak_header("FilmOverzicht");
-// Pagina ID 5
 ?>
 
 <body>
@@ -21,20 +21,21 @@ maak_header("FilmOverzicht");
             <div class="dropdown-content">
                 <div class="filter-header">
                     <h2>Filter voor je favoriete films</h2>
-                    <input type="text" placeholder="Search..">
+                    <form action="/html/FilmOverzicht.php" method="get">
+                        <input type="text" placeholder="Zoek op titel" name="titel">
                 </div>
                 <div class="row">
                     <div class="column">
                         <h3>Genres</h3>
-                        <form action="/html/FilmOverzicht.php" method="get">
-                            <?php printAlleGenres(); ?>
-                         
+
+                        <?php printAlleGenres(); ?>
+
                     </div>
                     <div class="column">
                         <h3>Regisseurs</h3>
 
-                            <?php printAlleRegisseurs(); ?>
-                       
+                        <?php printAlleRegisseurs(); ?>
+
                     </div>
                     <div class="column">
                         <h3>Publicatiejaar</h3>
@@ -55,6 +56,8 @@ maak_header("FilmOverzicht");
                         <input type="checkbox" name="periode" value="195%" id="195%">
                         <label for="50">'50s'</label>
                         <input type="submit" value="Filter instellen">
+                        <form action="/html/FilmOverzicht.php">
+                            <input type="submit" value="Filter resetten">
                         </form>
                     </div>
                 </div>
@@ -67,6 +70,10 @@ maak_header("FilmOverzicht");
         $genre = "%";
         $regisseur = "%";
         $jaar = "%";
+        $titel = "%";
+        if (isset($_GET['titel'])) {
+            $titel = "%" . $_GET['titel'] . "%";
+        }
         if (isset($_GET['Genres'])) {
             $genre = $_GET['Genres'];
         }
@@ -76,7 +83,7 @@ maak_header("FilmOverzicht");
         if (isset($_GET['periode'])) {
             $jaar = $_GET['periode'];
         }
-        printAlleFilms($genre, $regisseur, $jaar);
+        printAlleFilms($genre, $regisseur, $jaar, $titel);
         ?>
     </div>
 
