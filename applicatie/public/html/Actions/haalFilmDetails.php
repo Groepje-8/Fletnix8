@@ -10,7 +10,7 @@ function haalFilmDetails($movie_id){
     $query = getConn()->prepare($sql);
     $query->execute([':movie_id' => $movie_id]);
     $data = $query->fetchall();
-    return $data;
+    return $data[0];
 }
 
 function haalFilmGenres($movie_id){
@@ -22,7 +22,7 @@ function haalFilmGenres($movie_id){
     $query = getConn()->prepare($sql);
     $query->execute([':movie_id' => $movie_id]);
     $data = $query->fetchall();
-    return $data;
+    return $data[0];
 }
 
 function haalFilmCast($movie_id){
@@ -34,7 +34,7 @@ function haalFilmCast($movie_id){
     $query = getConn()->prepare($sql);
     $query->execute([':movie_id' => $movie_id]);
     $data = $query->fetchall();
-    return $data;
+    return $data[0];
 }
 
 function haalFilmRegisseur($movie_id){
@@ -45,13 +45,16 @@ function haalFilmRegisseur($movie_id){
     $query = getConn()->prepare($sql);
     $query->execute([':movie_id' => $movie_id]);
     $data = $query->fetchall();
-    return $data;
+    return $data[0];
 }
 
 function minutenNaarUur($minuten) {
     $minutenOver = $minuten % 60; 
     $uur = intval($minuten / 60);
-    $string = "$uur : $minutenOver";
+    $string = "$uur uur en $minutenOver minuten";
+    if ($minutenOver == 1){
+        $string = "$uur uur en $minutenOver minuut";
+    }
     return $string;
 }
 

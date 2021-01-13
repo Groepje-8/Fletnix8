@@ -6,7 +6,6 @@ maak_header("FilmDetails");
 
 //$_GET['movie_id'];
 $filmData = haalFilmDetails(1);
-var_dump($filmData);
 ?>
 <body>
     <?php require_once "Components/navbar.php";  ?>
@@ -19,26 +18,18 @@ var_dump($filmData);
             </form>
         </div>
         <div class="titel">
-            <h1>Tenet</h1>
-            <h2>2020 - Christopher Nolan</h2>
+            <h1><?=$filmData['title']?></h1>
+            <h2><?=$filmData['publication_year']?> - Regisseur</h2>
             <a href="/html/FilmOverzicht.php">
                 <p>Meer van deze regisseur</p>
             </a>
-            <h3>Actie - Sciencefiction</h3>
+            <h3>Genres</h3>
         </div>
         <div class="beschrijving">
 
             <h2>Samenvatting</h2>
-            <p>Bewapend met maar een woord, Tenet, en vechtend voor het overleven van de hele wereld reist onze
-                hoofdpersoon
-                door een schemerige wereld van internationale spionage op een missie die zich ontvouwt buiten de echte
-                tijdlijn. <br><br>
-
-                Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist
-                journeys
-                through a twilight world of international espionage on a mission that will unfold in something beyond
-                real time.</p>
-            <p>Speelduur: 2 uur en 30 minuten</p>
+            <p><?=$filmData['description']?></p>
+            <p>Speelduur: <?=minutenNaarUur($filmData['duration'])?></p>
         </div>
         <div class="poster">
             <img src="/img/poster.jpg" alt="Poster">

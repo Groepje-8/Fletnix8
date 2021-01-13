@@ -97,8 +97,7 @@ GO
 CREATE TABLE [persoon]
 (
  [persoon_id] int NOT NULL ,
- [voornaam]   varchar(50) NOT NULL ,
- [achternaam] varchar(50) NOT NULL ,
+ [naam]   varchar(50) NOT NULL ,
  [geslacht]   varchar(50) NOT NULL ,
 
 
