@@ -44,7 +44,7 @@ CREATE TABLE [gebruikers]
  [startDatumSub] date NOT NULL ,
  [endDatumSub]   date NOT NULL ,
  [username]      varchar(50) NOT NULL ,
- [wachtwoord]    varchar(50) NOT NULL ,
+ [wachtwoord]    varchar(100) NOT NULL ,
  [land]          varchar(50) NOT NULL ,
  [geslacht]      varchar(50) NOT NULL ,
  [geboortedatum] date NOT NULL ,
