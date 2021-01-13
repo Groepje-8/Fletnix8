@@ -1,11 +1,19 @@
 # Fletnix8
 
 Beroepsproduct 'Fletnix' Groepje8 BP1
-Een statische website met pure HTML en CSS op basis van wireframes.
+Een dynamische website met pure HTML,CSS,PHP en SQL op basis van wireframes.
+
+# Database gebruik
+Voor het gebruiken van de database moet je:
+1. De meegegeven INSERT en CREATE bestandjes onder de map database uitvoeren.
+1. In je database een gebruiker aanmaken met de naam:"Groepje8" en wachtwoord:"helloworld".
+1. Als laatste moet je deze gebruiker de lees en schrijf rechten geven in je database binnen SQL Management Studio
 
 # WTUX beroepsproduct omschrijving
 
 [Beroepsproduct omschrijving](https://hanaim-webtech.github.io/webtech/UX/beroepsproduct_UX.html)
+
+
 
 # Beoordelingsmodel
 

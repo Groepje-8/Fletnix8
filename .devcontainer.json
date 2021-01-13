@@ -7,5 +7,9 @@
     "extensions": [
         "sleistner.vscode-fileutils",
         "timonwong.shellcheck",
+        "ms-vscode-remote.remote-containers",
+        "bmewburn.vscode-intelephense-client",
+        "umoxfo.vscode-w3cvalidation",
+        "abusaidm.html-snippets"
     ]
 }
