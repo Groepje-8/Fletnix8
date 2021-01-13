@@ -2,7 +2,7 @@
 require_once "/srv/webserver/applicatie/public/html/components/connection.php";
 
 // Query hulp-functies
-function executeQuery($sql){
+function executeMovieIdQuery($sql, $movie_id){
     $query = getConn()->prepare($sql);
     $query->execute([':movie_id' => $movie_id]);
     $data = $query->fetchall();
@@ -21,7 +21,7 @@ function haalFilmDetails($movie_id){
         FROM films
         WHERE movie_id = :movie_id";
 
-    $data = executeQuery($sql);
+    $data =  executeMovieIdQuery($sql, $movie_id);
     return $data[0];
 }
 
@@ -30,7 +30,7 @@ function haalFilmGenres($movie_id){
         FROM filmgenre FG
         WHERE movie_id = :movie_id";
 
-    $data = executeQuery($sql);
+    $data =  executeMovieIdQuery($sql, $movie_id);
     return formatArray($data);
 }
 
@@ -39,7 +39,7 @@ function haalFilmCast($movie_id){
         FROM Persoon P INNER JOIN Cast C ON P.persoon_id = C.persoon_id
         WHERE movie_id = :movie_id";
 
-    $data = executeQuery($sql);
+    $data =  executeMovieIdQuery($sql, $movie_id);
     return formatArray($data);
 }
 
@@ -48,7 +48,7 @@ function haalFilmRegisseurs($movie_id){
         FROM Persoon P INNER JOIN Regisseur R ON P.persoon_id = R.persoon_id
         WHERE movie_id = :movie_id";
 
-    $data = executeQuery($sql);   
+    $data =  executeMovieIdQuery($sql, $movie_id);   
     return formatArray($data);
 }
 
