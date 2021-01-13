@@ -1,6 +1,8 @@
 <?php
+include "actions/haalTekstOp.php";
 require_once "Components/header.php";
 maak_header("Registreren");
+// pagina ID 9
 ?>
 
 <body>
@@ -89,8 +91,7 @@ maak_header("Registreren");
 
         </table>
     </form>
-    <p> Klik op "verzend" knop om U account aan te maken en door te gaan naar U profielpagina.<br>
-        Hier kunt U de informatie nalezen en controleren op eventuelen fouten.</p>
+    <p> <?php (haalTekstOp(9, 1)); ?></p>
 
     <?php 
     if (isset($_GET["error"])) {

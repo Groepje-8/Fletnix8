@@ -1,7 +1,9 @@
 <?php
+include "html/Components/sessionStart.php";
+include "html/actions/haalTekstOp.php";
 require_once "html/Components/header.php";
 maak_header("Index");
-
+// pagina ID 1
 ?>
 
 <body>
@@ -10,11 +12,11 @@ maak_header("Index");
 
         <div class="title">
             <h1>Fletnix</h1>
-            <h2>DÉ videostreaming website voor studenten</h2>
+            <h2><?php haalTekstOp(1, 1);?></h2>
         </div>
 
         <div class="registreerform">
-            <p>Registeer je nu en betaal de eerste maand 0 euro!</p>
+            <p><?php haalTekstOp(1, 2);?></p>
 
             <form action="/html/Abonnement.php">
                 <input type="submit" value="Registeer" />
@@ -22,7 +24,7 @@ maak_header("Index");
         </div>
 
         <div class="loginform">
-            <p>Of log in als je al een account hebt</p>
+            <p><?php haalTekstOp(1, 3);?></p>
 
             <form action="Components/inlogSession.php" method="POST">
                 <label for="username">Username:</label>
@@ -39,10 +41,8 @@ maak_header("Index");
             </video>
         </main>
 
-        
-
         <?php 
-        // Maak hier functie van en mooi veld
+        // Maak hier functie van een mooi veld
          if (isset($_GET["error"])) {
              if ($_GET["error"] == "emptyinput") {
                  echo "<p>Vul alle velden in svp</p>";

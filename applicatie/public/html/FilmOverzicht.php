@@ -4,6 +4,7 @@ require_once "Actions/haalFilmsOp.php";
 require_once "Actions/haalFilmDetails.php";
 require_once "Components/header.php";
 maak_header("FilmOverzicht");
+// Pagina ID 5
 ?>
 
 <body>

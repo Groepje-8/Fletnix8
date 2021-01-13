@@ -3,6 +3,7 @@ include "Components/sessionStart.php";
 include "Actions/haalFilmDetails.php";
 require_once "Components/header.php";
 maak_header("FilmDetails");
+// Pagina ID 4
 
 if (!isset($_GET['movie_id'])){
     header("location: /html/FilmOverzicht.php");
@@ -15,9 +16,11 @@ $film = [
     'Regisseurs' => haalFilmRegisseurs($movie_id),
     'Cast' => haalFilmCast($movie_id),
 ];
+
+$_SESSION['username'] = "abc";
 ?>
 <body>
-    <?php require_once "Components/navbar.php";  ?>
+    <?php require_once "Components/navbar.php"; ?>
 
     <main>
         <div class="terugknop">
@@ -46,13 +49,15 @@ $film = [
         </div>
 
         <div class="knoppen">
-            <a href="/html/MediaPlayer.php">
+            <a href="/html/MediaPlayer.php?titel=<?=$film['Details']['title']?>">
                 <p>Bekijk Trailer</p>
             </a>
             <br>
-            <a href="/html/MediaPlayer.php">
-                <p>Bekijk Film</p>
-            </a>
+            <?php if(isset($_SESSION['username'])){
+               echo "<a href='/html/MediaPlayer.php?titel=".$film['Details']['title'].".'>
+                        <p>Bekijk Film</p>
+                    </a>";
+            }?>
         </div>
 
         <div class="acteurgrid">
