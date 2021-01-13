@@ -41,7 +41,22 @@ maak_header("Index");
 
         
 
+<<<<<<< Updated upstream
         <?php include "html/Components/footer.php"; ?>
+=======
+        <?php 
+         if (isset($_GET["error"])) {
+             if ($_GET["error"] == "emptyinput") {
+                 echo "<p>Vul alle velden in svp</p>";
+                 }
+                 else if ($_GET["error"] == "wronglogin") {
+                     echo "<p>login gegevens kloppen niet</p>";
+                }
+            }
+        ?>
+          
+        <?= include "html/Components/footer.php"; ?>
+>>>>>>> Stashed changes
     </div>
 </body>
 

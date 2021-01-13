@@ -32,3 +32,28 @@ if (password_verify($SubmittedPassword, $data['password'])) {
 } else {
     header("location: ../../index.php");
 }
+<<<<<<< Updated upstream:applicatie/public/html/Actions/login.php
+=======
+
+//--------------------------------------------------------
+
+if (isset($_POST["submit"])) {
+    $gebruikersnaam = $_POST["gebruikersnaam"]
+    $ww = $_POST["ww"]
+ 
+//juiste db connectie en functions. 
+require_once 'name';
+
+    if (emptyInputSignup($gebruikersnaam, $ww) !== false) {
+        header("location: ../../index.php?error=emptyinput");
+        exit();
+    }
+
+    loginUser($conn, $gebruikersnaam, $ww)
+}
+else{
+    header("location: ../login.php");
+}
+
+}
+>>>>>>> Stashed changes:applicatie/public/html/Actions/inlog.php

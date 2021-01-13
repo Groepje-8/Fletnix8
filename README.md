@@ -86,3 +86,4 @@ Een statische website met pure HTML en CSS op basis van wireframes.
 1. Accountinstellingen
 1. Registreren
 1. ProfielPagina
+1. Login

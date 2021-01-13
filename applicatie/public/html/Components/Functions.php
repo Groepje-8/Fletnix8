@@ -1,8 +1,9 @@
 <?php
 
-function emptyInputSignup($voornaam, $achternaam, $land, $geboortejaar, $rekeningnummer, $gebruikersnaam, $abonnement, $ww, $hww){
+//--------------registreren---------------------------
+function emptyInputSignup($voornaam, $achternaam, $land, $geboortejaar, $emailadres, $gebruikersnaam, $abonnement, $ww, $hww){
     $result;
-    if (empty($voornaam) || empty($achternaam) || empty($land) || empty($geboortejaar) || empty($rekeningnummer) || empty($gebruikersnaam) || empty($abonnement) || empty($ww) || empty($hww)  ){
+    if (empty($voornaam) || empty($achternaam) || empty($land) || empty($geboortejaar) || empty($emailadres) || empty($gebruikersnaam) || empty($abonnement) || empty($ww) || empty($hww)  ){
         $result = true;
     }
     else {
@@ -15,20 +16,25 @@ function invalidUid($username) {
     return !preg_match("/^[a-zA-Z0-9]*$/", $username);
 }
 
-function invalidEmail($email) {
-    $result;
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-        $result = true;
-    }
-    else {
-        $result = false;
-    }
-    return $result;
-}
 
 function pwdMatch($ww, $hww) {
+    return $ww !== $hww;
+}
+
+function createUser(){
+    //alles benoemen anders kan de info niet in de database worden opgeslagen. De vraagtekens zijn placeholders. Bij query is wat je er invult. Als tijd over is geslacht toevoegen. 
+    $query = $dbh->prepare('INSERT INTO fletnix_user (emailadres, achternaam, voornaam, abonnement, username, wachtwoord, land, geboortedatum)
+    VALUES (?, ?, ?, ?, ?, ?, ?)');
+    $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
+    //hier eigen waardes invoeren. !!!!
+    $query->execute([$emailadres, $achternaam, $voornaam, $abonnement, $gebruikersnaam, $passwordHashed, $land, $geboortejaar]);
+    exit();
+}
+
+//-------------------- login ---------------------------
+function emptyInputLogin($gebruikersnaam, $ww){
     $result;
-    if ($ww !== $hww){
+    if ( empty($gebruikersnaam) || empty($ww) ){
         $result = true;
     }
     else {
@@ -36,6 +42,7 @@ function pwdMatch($ww, $hww) {
     }
     return $result;
 }
+<<<<<<< Updated upstream
 // users en usersUid omgezet worden naar hoe de tabellen en kolommen worden genoemd !!
 function uidExists($conn, $username, $email) {
      $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";     //? is placeholder
@@ -79,44 +86,40 @@ function createUser($conn, $voornaam, $achternaam, $land, $geboortejaar, $rekeni
     header("location: ../Registreren.php?error=none");
     exit();
 }
+=======
 
-$resultmessage = "";
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['username'], $_POST['email']) && !isset($_SESSION['Gebruikersnaam'], $_SESSION['Email'])) {
-        $result = Classes\Query\Query::getUser($_POST['email'], $_POST['username']);
-        if ($result->count() > 0) {
-            $resultmessage = "Er is al een gebruiker met dat emailadres of die gebruikersnaam geregistreerd.";
-        } else {
-            $_SESSION['Gebruikersnaam'] = $_POST['username'];
-            $_SESSION['Email'] = $_POST['email'];
+//headers checken
+function loginUser( $gebruikersnaam, $ww){
+    // $uidExists = uidExists($conn, $username);
+>>>>>>> Stashed changes
 
-            Classes\Registration::sendVerificationEmail($_SESSION["Gebruikersnaam"], $_SESSION["Email"]);
-        }
-    }
-    if (isset($_POST['verifieer'])) {
-        $_SESSION['codeIsCorrect'] = $_POST['verifieer'];
-    }
-    if (isset($_POST['username'], $_POST['password'], $_POST['passwordRepeat'], $_POST['email'], $_POST['firstName'], $_POST['lastName'], $_POST['addressLine1'], $_POST['placeName'], $_POST['zipCode'], $_POST['country'], $_POST['birthDate'], $_POST['secretQuestionID'], $_POST['secretQuestionAnswer'])) {
-        $resultmessage = Classes\Registration::register();
-        if ($resultmessage == "success") {
-            $_SESSION['statusMessage'] = "Account successvol aangemaakt, u kunt nu inloggen.";
-            header("location: login.php");
-            exit();
-        }
+    // if (uidExists === false) {
+    //     header("location: ../login.php?error=wronglogin");
+    //     exit();
+    // }
+    // [kolom name in db]
+    if (password_verify($password, $passwordHashed)) {
+        session_start();
+        $_SESSION["username"] = $uidExist["username"];
+        header("location: ../../index.php");
+        exit();
+      }
+      else {
+        header("location: ../login.php?error=wronglogin");
+        exit();
     }
 }
 
-if (Query::get('Gebruiker')->where('gebruikersnaam', $username)->count() > 0) {
-    //account met ingevulde username bestaat al
-    return "Er bestaat al een account met deze gebruikersnaam.";
-} else if (Query::get('Gebruiker')->where('mailbox', $email)->count() > 0) {
-    //account met ingevulde email bestaat al
-    return "Er bestaat al een account met dit e-mailadres.";
-}
+//     $checkww = password_verify($ww, $wwHashed);
 
-if (Query::insert('Gebruiker', $columns, $values)) {
-    return "success";
-} else {
-    return "Er is iets fout gegaan, probeer het a.u.b. later opnieuw.";
-}
-?>
+//     if ($checkww === false) {
+//         header("location: ../login.php?error=wronglogin");
+//         exit();
+//     }
+//     else if ($checkww === true) {
+//         session_start();
+//         $_SESSION["gebruikersnaam"] = $uidExist["gebruikersnaam"];
+//         header("location: ../../index.php");
+//         exit();
+//     }
+// }
