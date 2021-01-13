@@ -7,7 +7,7 @@ maak_header("Registreren");
     <?php include "Components/navbar.php"; ?>
 
     <h1>Registratie formulier</h1>
-    <form action="/html/Copmponents/RegistratiePOST.php" method="POST" id="profielform">
+    <form action="/html/Components/RegistratiePOST.php" method="POST" id="profielform">
         <table id="registreren">
             <tr>
                 <td>
@@ -43,10 +43,10 @@ maak_header("Registreren");
             </tr>
             <tr>
                 <td>
-                    <label for="mail">E-mailadres:</label>
+                    <label for="emailadres">E-mailadres:</label>
                 </td>
                 <td>
-                    <input pattern="[0-9]+" type="text" id="mail" name="mail">
+                <input type="email" id="emailadres" name="emailadres">
                 </td>
             </tr>
             <tr>
@@ -61,6 +61,7 @@ maak_header("Registreren");
                 <td>
                     <label for="abonnement">Abonnement:</label>
                 </td>
+<<<<<<< Updated upstream
                 <td>
                     <select id="abb" name="abb">
                         <option value="beginner" <?php if ($_GET['abo'] == "beginner") {
@@ -72,6 +73,10 @@ maak_header("Registreren");
                         <option value="professioneel" <?php if ($_GET['abo'] == "professioneel") {
                                                             echo "selected";
                                                         } ?>>Professioneel</option>
+=======
+                <td> 
+                <input pattern="[a-zA-Z]+" type="text" id="abonnement" name="abonnement">
+>>>>>>> Stashed changes
                 </td>
             </tr>
             <tr>
@@ -100,6 +105,29 @@ maak_header("Registreren");
     </form>
     <p> Klik op "verzend" knop om U account aan te maken en door te gaan naar U profielpagina.<br>
         Hier kunt U de informatie nalezen en controleren op eventuelen fouten.</p>
+
+    <?php 
+    if (isset($_GET["error"])) {
+        if ($_GET["error"] == "emptyinput") {
+            echo "<p>Vul alle velden in svp</p>";
+        }
+        else if ($_GET["error"] == "invaliduid") {
+            echo "<p>Kies een geldige gebruikersnaam </p>";
+        }
+        else if ($_GET["error"] == "passwordsdontmatch") {
+            echo "<p>Wachtwoorden komen niet overeen</p>";
+        }
+        else if ($_GET["error"] == "stmtfailed") {
+            echo "<p>Er is iets mis gegaan</p>";
+        }
+        else if ($_GET["error"] == "usernametaken") {
+            echo "<p>Gebruikersnaam bestaat al</p>";
+        }
+        else if ($_GET["error"] == "none") {
+            echo "<p>U heeft succesvol geregistreerd</p>";
+        }
+    }
+    ?>    
 
     <?= include "Components/footer.php"; ?>
 </body>
