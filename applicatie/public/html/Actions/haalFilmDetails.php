@@ -54,7 +54,7 @@ function haalFilmRegisseurs($movie_id)
             FROM Persoon P INNER JOIN Regisseur R ON P.persoon_id = R.persoon_id
             WHERE movie_id = :movie_id";
 
-    $data = executeMovieIdQuery($sql, $movie_id);
+    $data = executeMovieIdQuery($sql, $movie_id);   
     return formatArray($data);
 }
 

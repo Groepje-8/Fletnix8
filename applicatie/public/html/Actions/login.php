@@ -32,11 +32,8 @@ if (password_verify($SubmittedPassword, $data['password'])) {
 } else {
     header("location: ../../index.php");
 }
-<<<<<<< Updated upstream:applicatie/public/html/Actions/login.php
-=======
 
-//--------------------------------------------------------
-
+/*
 if (isset($_POST["submit"])) {
     $gebruikersnaam = $_POST["gebruikersnaam"]
     $ww = $_POST["ww"]
@@ -54,6 +51,4 @@ require_once 'name';
 else{
     header("location: ../login.php");
 }
-
-}
->>>>>>> Stashed changes:applicatie/public/html/Actions/inlog.php
+*/
