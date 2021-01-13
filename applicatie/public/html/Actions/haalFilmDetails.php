@@ -86,7 +86,7 @@ function printActeurGrid($data)
     $html = "";
     foreach ($data as $entry) {
         $html .= "<div>";
-        $html .=    "<img src='/img/placeholder.png' alt='acteur'>";
+        $html .=    "<img src='/img/Acteurs/$entry.jpg' alt='$entry'>";
         $html .=    "<h3>$entry</h3>";
         $html .= "</div>";
     }

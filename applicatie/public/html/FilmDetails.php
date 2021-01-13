@@ -16,8 +16,6 @@ $film = [
     'Regisseurs' => haalFilmRegisseurs($movie_id),
     'Cast' => haalFilmCast($movie_id),
 ];
-
-$_SESSION['username'] = "abc";
 ?>
 <body>
     <?php require_once "Components/navbar.php"; ?>
