@@ -1,5 +1,5 @@
 <?php
-include "actions/haalTekstOp.php";
+require_once $_SERVER["DOCUMENT_ROOT"]."/html/Actions/haalTekstOp.php";
 require_once "Components/header.php";
 maak_header("Registreren");
 // pagina ID 9

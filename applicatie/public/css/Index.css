@@ -23,6 +23,10 @@
     width: 45%;
     margin-left: 49%;
 }
+.registreerform[type=submit]{
+    float:bottom;
+
+}
 
 .loginform {
     grid-area: loginform;
@@ -31,8 +35,8 @@
     box-shadow: 2px 2px 4px black;
     line-height: 3vh;
     font-size: 2.5vh;
-    width: 45%;
-    height: 100%;
+    width: 40%;
+    height: 110%;
     margin-left: 20%;
 }
 

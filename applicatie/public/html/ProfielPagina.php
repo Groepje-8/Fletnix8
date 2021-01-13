@@ -1,6 +1,7 @@
 <?php
 
 include "Components/sessionStart.php";
+checkOfIsIngelogd();
 // Dit hieronder moet in een functie
 if (isset($_SESSION['usernaam'])) {
     $data = [$_SESSION['mail'], $_SESSION['vnaam'], $_SESSION['anaam'], $_SESSION['land'], $_SESSION['gdatum'], $_SESSION['username'], $_SESSION['abonnemnt']];

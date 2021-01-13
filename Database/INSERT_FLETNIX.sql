@@ -64,7 +64,13 @@ VALUES (1,'Tenet',150,2020, 'Armed with only one word, Tenet, and fighting for t
        (17,'Ben-Hur',212,1959, 'After a Jewish prince is betrayed and sent into slavery by a Roman friend, he regains his freedom and comes back for revenge.'),
        (18,'Hunter Killer',121,2018, 'An untested American submarine captain teams with U.S. Navy Seals to rescue the Russian president, who has been kidnapped by a rogue general.'),
        (19,'A Clockwork Orange',136,1971, 'In the future, a sadistic gang leader is imprisoned and volunteers for a conduct-aversion experiment, but it doesn''t go as planned.'),
-       (20,'American Sniper',133,2014, 'Navy S.E.A.L. sniper Chris Kyle''s pinpoint accuracy saves countless lives on the battlefield and turns him into a legend. Back home with his family after four tours of duty, however, Chris finds that it is the war he can''t leave behind.');
+       (20,'American Sniper',133,2014, 'Navy S.E.A.L. sniper Chris Kyle''s pinpoint accuracy saves countless lives on the battlefield and turns him into a legend. Back home with his family after four tours of duty, however, Chris finds that it is the war he can''t leave behind.'),
+       (21,'The Shawshank Redemption',142,1994,'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency. '),
+       (22,'The Godfather',215,1972,'An organized crime dynastys aging patriarch transfers control of his clandestine empire to his reluctant son. '),
+       (23,'The Dark Knight',152,2008,'When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.'),
+       (24,'The Lord of the Rings: The Return of the King',201,2003,'Gandalf and Aragorn lead the World of Men against Saurons army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring. ');
+
+
 GO
 
 -- Genres
@@ -103,7 +109,10 @@ VALUES (1, 'Action'), (1, 'Sci-Fi'), (1, 'Thriller'),
        (17, 'Adventure'), (17, 'Drama'), (17, 'History'),
        (18, 'Action'), (18, 'Thriller'),
        (19, 'Crime'), (19, 'Drama'), (19, 'Sci-Fi'),
-       (20, 'Action'), (20, 'Biography'), (20, 'Drama');
+       (20, 'Action'), (20, 'Biography'), (20, 'Drama'),
+       (21,'Drama'),(22,'Crime'),(22,'Drama'),(23,'Action'),
+       (23,'Crime'),(23,'Drama'),(24,'Action'),(24,'Adventure'),
+       (24,'Drama');
 GO
 
 -- Personen
@@ -202,7 +211,18 @@ VALUES (1, 'Adam Driver'),
        (91, 'William Wyler'),
        (92, 'Donovan Marsh'),
        (93, 'Stanley Kubrick'),
-       (94, 'Clint Eastwood');
+       (94, 'Clint Eastwood'),
+       (95, 'Frank Darabont'),
+       (96, 'Tim Robbins'),
+       (97, 'Morgan Freeman'),
+       (98, 'Bob Gunton'),
+       (99, 'Francis Ford Coppola'),
+       (100, 'Marlon Brando'),
+       (101, 'Heath Ledger'),
+       (102, 'Peter Jackson'),
+       (103, 'Elijah Wood'),
+       (104, 'Viggo Mortensen');
+
 GO
 
 INSERT INTO Regisseur
@@ -225,7 +245,11 @@ VALUES (1, 78),
        (17, 91),
        (18, 92),
        (19, 93),
-       (20, 94);
+       (20, 94),
+       (21, 95),
+       (22, 99),
+       (23, 78),
+       (24, 102);
 GO
 
 INSERT INTO Cast (movie_id, persoon_id)
@@ -248,7 +272,9 @@ VALUES (1, 34), (1, 63), (1, 21), (1, 38),
        (17, 12), (17, 29), (17, 28), (17, 71),
        (18, 26), (18, 35), (18, 73), (18, 3),
        (19, 47), (19, 7), (19, 58), (19, 17),
-       (20, 9), (20, 69), (20, 45), (20, 30);
+       (20, 9), (20, 69), (20, 45), (20, 30),
+       (21,96),(21,97),(21,98),(22,100),(22,2),
+       (23,15),(23,101),(24,103),(24,104);
 GO
 
 /* Ter controle

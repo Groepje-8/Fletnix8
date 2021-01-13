@@ -9,7 +9,7 @@ if (isset($_POST["submit"])) {
     $geboortejaar = $_POST["geboortejaar"];
     $emailadres = $_POST["emailadres"];
     $gebruikersnaam = $_POST["gebruikersnaam"];
-    $abonnement = $_POST["abonnement"];
+    $abonnement = 1;
     $ww = $_POST["ww"];
     $hww = $_POST["hww"];
 
@@ -29,7 +29,7 @@ if (isset($_POST["submit"])) {
     }
 
     createUser($voornaam, $achternaam, $land, $geboortejaar, $emailadres, $gebruikersnaam, $abonnement, $ww);
-
+    header("location: ../filmOverzicht.php");
 }
 else {
     header("location: ../ProfielPagina.php");

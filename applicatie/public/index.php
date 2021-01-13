@@ -1,9 +1,9 @@
 <?php
 include "html/Components/sessionStart.php";
-require_once $_SERVER["DOCUMENT_ROOT"]."/html/Actions/haalTekstOp.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/html/Actions/haalTekstOp.php";
 require_once "html/Components/header.php";
 maak_header("Index");
-session_start();
+
 
 // pagina ID 1
 ?>
@@ -14,11 +14,28 @@ session_start();
 
         <div class="title">
             <h1>Fletnix</h1>
-            <h2><?php haalTekstOp(1, 1);?></h2>
+            <h2>
+                <?php
+                if (!isset($_GET['error'])) {
+                    haalTekstOp(1, 1);
+                } else {
+                    if ($_GET['error'] == "JeBentNogNietIngelogd") {
+                        echo "Je bent nog niet ingelogd!";
+                    }
+                    if ($_GET['error'] == "verkeerdegegevens") {
+                        echo "Je inloggegevenskloppen niet!";
+                    }
+                    if ($_GET['error'] == "emptyinput")
+                        echo "Je hebt niet alle gegevens ingevuld!";
+                }
+
+                ?>
+
+            </h2>
         </div>
 
         <div class="registreerform">
-            <p><?php haalTekstOp(1, 2);?></p>
+            <p><?php haalTekstOp(1, 2); ?></p>
 
             <form action="/html/Abonnement.php">
                 <input type="submit" value="Registeer" />
@@ -26,13 +43,13 @@ session_start();
         </div>
 
         <div class="loginform">
-            <p><?php haalTekstOp(1, 3);?></p>
+            <p><?php haalTekstOp(1, 3); ?></p>
 
-            <form action="/html/Components/inlogSession.php" method="POST">
+            <form action="/html/Actions/LoginFuncties.php" method="POST">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" pattern="[a-zA-Z]+">
                 <label for="wachtwoord">wachtwoord:</label>
-                <input type="wachtwoord" id="wachtwoord" name="wachtwoord" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <input type="password" id="wachtwoord" name="wachtwoord" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                 <input type="submit" value="Login" />
             </form>
         </div>
@@ -42,18 +59,6 @@ session_start();
                 Your browser does not support the video tag.
             </video>
         </main>
-
-        <?php 
-        if (isset($_GET["error"])) {
-          if ($_GET["error"] == "verkeerdegegevens") {
-            echo "<p>Probeer opnieuw</p>";
-          }
-          if ($_GET["error"] == "emptyinput") {
-            echo "<p>Vul alle velden in.</p>";
-          }
-        }
-        ?>
-          
         <?php require_once "html/Components/footer.php"; ?>
     </div>
 </body>
