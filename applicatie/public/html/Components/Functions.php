@@ -1,8 +1,9 @@
 <?php
 
+require_once 'Connection.php';
+
 //--------------registreren---------------------------
 function emptyInputSignup($voornaam, $achternaam, $land, $geboortejaar, $emailadres, $gebruikersnaam, $abonnement, $ww, $hww){
-    $result;
     if (empty($voornaam) || empty($achternaam) || empty($land) || empty($geboortejaar) || empty($emailadres) || empty($gebruikersnaam) || empty($abonnement) || empty($ww) || empty($hww)  ){
         $result = true;
     }
@@ -21,9 +22,9 @@ function pwdMatch($ww, $hww) {
     return $ww !== $hww;
 }
 
-function createUser(){
-    //alles benoemen anders kan de info niet in de database worden opgeslagen. De vraagtekens zijn placeholders. Bij query is wat je er invult. Als tijd over is geslacht toevoegen. 
-    $query = $dbh->prepare('INSERT INTO fletnix_user (emailadres, achternaam, voornaam, abonnement, username, wachtwoord, land, geboortedatum)
+function createUser($voornaam, $achternaam, $land, $geboortejaar, $emailadres, $gebruikersnaam, $abonnement, $password){
+//alles benoemen anders kan de info niet in de database worden opgeslagen. De vraagtekens zijn placeholders. Bij query is wat je er invult. Als tijd over is geslacht toevoegen. 
+    $query = getConn()->prepare('INSERT INTO gebruikers (emailadres, achternaam, voornaam, abonnement, username, wachtwoord, land, geboortedatum)
     VALUES (?, ?, ?, ?, ?, ?, ?)');
     $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
     //hier eigen waardes invoeren. !!!!
@@ -33,7 +34,6 @@ function createUser(){
 
 //-------------------- login ---------------------------
 function emptyInputLogin($gebruikersnaam, $ww){
-    $result;
     if ( empty($gebruikersnaam) || empty($ww) ){
         $result = true;
     }

@@ -18,7 +18,7 @@ if (isset($_POST["submit"])) {
         // header("location: ../Registreren.php?error=emptyinput");
         exit();
     }
-    if (invalidUid($username) !== false) {
+    if (invalidUid($gebruikersnaam) !== false) {
         header("location: ../Registreren.php?error=invaliduid");
         exit();
     }
@@ -34,7 +34,7 @@ if (isset($_POST["submit"])) {
     // }
 
     //Ook hier niet zeker of $conn werkt
-    createUser($voornaam, $achternaam, $land, $geboortejaar, $rekeningnummer, $gebruikersnaam, $abonnement, $ww, $hww);
+    createUser($voornaam, $achternaam, $land, $geboortejaar, $emailadres, $gebruikersnaam, $abonnement, $ww);
 
 }
 else {
