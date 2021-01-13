@@ -28,7 +28,7 @@ DELETE FROM persoon
 INSERT INTO content
 VALUES (1,1,'DÉ videostreaming website voor studenten'),
        (1,2,'Registeer je nu en betaal de eerste maand 0 euro!'),
-	   (1,3,'Of log in als je al een account hebt'),
+	(1,3,'Of log in als je al een account hebt'),
        (2,1,'Met het beginner abbonement kun je gemakkelijk en goedkoop de nieuwste films en series van vorig jaar zien!'),
        (2,2,'Met het standaard abbonement kun je alle films zien die niet meer in de bioscoop draaien en series een week voordat ze op tv komen!'),
        (2,3,'Met het professional abbonement kun je alle films zien VOORDAT ze in de bioscoop draaien, voor series geld het zelfde als het standaard abbonement!'),
@@ -38,9 +38,9 @@ VALUES (1,1,'DÉ videostreaming website voor studenten'),
        (8,2,'Alle rechten voorbehouden door Fletnix&#169; inc.'),
        (8,3,'Het kopiëren/distribueren van ons assortiment is ten strikste verboden en daders zullen strafrechtelijk vervolgd worden.'),
        (9, 1, 'Klik op "verzend" knop om U account aan te maken en door te gaan naar U profielpagina.<br> Hier kunt U de informatie nalezen en controleren op eventuelen fouten.'),
-       (10,1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' ),
-       (10,2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' ),
-	   (10,3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' );
+       (10,1, 'Wij zijn natuurlijk het beste groepje, namelijk groepje8 en daar zijn wij trots op, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' ),
+       (10,2, 'Wij programmeren websites omdat dat "leerzaam is", sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' ),
+	(10,3, 'Mooie cijfers halen natuurlijk, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' );
 GO
 
 -- Films
@@ -110,7 +110,7 @@ GO
 INSERT INTO persoon (persoon_id, naam)
 VALUES (1, 'Adam Driver'),
        (2, 'Al Pacino'),
-       (3, 'Alan Siegel'),
+       (3, 'Gary Oldman'),
        (4, 'Amanda Schull'),
        (5, 'Amanda Seyfried'),
        (6, 'Anne Hathaway'),
@@ -269,7 +269,7 @@ GO
 (15, Matt Damon, Christian Bale, Jon Bernthal, Caitriona Balfe),
 (16, Robert De Niro, Al Pacino, Joe Pesci, Harvey Keitel),
 (17, Charlton Heston, Jack Hawkins, Haya Harareet, Stephen Boyd),
-(18, Gerard Butler, John Thompson, Toby Jaffe, Alan Siegel ),
+(18, Gerard Butler, John Thompson, Toby Jaffe, Gary Oldman),
 (19, Malcolm McDowell, Anthony Burgess, Patrick Magee, David Prowse),
 (20, Bradley Cooper, Sienna Miller, Luke Grimes, Jason Hall);
 */

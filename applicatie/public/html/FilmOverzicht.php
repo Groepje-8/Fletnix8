@@ -1,8 +1,8 @@
 <?php
-include "Components/sessionStart.php";
-include "Actions/haalFilmsOp.php";
-include "Actions/haalFilmDetails.php";
-
+// Pagina ID 5
+require_once "Components/sessionStart.php";
+require_once "Actions/haalFilmsOp.php";
+require_once "Actions/haalFilmDetails.php";
 require_once "Components/header.php";
 maak_header("FilmOverzicht");
 ?>
@@ -12,66 +12,53 @@ maak_header("FilmOverzicht");
     <?php require_once "Components/navbar.php";  ?>
     <h1>Nieuwste Films</h1>
     <div class="flexbox">
-    <?php printNieuwsteFilms();?>
+        <?php printNieuwsteFilms(); ?>
     </div>
     <h2>Assortiment</h2>
     <div class="flexbox-titel">
-
-
-
         <div class="dropdown">
             <button class="dropbtn">Filters</button>
             <div class="dropdown-content">
                 <div class="filter-header">
                     <h2>Filter voor je favoriete films</h2>
-                    <input type="text" placeholder="Search..">
+                    <form action="/html/FilmOverzicht.php" method="get">
+                        <input type="text" placeholder="Zoek op titel" name="titel">
                 </div>
                 <div class="row">
                     <div class="column">
                         <h3>Genres</h3>
-                       <?php printGenres();?>
+
+                        <?php printAlleGenres(); ?>
+
                     </div>
                     <div class="column">
                         <h3>Regisseurs</h3>
-                        <input type="checkbox" name="Regisseurs" value="Martin Scorsese" id="Martin_Scorsese">
-                        <label for="Martin_Scorsese">Martin Scorsese</label>
-                        <input type="checkbox" name="Regisseurs" value="Quentin Tarantino" id="Quentin_Tarantino">
-                        <label for="Quentin_Tarantino">Quentin Tarantino</label>
-                        <input type="checkbox" name="Regisseurs" value="Steven Spielberg" id="Steven_Spielberg">
-                        <label for="Steven_Spielberg">Steven Spielberg</label>
-                        <input type="checkbox" name="Regisseurs" value="Stanley Kubrick" id="Stanley_Kubrick">
-                        <label for="Stanley_Kubrick">Stanley Kubrick</label>
-                        <input type="checkbox" name="Regisseurs" value="Alfred Hitchcock" id="Alfred_Hitchcock">
-                        <label for="Alfred_Hitchcock">Alfred Hitchcock</label>
-                        <input type="checkbox" name="Regisseurs" value="Christopher Nolan" id="Christopher_Nolan">
-                        <label for="Christopher_Nolan">Christopher Nolan</label>
-                        <input type="checkbox" name="Regisseurs" value="Wes Anderson" id="Wes_Anderson">
-                        <label for="Wes_Anderson">Wes Anderson</label>
-                        <input type="checkbox" name="Regisseurs" value="James Cameron" id="James_Cameron">
-                        <label for="James_Cameron">James Cameron</label>
-                        <input type="checkbox" name="Regisseurs" value="Tim Burton" id="Tim_Burton">
-                        <label for="Tim_Burton">Tim Burton</label>
-                        <input type="checkbox" name="Regisseurs" value="Woody Allen" id="Woody_Allen">
-                        <label for="Woody_Allen">Woody Allen</label>
+
+                        <?php printAlleRegisseurs(); ?>
+
                     </div>
                     <div class="column">
                         <h3>Publicatiejaar</h3>
-                        <input type="checkbox" name="periode" value="'20s'" id="20">
+                        <input type="checkbox" name="periode" value="202%" id="202%">
                         <label for="20">'20s'</label>
-                        <input type="checkbox" name="periode" value="'20s'" id="10">
+                        <input type="checkbox" name="periode" value="201%" id="201%">
                         <label for="10">'10s'</label>
-                        <input type="checkbox" name="periode" value="'20s'" id="00">
+                        <input type="checkbox" name="periode" value="200%" id="200%">
                         <label for="00">'00s'</label>
-                        <input type="checkbox" name="periode" value="'20s'" id="90">
+                        <input type="checkbox" name="periode" value="109%" id="109%">
                         <label for="90">'90s'</label>
-                        <input type="checkbox" name="periode" value="'20s'" id="80">
+                        <input type="checkbox" name="periode" value="198%" id="198%">
                         <label for="80">'80s'</label>
-                        <input type="checkbox" name="periode" value="'20s'" id="70">
+                        <input type="checkbox" name="periode" value="197%" id="197%">
                         <label for="70">'70s'</label>
-                        <input type="checkbox" name="periode" value="'20s'" id="60">
+                        <input type="checkbox" name="periode" value="196%" id="196%">
                         <label for="60">'60s'</label>
-                        <input type="checkbox" name="periode" value="'20s'" id="50">
+                        <input type="checkbox" name="periode" value="195%" id="195%">
                         <label for="50">'50s'</label>
+                        <input type="submit" value="Filter instellen">
+                        <form action="/html/FilmOverzicht.php">
+                            <input type="submit" value="Filter resetten">
+                        </form>
                     </div>
                 </div>
             </div>
@@ -79,7 +66,25 @@ maak_header("FilmOverzicht");
     </div>
 
     <div class="flexbox-assortiment">
-        <?php printFilms(); ?>
+        <?php
+        $genre = "%";
+        $regisseur = "%";
+        $jaar = "%";
+        $titel = "%";
+        if (isset($_GET['titel'])) {
+            $titel = "%" . $_GET['titel'] . "%";
+        }
+        if (isset($_GET['Genres'])) {
+            $genre = $_GET['Genres'];
+        }
+        if (isset($_GET['regisseur'])) {
+            $regisseur = $_GET['regisseur'];
+        }
+        if (isset($_GET['periode'])) {
+            $jaar = $_GET['periode'];
+        }
+        printAlleFilms($genre, $regisseur, $jaar, $titel);
+        ?>
     </div>
 
     <?php include "Components/footer.php"; ?>

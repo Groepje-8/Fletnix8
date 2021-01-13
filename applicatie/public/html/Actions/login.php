@@ -33,11 +33,10 @@ if (password_verify($SubmittedPassword, $data['password'])) {
     header("location: ../../index.php");
 }
 
-//--------------------------------------------------------
-
-// if (isset($_POST["submit"])) {
-//     $gebruikersnaam = $_POST["gebruikersnaam"]
-//     $ww = $_POST["ww"]
+/*
+if (isset($_POST["submit"])) {
+    $gebruikersnaam = $_POST["gebruikersnaam"]
+    $ww = $_POST["ww"]
  
 // //juiste db connectie en functions. 
 // require_once 'name';
@@ -47,10 +46,9 @@ if (password_verify($SubmittedPassword, $data['password'])) {
 //         exit();
 //     }
 
-//     loginUser($conn, $gebruikersnaam, $ww)
-// }
-// else{
-//     header("location: ../login.php");
-// }
-
+    loginUser($conn, $gebruikersnaam, $ww)
 }
+else{
+    header("location: ../login.php");
+}
+*/

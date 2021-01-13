@@ -3,64 +3,63 @@ include "Components/sessionStart.php";
 include "Actions/haalFilmDetails.php";
 require_once "Components/header.php";
 maak_header("FilmDetails");
+// Pagina ID 4
 
-//$_GET['movie_id'];
-$filmData = haalFilmDetails(1);
+if (!isset($_GET['movie_id'])){
+    header("location: /html/FilmOverzicht.php");
+}
+$movie_id = $_GET['movie_id'];
+
+$film = [
+    'Details' => haalFilmDetails($movie_id),
+    'Genres' => haalFilmGenres($movie_id),
+    'Regisseurs' => haalFilmRegisseurs($movie_id),
+    'Cast' => haalFilmCast($movie_id),
+];
 ?>
 <body>
-    <?php require_once "Components/navbar.php";  ?>
+    <?php require_once "Components/navbar.php"; ?>
 
     <main>
         <div class="terugknop">
-
             <form action="/html/FilmOverzicht.php">
                 <input type="submit" value="Terug naar assortiment" />
             </form>
         </div>
+
         <div class="titel">
-            <h1><?=$filmData['title']?></h1>
-            <h2><?=$filmData['publication_year']?> - Regisseur</h2>
+            <h1><?=$film['Details']['title']?></h1>
+            <h2><?=$film['Details']['publication_year']?> - <?=formatDetailString($film['Regisseurs']);?></h2>
             <a href="/html/FilmOverzicht.php">
                 <p>Meer van deze regisseur</p>
             </a>
-            <h3>Genres</h3>
+            <h3><?=formatDetailString($film['Genres']);?></h3>
         </div>
-        <div class="beschrijving">
 
+        <div class="beschrijving">
             <h2>Samenvatting</h2>
-            <p><?=$filmData['description']?></p>
-            <p>Speelduur: <?=minutenNaarUur($filmData['duration'])?></p>
+            <p><?=$film['Details']['description']?></p>
+            <p>Speelduur: <?=minutenNaarUur($film['Details']['duration'])?></p>
         </div>
+
         <div class="poster">
-            <img src="/img/poster.jpg" alt="Poster">
+            <img src="/img/Posters/<?=$movie_id?>.jpg" alt="Poster">
         </div>
+
         <div class="knoppen">
-            <a href="/html/MediaPlayer.php">
+            <a href="/html/MediaPlayer.php?titel=<?=$film['Details']['title']?>">
                 <p>Bekijk Trailer</p>
             </a>
             <br>
-            <a href="/html/MediaPlayer.php">
-                <p>Bekijk Film</p>
-            </a>
-
+            <?php if(isset($_SESSION['username'])){
+               echo "<a href='/html/MediaPlayer.php?titel=".$film['Details']['title'].".'>
+                        <p>Bekijk Film</p>
+                    </a>";
+            }?>
         </div>
+
         <div class="acteurgrid">
-            <div>
-                <img src="/img/placeholder.png" alt="acteur">
-                <h3>John David Washington</h3>
-            </div>
-            <div>
-                <img src="/img/placeholder.png" alt="acteur">
-                <h3>Robert Pattinson</h3>
-            </div>
-            <div>
-                <img src="/img/placeholder.png" alt="acteur">
-                <h3>Elizabeth Debicki</h3>
-            </div>
-            <div>
-                <img src="/img/placeholder.png" alt="acteur">
-                <h3>Michael Caine</h3>
-            </div>
+            <?=printActeurGrid($film['Cast'])?>
         </div>
     </main>
 

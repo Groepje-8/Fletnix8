@@ -1,11 +1,13 @@
 <footer>
+<?php
+ require_once $_SERVER["DOCUMENT_ROOT"]."/html/Actions/haalTekstOp.php";
+ ?>
     <ul>
         <li><a href="/html/OverOns.php">Over ons</a> </li>
         <li><a href="/html/ProfielPagina.php">Account</a> </li>
         <li><a href="#">veelgestelde vragen</a> </li>
     </ul>
-    <p> Vragen? Bel 0800-123-4567 </p>
-    <p> Alle rechten voorbehouden door Fletnix&#169; inc. </p>
-    <p> Het kopiëren/distribueren van ons assortiment is ten strikste verboden en daders zullen strafrechtelijk
-        vervolgd worden.</p>
+    <p> <?php (haalTekstOp(8, 1)); ?></p>
+    <p> <?php (haalTekstOp(8, 2)); ?></p>
+    <p> <?php (haalTekstOp(8, 3)); ?></p>
 </footer>

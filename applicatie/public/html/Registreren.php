@@ -1,6 +1,8 @@
 <?php
+include "actions/haalTekstOp.php";
 require_once "Components/header.php";
 maak_header("Registreren");
+// pagina ID 9
 ?>
 
 <body>
@@ -46,7 +48,7 @@ maak_header("Registreren");
                     <label for="emailadres">E-mailadres:</label>
                 </td>
                 <td>
-                <input type="email" id="emailadres" name="emailadres">
+                    <input type="email" id="emailadres" name="emailadres">
                 </td>
             </tr>
             <tr>
@@ -61,8 +63,12 @@ maak_header("Registreren");
                 <td>
                     <label for="abonnement">Abonnement:</label>
                 </td>
-                <td> 
-                <input pattern="[a-zA-Z]+" type="text" id="abonnement" name="abonnement">
+                <td>
+                    <select id="Abonnement" name="Abonnement">
+                        <option value=1> Beginner </option>
+                        <option value=2> Standaard </option>
+                        <option value=3> Professional </option>             
+
                 </td>
             </tr>
             <tr>
@@ -89,33 +95,27 @@ maak_header("Registreren");
 
         </table>
     </form>
-    <p> Klik op "verzend" knop om U account aan te maken en door te gaan naar U profielpagina.<br>
-        Hier kunt U de informatie nalezen en controleren op eventuelen fouten.</p>
+    <p> <?php (haalTekstOp(9, 1)); ?></p>
 
-    <?php 
+    <?php
     if (isset($_GET["error"])) {
         if ($_GET["error"] == "emptyinput") {
             echo "<p>Vul alle velden in svp</p>";
-        }
-        else if ($_GET["error"] == "invaliduid") {
+        } else if ($_GET["error"] == "invaliduid") {
             echo "<p>Kies een geldige gebruikersnaam </p>";
-        }
-        else if ($_GET["error"] == "passwordsdontmatch") {
+        } else if ($_GET["error"] == "passwordsdontmatch") {
             echo "<p>Wachtwoorden komen niet overeen</p>";
-        }
-        else if ($_GET["error"] == "stmtfailed") {
+        } else if ($_GET["error"] == "stmtfailed") {
             echo "<p>Er is iets mis gegaan</p>";
-        }
-        else if ($_GET["error"] == "usernametaken") {
+        } else if ($_GET["error"] == "usernametaken") {
             echo "<p>Gebruikersnaam bestaat al</p>";
-        }
-        else if ($_GET["error"] == "none") {
+        } else if ($_GET["error"] == "none") {
             echo "<p>U heeft succesvol geregistreerd</p>";
         }
     }
-    ?>    
+    ?>
 
-    <?= include "Components/footer.php"; ?>
+    <?php include "Components/footer.php"; ?>
 </body>
 
 </html>

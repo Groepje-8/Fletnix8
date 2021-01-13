@@ -1,8 +1,11 @@
 <?php
+include "html/Components/sessionStart.php";
+require_once $_SERVER["DOCUMENT_ROOT"]."/html/Actions/haalTekstOp.php";
 require_once "html/Components/header.php";
 maak_header("Index");
 session_start();
 
+// pagina ID 1
 ?>
 
 <body>
@@ -11,11 +14,11 @@ session_start();
 
         <div class="title">
             <h1>Fletnix</h1>
-            <h2>DÉ videostreaming website voor studenten</h2>
+            <h2><?php haalTekstOp(1, 1);?></h2>
         </div>
 
         <div class="registreerform">
-            <p>Registeer je nu en betaal de eerste maand 0 euro!</p>
+            <p><?php haalTekstOp(1, 2);?></p>
 
             <form action="/html/Abonnement.php">
                 <input type="submit" value="Registeer" />
@@ -23,7 +26,7 @@ session_start();
         </div>
 
         <div class="loginform">
-            <p>Of log in als je al een account hebt</p>
+            <p><?php haalTekstOp(1, 3);?></p>
 
             <form action="/html/Components/inlogSession.php" method="POST">
                 <label for="username">Username:</label>
@@ -51,7 +54,7 @@ session_start();
         }
         ?>
           
-        <?= include "html/Components/footer.php"; ?>
+        <?php require_once "html/Components/footer.php"; ?>
     </div>
 </body>
 

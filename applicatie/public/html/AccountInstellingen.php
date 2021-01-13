@@ -1,7 +1,9 @@
 <?php
 include "Components/sessionStart.php";
+require_once $_SERVER["DOCUMENT_ROOT"]."/html/Actions/haalTekstOp.php";
 require_once "Components/header.php";
 maak_header("AccountInstellingen");
+// pagina ID 3
 ?>
 
 <body>
@@ -14,7 +16,7 @@ maak_header("AccountInstellingen");
         </div>
 
         <div class="Verzenden">
-            <h1> Klik op de "Update" knop en de nieuwe data wordt opgeslagen.</h1>
+            <h1><?php haalTekstOp(3, 1); ?></h1>
         </div>
 
         <div class="Accountdetails">

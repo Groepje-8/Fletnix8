@@ -1,86 +1,134 @@
 <?php
 require_once "/srv/webserver/applicatie/public/html/components/connection.php";
 
-function haalFilmDetails($movie_id){
-    
+// Query hulp-functies
+function executeMovieIdQuery($sql, $movie_id)
+{
+    $query = getConn()->prepare($sql);
+    $query->execute([':movie_id' => $movie_id]);
+    $data = $query->fetchall();
+    return $data;
+}
+
+function formatArray($data)
+{
+    $data = array_reduce($data, 'array_merge', array());
+    array_shift($data);
+    return $data;
+}
+
+// Query functies
+function haalFilmDetails($movie_id)
+{
     $sql = "SELECT title, publication_year, description, duration
-        FROM films
-        WHERE movie_id = :movie_id";
+            FROM films
+            WHERE movie_id = :movie_id";
 
-    $query = getConn()->prepare($sql);
-    $query->execute([':movie_id' => $movie_id]);
-    $data = $query->fetchall();
+    $data = executeMovieIdQuery($sql, $movie_id);
     return $data[0];
 }
 
-function haalFilmGenres($movie_id){
-    
+function haalFilmGenres($movie_id)
+{
     $sql = "SELECT genrename
-        FROM filmgenre FG
-        WHERE F.movie_id = :movie_id";
+            FROM filmgenre FG
+            WHERE movie_id = :movie_id";
 
-    $query = getConn()->prepare($sql);
-    $query->execute([':movie_id' => $movie_id]);
-    $data = $query->fetchall();
-    return $data[0];
+    $data = executeMovieIdQuery($sql, $movie_id);
+    return formatArray($data);
 }
 
-function haalFilmCast($movie_id){
-    
-    $sql = "SELECT voornaam, achternaam
-        FROM Persoon P INNER JOIN Cast C ON P.persoon_id = C.persoon_id
-        WHERE movie_id = :movie_id";
+function haalFilmCast($movie_id)
+{
+    $sql = "SELECT naam
+            FROM Persoon P INNER JOIN Cast C ON P.persoon_id = C.persoon_id
+            WHERE movie_id = :movie_id";
 
-    $query = getConn()->prepare($sql);
-    $query->execute([':movie_id' => $movie_id]);
-    $data = $query->fetchall();
-    return $data[0];
+    $data = executeMovieIdQuery($sql, $movie_id);
+    return formatArray($data);
 }
 
-function haalFilmRegisseur($movie_id){
-    $sql = "SELECT voornaam, achternaam
-        FROM Persoon P INNER JOIN Regisseur R ON P.persoon_id = R.persoon_id
-        WHERE movie_id = :movie_id";
+function haalFilmRegisseurs($movie_id)
+{
+    $sql = "SELECT naam
+            FROM Persoon P INNER JOIN Regisseur R ON P.persoon_id = R.persoon_id
+            WHERE movie_id = :movie_id";
 
-    $query = getConn()->prepare($sql);
-    $query->execute([':movie_id' => $movie_id]);
-    $data = $query->fetchall();
-    return $data[0];
+    $data = executeMovieIdQuery($sql, $movie_id);   
+    return formatArray($data);
 }
 
-function minutenNaarUur($minuten) {
-    $minutenOver = $minuten % 60; 
+// Format functies
+function minutenNaarUur($minuten)
+{
+    $minutenOver = $minuten % 60;
     $uur = intval($minuten / 60);
     $string = "$uur uur en $minutenOver minuten";
-    if ($minutenOver == 1){
+    if ($minutenOver == 1) {
         $string = "$uur uur en $minutenOver minuut";
     }
     return $string;
 }
 
-function haalGenresOp(){
-    $sql = "SELECT * FROM genre";
-     return(krijgData($sql));
+function formatDetailString($data)
+{
+    $string = "";
+    foreach ($data as $entry) {
+        $string .= $entry;
+        $string .= " - ";
+    }
+    $string = substr($string, 0, -3);
+    return $string;
 }
 
-function printGenres(){
-    foreach(haalGenresOp()as $genre){
-      echo ' <input type="checkbox" name="Genres" value="'.$genre['genrename'].'" id="'.$genre['genrename'].'">
-                        <label for="'.$genre['genrename'].'">'.$genre['genrename'].'</label>';
+function printActeurGrid($data)
+{
+    $html = "";
+    foreach ($data as $entry) {
+        $html .= "<div>";
+        $html .=    "<img src='/img/Acteurs/$entry.jpg' alt='$entry'>";
+        $html .=    "<h3>$entry</h3>";
+        $html .= "</div>";
+    }
+    return $html;
+}
+
+// Jorian functies
+function haalAlleGenresOp()
+{
+    $sql = "SELECT * 
+            FROM genre";
+    return (krijgData($sql));
+}
+
+function printAlleGenres()
+{
+    foreach (haalAlleGenresOp() as $genre) {
+        echo ' <input type="checkbox" name="Genres" value="' . $genre['genrename'] . '" id="' . $genre['genrename'] . '">
+                        <label for="' . $genre['genrename'] . '">' . $genre['genrename'] . '</label>';
     }
 }
 
-function haalRegisseursOp(){
-    $sql = "SELECT * FROM persoon INNER JOIN regisseur ON persoon.persoon_id = regisseur.persoon_id";
-    return(krijgData($sql));
+function haalAlleRegisseursOp()
+{
+    $sql = "SELECT Persoon.naam
+            FROM persoon 
+            INNER JOIN regisseur 
+            ON persoon.persoon_id = regisseur.persoon_id
+            GROUP BY persoon.naam";
+    return (krijgData($sql));
 }
 
-function printRegisseurs(){
-    foreach(haalRegisseursOp()as $regisseur){
-      echo '<input type="checkbox" name="regisseur" value="'.$regisseur['naam'].'" id="'.$regisseur['naam'].'">
-                      <label for="'.$regisseur['naam'].'">'.$regisseur['naam'].'</label>';
+function printAlleRegisseurs()
+{
+    foreach (haalAlleRegisseursOp() as $regisseur) {
+        echo '<input type="checkbox" name="regisseur" value="' . $regisseur['naam'] . '" id="' . $regisseur['naam'] . '">
+                      <label for="' . $regisseur['naam'] . '">' . $regisseur['naam'] . '</label>';
     }
 }
 
+function haalPublicatieJaarOp()
+{
+    //waarschijnlijk niet ophalen uit DB maar anders doen
 
-?>
+}
