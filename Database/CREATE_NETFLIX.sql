@@ -24,7 +24,7 @@ CREATE TABLE [Films]
  [title]            varchar(255) NOT NULL ,
  [duration]         int NULL ,
  [publication_year] int NOT NULL ,
- [description]      varchar(255) NULL ,
+ [description]      varchar(275) NULL ,
  [previous_part]    int NULL ,
  [price]            decimal(5,2) NULL ,
  [URL]              varchar(255) NULL ,
@@ -98,7 +98,7 @@ CREATE TABLE [persoon]
 (
  [persoon_id] int NOT NULL ,
  [naam]   varchar(50) NOT NULL ,
- [geslacht]   varchar(50) NOT NULL ,
+ [geslacht]   varchar(50) NULL ,
 
 
  CONSTRAINT [PK_persoon] PRIMARY KEY CLUSTERED ([persoon_id] ASC)

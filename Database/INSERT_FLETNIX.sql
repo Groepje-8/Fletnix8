@@ -1,11 +1,13 @@
 USE FLETNIX
+
+DELETE FROM Regisseur
+DELETE FROM Cast
+DELETE FROM filmgenre
 DELETE FROM content
 DELETE FROM films
 DELETE FROM genre
 DELETE FROM persoon
-DELETE FROM filmgenre
-DELETE FROM Regisseur
-DELETE FROM Cast
+
 
 /*
 1:  Index.php
@@ -26,31 +28,20 @@ DELETE FROM Cast
 INSERT INTO content
 VALUES (1,1,'DÉ videostreaming website voor studenten'),
        (1,2,'Registeer je nu en betaal de eerste maand 0 euro!'),
-	   (1,3,'Of log in als je al een account hebt');
-
-INSERT INTO content
-VALUES (2,1,'Met het beginner abbonement kun je gemakkelijk en goedkoop de nieuwste films en series van vorig jaar zien!'),
+	   (1,3,'Of log in als je al een account hebt'),
+       (2,1,'Met het beginner abbonement kun je gemakkelijk en goedkoop de nieuwste films en series van vorig jaar zien!'),
        (2,2,'Met het standaard abbonement kun je alle films zien die niet meer in de bioscoop draaien en series een week voordat ze op tv komen!'),
-       (2,3,'Met het professional abbonement kun je alle films zien VOORDAT ze in de bioscoop draaien, voor series geld het zelfde als het standaard abbonement!');
-
-INSERT INTO content
-VALUES (3,1,'Klik op de "Update" knop en de nieuwe data wordt opgeslagen.');
-
+       (2,3,'Met het professional abbonement kun je alle films zien VOORDAT ze in de bioscoop draaien, voor series geld het zelfde als het standaard abbonement!'),
+       (3,1,'Klik op de "Update" knop en de nieuwe data wordt opgeslagen.'),
 -- 4, 5, 6, 7
-
-INSERT INTO content
-VALUES (8,1,'Vragen? Bel 0800-123-4567.'),
+       (8,1,'Vragen? Bel 0800-123-4567.'),
        (8,2,'Alle rechten voorbehouden door Fletnix&#169; inc.'),
-       (8,3,'Het kopiëren/distribueren van ons assortiment is ten strikste verboden en daders zullen strafrechtelijk vervolgd worden.');
-
-INSERT INTO content
-VALUES (9, 1, 'Klik op "verzend" knop om U account aan te maken en door te gaan naar U profielpagina.<br> Hier kunt U de informatie nalezen en controleren op eventuelen fouten.');
-
-INSERT INTO content
-VALUES (10,1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' ),
+       (8,3,'Het kopiëren/distribueren van ons assortiment is ten strikste verboden en daders zullen strafrechtelijk vervolgd worden.'),
+       (9, 1, 'Klik op "verzend" knop om U account aan te maken en door te gaan naar U profielpagina.<br> Hier kunt U de informatie nalezen en controleren op eventuelen fouten.'),
+       (10,1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' ),
        (10,2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' ),
 	   (10,3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiatnulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' );
-
+GO
 
 -- Films
 INSERT INTO Films (movie_id,title,duration,publication_year, description)
@@ -74,6 +65,7 @@ VALUES (1,'Tenet',150,2020, 'Armed with only one word, Tenet, and fighting for t
        (18,'Hunter Killer',121,2018, 'An untested American submarine captain teams with U.S. Navy Seals to rescue the Russian president, who has been kidnapped by a rogue general.'),
        (19,'A Clockwork Orange',136,1971, 'In the future, a sadistic gang leader is imprisoned and volunteers for a conduct-aversion experiment, but it doesn''t go as planned.'),
        (20,'American Sniper',133,2014, 'Navy S.E.A.L. sniper Chris Kyle''s pinpoint accuracy saves countless lives on the battlefield and turns him into a legend. Back home with his family after four tours of duty, however, Chris finds that it is the war he can''t leave behind.');
+GO
 
 -- Genres
 INSERT INTO genre
@@ -87,7 +79,9 @@ VALUES ('Action', 'Desc'),
        ('Animation', 'Desc'),
        ('Romance', 'Desc'),
        ('Biography', 'Desc'),
-       ('Crime', 'Desc');
+       ('Crime', 'Desc'),
+       ('History', 'Desc');
+GO
 
 INSERT INTO filmgenre
 VALUES (1, 'Action'), (1, 'Sci-Fi'), (1, 'Thriller'),
@@ -106,10 +100,11 @@ VALUES (1, 'Action'), (1, 'Sci-Fi'), (1, 'Thriller'),
        (14, 'Drama'), (14, 'Romance'), (14, 'Sci-Fi'),
        (15, 'Action'), (15, 'Biography'), (15, 'Drama'),
        (16, 'Biography'), (16, 'Crime'), (16, 'Drama'),
-       (17, 'Adventure'), (17, 'Drama'), (17, History),
+       (17, 'Adventure'), (17, 'Drama'), (17, 'History'),
        (18, 'Action'), (18, 'Thriller'),
        (19, 'Crime'), (19, 'Drama'), (19, 'Sci-Fi'),
        (20, 'Action'), (20, 'Biography'), (20, 'Drama');
+GO
 
 -- Personen
 INSERT INTO persoon (persoon_id, naam)
@@ -150,7 +145,7 @@ VALUES (1, 'Adam Driver'),
        (35, 'John Thompson'),
        (36, 'Jon Bernthal'),
        (37, 'Joseph Gordon-Levitt'),
-       (38, 'Kenneth Branagh')
+       (38, 'Kenneth Branagh'),
        (39, 'Kevin Costner'),
        (40, 'Kevin Spacey'),
        (41, 'Laura Dern'), 
@@ -169,7 +164,6 @@ VALUES (1, 'Adam Driver'),
        (54, 'Michael Biehn'),
        (55, 'Michael Caine'),
        (56, 'Michael Peña'),
-       (56, 'Milo Ventimiglia'),
        (57, 'Park So-dam'),
        (58, 'Patrick Magee'),
        (59, 'Paul Dano'),
@@ -190,48 +184,51 @@ VALUES (1, 'Adam Driver'),
        (74, 'Tom Hanks'),
        (75, 'Tom Hardy'),
        (76, 'Tony Hale'),
+       (77, 'Milo Ventimiglia'),
        -- Regisseurs
-       (77, 'Christopher Nolan'),
-       (78, 'Terry Gilliam'),
-       (79, 'Rian Johnson'),
-       (80, 'Duncan Jones'),
-       (81, 'James Cameron'),
-       (82, 'Bong Joon Ho'),
-       (83, 'Noah Baumbach'),
-       (84, 'Josh Cooley'),
-       (85, 'Antoine Fuqua'),
-       (86, 'Simon Curtis'),
-       (87, 'Spike Jonze'),
-       (88, 'James Mangold'),
-       (89, 'Martin Scorsese'),
-       (90, 'William Wyler'),
-       (91, 'Donovan Marsh'),
-       (92, 'Stanley Kubrick'),
-       (93, 'Clint Eastwood');
+       (78, 'Christopher Nolan'),
+       (79, 'Terry Gilliam'),
+       (80, 'Rian Johnson'),
+       (81, 'Duncan Jones'),
+       (82, 'James Cameron'),
+       (83, 'Bong Joon Ho'),
+       (84, 'Noah Baumbach'),
+       (85, 'Josh Cooley'),
+       (86, 'Antoine Fuqua'),
+       (87, 'Simon Curtis'),
+       (88, 'Spike Jonze'),
+       (89, 'James Mangold'),
+       (90, 'Martin Scorsese'),
+       (91, 'William Wyler'),
+       (92, 'Donovan Marsh'),
+       (93, 'Stanley Kubrick'),
+       (94, 'Clint Eastwood');
+GO
 
 INSERT INTO Regisseur
-VALUES (1, 77),
-       (2, 77),
-       (3, 77),
+VALUES (1, 78),
+       (2, 78),
+       (3, 78),
        (4, 25),
-       (5, 78),
-       (6, 79),
-       (7, 80),
-       (8, 81),
-       (9, 82),
-       (10, 83),
-       (11, 84),
-       (12, 85),
-       (13, 86),
-       (14, 87),
-       (15, 88),
-       (16, 89),
-       (17, 90),
-       (18, 91),
-       (19, 92),
-       (20, 93);
+       (5, 79),
+       (6, 80),
+       (7, 81),
+       (8, 82),
+       (9, 83),
+       (10, 84),
+       (11, 85),
+       (12, 86),
+       (13, 87),
+       (14, 88),
+       (15, 89),
+       (16, 90),
+       (17, 91),
+       (18, 92),
+       (19, 93),
+       (20, 94);
+GO
 
-INSERT INTO Cast
+INSERT INTO Cast (movie_id, persoon_id)
 VALUES (1, 34), (1, 63), (1, 21), (1, 38),
        (2, 44), (2, 37), (2, 22), (2, 75),
        (3, 53), (3, 6), (3, 55), (3, 46),
@@ -244,7 +241,7 @@ VALUES (1, 34), (1, 63), (1, 21), (1, 38),
        (10, 1), (10, 68), (10, 41), (10, 64),
        (11, 74), (11, 72), (11, 76), (11, 31),
        (12, 48), (12, 61), (12, 16), (12, 56),
-       (13, 39), (13, 56), (13, 5), (13, 49),
+       (13, 39), (13, 77), (13, 5), (13, 49),
        (14, 32), (14, 14), (14, 68), (14, 65),
        (15, 52), (15, 15), (15, 36), (15, 11),
        (16, 62), (16, 2), (16, 33), (16, 27),
@@ -252,6 +249,7 @@ VALUES (1, 34), (1, 63), (1, 21), (1, 38),
        (18, 26), (18, 35), (18, 73), (18, 3),
        (19, 47), (19, 7), (19, 58), (19, 17),
        (20, 9), (20, 69), (20, 45), (20, 30);
+GO
 
 /* Ter controle
 (1, John David Washington, Robert Pattinson, Elizabeth Debicki, Kenneth Branagh)
