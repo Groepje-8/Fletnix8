@@ -2,7 +2,7 @@
 include "getData.php";
 // include "haalFilmDetails.php";
 
-function haalFilmsOp()
+function haalAlleFilmsOp()
 {
     $sql = "SELECT * FROM Films";
     // if ($genre !=""){
@@ -17,8 +17,8 @@ function haalFilmsOp()
    return(krijgData($sql));
 }
 
-function printFilms(){
-    foreach (haalFilmsOp() as $film) {
+function printAlleFilms(){
+    foreach (haalAlleFilmsOp() as $film) {
         echo "<div>
         <a href='FilmDetails.php/?movie_id=".$film['movie_id']."'><img src='/img/posters/".$film['movie_id'].".jpg' alt='Poster'></a>
     </div>";

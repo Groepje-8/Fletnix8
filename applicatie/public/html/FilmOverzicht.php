@@ -29,30 +29,11 @@ maak_header("FilmOverzicht");
                 <div class="row">
                     <div class="column">
                         <h3>Genres</h3>
-                       <?php printGenres();?>
+                       <?php printAlleGenres();?>
                     </div>
                     <div class="column">
                         <h3>Regisseurs</h3>
-                        <input type="checkbox" name="Regisseurs" value="Martin Scorsese" id="Martin_Scorsese">
-                        <label for="Martin_Scorsese">Martin Scorsese</label>
-                        <input type="checkbox" name="Regisseurs" value="Quentin Tarantino" id="Quentin_Tarantino">
-                        <label for="Quentin_Tarantino">Quentin Tarantino</label>
-                        <input type="checkbox" name="Regisseurs" value="Steven Spielberg" id="Steven_Spielberg">
-                        <label for="Steven_Spielberg">Steven Spielberg</label>
-                        <input type="checkbox" name="Regisseurs" value="Stanley Kubrick" id="Stanley_Kubrick">
-                        <label for="Stanley_Kubrick">Stanley Kubrick</label>
-                        <input type="checkbox" name="Regisseurs" value="Alfred Hitchcock" id="Alfred_Hitchcock">
-                        <label for="Alfred_Hitchcock">Alfred Hitchcock</label>
-                        <input type="checkbox" name="Regisseurs" value="Christopher Nolan" id="Christopher_Nolan">
-                        <label for="Christopher_Nolan">Christopher Nolan</label>
-                        <input type="checkbox" name="Regisseurs" value="Wes Anderson" id="Wes_Anderson">
-                        <label for="Wes_Anderson">Wes Anderson</label>
-                        <input type="checkbox" name="Regisseurs" value="James Cameron" id="James_Cameron">
-                        <label for="James_Cameron">James Cameron</label>
-                        <input type="checkbox" name="Regisseurs" value="Tim Burton" id="Tim_Burton">
-                        <label for="Tim_Burton">Tim Burton</label>
-                        <input type="checkbox" name="Regisseurs" value="Woody Allen" id="Woody_Allen">
-                        <label for="Woody_Allen">Woody Allen</label>
+                        <?php printAlleRegisseurs();?>
                     </div>
                     <div class="column">
                         <h3>Publicatiejaar</h3>
@@ -79,7 +60,7 @@ maak_header("FilmOverzicht");
     </div>
 
     <div class="flexbox-assortiment">
-        <?php printFilms(); ?>
+        <?php printAlleFilms(); ?>
     </div>
 
     <?php include "Components/footer.php"; ?>

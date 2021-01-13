@@ -41,12 +41,12 @@ CREATE TABLE [gebruikers]
  [achternaam]    varchar(50) NOT NULL ,
  [voornaam]      varchar(50) NOT NULL ,
  [abonnement]    int NOT NULL ,
- [startDatumSub] date NOT NULL ,
- [endDatumSub]   date NOT NULL ,
+ [startDatumSub] date NULL ,
+ [endDatumSub]   date NULL ,
  [username]      varchar(50) NOT NULL ,
  [wachtwoord]    varchar(100) NOT NULL ,
  [land]          varchar(50) NOT NULL ,
- [geslacht]      varchar(50) NOT NULL ,
+ [geslacht]      varchar(50) NULL ,
  [geboortedatum] date NOT NULL ,
 
 
