@@ -16,9 +16,11 @@ $film = [
     'Regisseurs' => haalFilmRegisseurs($movie_id),
     'Cast' => haalFilmCast($movie_id),
 ];
+
+$_SESSION['username'] = "abc";
 ?>
 <body>
-    <?php require_once "Components/navbar.php";  ?>
+    <?php require_once "Components/navbar.php"; ?>
 
     <main>
         <div class="terugknop">
@@ -47,12 +49,14 @@ $film = [
         </div>
 
         <div class="knoppen">
-            <a href="/html/MediaPlayer.php">
+            <a href="/html/MediaPlayer.php?titel=<?=$film['Details']['title']?>">
                 <p>Bekijk Trailer</p>
             </a>
             <br>
             <?php if(isset($_SESSION['username'])){
-                echo "<a href='/html/MediaPlayer.php'><p>Bekijk Film</p></a>";
+               echo "<a href='/html/MediaPlayer.php?titel=".$film['Details']['title'].".'>
+                        <p>Bekijk Film</p>
+                    </a>";
             }?>
         </div>
 
