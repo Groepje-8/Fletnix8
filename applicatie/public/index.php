@@ -1,6 +1,7 @@
 <?php
 require_once "html/Components/header.php";
 maak_header("Index");
+session_start();
 
 ?>
 
@@ -24,11 +25,11 @@ maak_header("Index");
         <div class="loginform">
             <p>Of log in als je al een account hebt</p>
 
-            <form action="Components/inlogSession.php" method="POST">
+            <form action="/html/Components/inlogSession.php" method="POST">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" pattern="[a-zA-Z]+">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <label for="wachtwoord">wachtwoord:</label>
+                <input type="wachtwoord" id="wachtwoord" name="wachtwoord" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                 <input type="submit" value="Login" />
             </form>
         </div>
@@ -39,18 +40,15 @@ maak_header("Index");
             </video>
         </main>
 
-        
-
         <?php 
-        // Maak hier functie van en mooi veld
-         if (isset($_GET["error"])) {
-             if ($_GET["error"] == "emptyinput") {
-                 echo "<p>Vul alle velden in svp</p>";
-                 }
-                 else if ($_GET["error"] == "wronglogin") {
-                     echo "<p>login gegevens kloppen niet</p>";
-                }
-            }
+        if (isset($_GET["error"])) {
+          if ($_GET["error"] == "verkeerdegegevens") {
+            echo "<p>Probeer opnieuw</p>";
+          }
+          if ($_GET["error"] == "emptyinput") {
+            echo "<p>Vul alle velden in.</p>";
+          }
+        }
         ?>
           
         <?= include "html/Components/footer.php"; ?>

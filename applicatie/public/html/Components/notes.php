@@ -79,34 +79,6 @@ function uidExists($conn, $username, $email) {
     sqlsrv_close($stmt);
 }
 
-
-
-function createUser($conn, $voornaam, $achternaam, $land, $geboortejaar, $rekeningnummer, $gebruikersnaam, $abonnement, $ww, $hww) {
-    //volgorde moet de volgorde van database tabel volgen !!! aanpassen !!!!!
-    $sql = "INSERT INTO users (emailadres, achternaam, voornaam, abbonement, username, wachtwoord, land, geslacht, geboortedatum) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";     
-    $stmt = mysqli_stmt_init($conn);
-    if (!sqlsrv_prepare($stmt, $sql)){
-       header("location: ../Registreren.php?error=stmtfailed");
-       exit();
-    }
- 
-    $hashedWachtwoord = password_hash($ww, PASSWORD_DEFAULT);
- 
-    mysqli_stmt_bind_param($stmt, "sssssssss", $emailadres, $achternaam, $voornaam, $abbonement, $username, $wachtwoord, $land, $geslacht, $geboortedatum)
-    sqlsrv_execute($stmt);
-    sqlsrv_close($stmt);
-    header("location: ../Registreren.php?error=none");
-    exit();
- }
-
-
- //alles benoemen anders kan de info niet in de database worden opgeslagen. De vraagtekens zijn placeholders. Bij query is wat je er invult. Als tijd over is geslacht toevoegen. 
-$query = $dbh->prepare('INSERT INTO fletnix_user (emailadres, achternaam, voornaam, abonnement, username, wachtwoord, land, geboortedatum)
-VALUES (?, ?, ?, ?, ?, ?, ?)');
-//hier eigen waardes invoeren. !!!!
-$query->execute(['student', $passwordHashed]);
-
-password_hash($password, PASSWORD_DEFAULT)
 password_verify($password, $versleuteldpassword)
 
 //voor het aanpassen van data bij profielpagina. 
@@ -115,6 +87,10 @@ VALUES (?, ?, ?, ?, ?, ?, ?)');
 //hier eigen waardes invoeren. !!!!
 $query->execute(['student', $passwordHashed]);
 
-
-
+  
+    Weet niet zeker of het zo met $conn moet. 
+    if (uidExists($conn, $username, $email) !== false) {
+        header("location: ../Registreren.php?error=usernametaken");
+        exit();
+    }
 ?>

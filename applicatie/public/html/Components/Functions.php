@@ -1,6 +1,8 @@
 <?php
 
 require_once 'Connection.php';
+//test
+session_start();
 
 //--------------registreren---------------------------
 function emptyInputSignup($voornaam, $achternaam, $land, $geboortejaar, $emailadres, $gebruikersnaam, $abonnement, $ww, $hww){
@@ -17,22 +19,50 @@ function invalidUid($username) {
     return !preg_match("/^[a-zA-Z0-9]*$/", $username);
 }
 
-
 function pwdMatch($ww, $hww) {
     return $ww !== $hww;
+}
+
+function abonnement($String){
+    if ( $String == "beginner" ) {
+        return 1;
+    } elseif ($String == "standaard"){
+        return 2;
+    } elseif ($String == "professional"){
+        return 3;
+    } else {
+        return 0;
+    }
 }
 
 function createUser($voornaam, $achternaam, $land, $geboortejaar, $emailadres, $gebruikersnaam, $abonnement, $password){
 //alles benoemen anders kan de info niet in de database worden opgeslagen. De vraagtekens zijn placeholders. Bij query is wat je er invult. Als tijd over is geslacht toevoegen. 
     $query = getConn()->prepare('INSERT INTO gebruikers (emailadres, achternaam, voornaam, abonnement, username, wachtwoord, land, geboortedatum)
-    VALUES (?, ?, ?, ?, ?, ?, ?)');
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
     $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
     //hier eigen waardes invoeren. !!!!
-    $query->execute([$emailadres, $achternaam, $voornaam, $abonnement, $gebruikersnaam, $passwordHashed, $land, $geboortejaar]);
+    $query->execute([$emailadres, $achternaam, $voornaam, abonnement($abonnement), $gebruikersnaam, $passwordHashed, $land, 1990-07-25]);
     exit();
 }
 
 //-------------------- login ---------------------------
+function login($username, $wachtwoord){
+    $passwordHashed = password_hash($wachtwoord, PASSWORD_DEFAULT);
+    $stmt = getConn()->prepare("SELECT * FROM gebruikers WHERE username = ? AND wachtwoord = ?");
+    $stmt->execute([$username, $passwordHashed]);
+    $count = $stmt->fetchColumn();
+    
+    if ($count == 1){
+       echo "gelukt";
+        // $_SESSION["username"] = $username;
+        header("location: ../FilmOverzicht.php");
+    } else {
+        echo "niet gelukt";
+        header("location: ../../index.php?error=verkeerdegegevens");
+        exit();
+    }
+}
+
 function emptyInputLogin($gebruikersnaam, $ww){
     if ( empty($gebruikersnaam) || empty($ww) ){
         $result = true;
@@ -42,39 +72,3 @@ function emptyInputLogin($gebruikersnaam, $ww){
     }
     return $result;
 }
-
-//headers checken
-function loginUser( $gebruikersnaam, $ww){
-    // $uidExists = uidExists($conn, $username);
-
-    // if (uidExists === false) {
-    //     header("location: ../login.php?error=wronglogin");
-    //     exit();
-    // }
-    // [kolom name in db]
-
-    // if (password_verify($password, $passwordHashed)) {
-    //     session_start();
-    //     $_SESSION["username"] = $uidExist["username"];
-    //     header("location: ../../index.php");
-    //     exit();
-    //   }
-    //   else {
-    //     header("location: ../login.php?error=wronglogin");
-    //     exit();
-    // }
-}
-
-//     $checkww = password_verify($ww, $wwHashed);
-
-//     if ($checkww === false) {
-//         header("location: ../login.php?error=wronglogin");
-//         exit();
-//     }
-//     else if ($checkww === true) {
-//         session_start();
-//         $_SESSION["gebruikersnaam"] = $uidExist["gebruikersnaam"];
-//         header("location: ../../index.php");
-//         exit();
-//     }
-// }
