@@ -20,7 +20,7 @@ function haalFilmsOp()
 function printFilms(){
     foreach (haalFilmsOp() as $film) {
         echo "<div>
-        <a href='FilmDetails.php'><img src='/img/posters/".$film['movie_id'].".jpg' alt='Poster'></a>
+        <a href='FilmDetails.php/?movie_id=".$film['movie_id']."'><img src='/img/posters/".$film['movie_id'].".jpg' alt='Poster'></a>
     </div>";
     }
 }
@@ -29,7 +29,7 @@ function printNieuwsteFilms(){
     $sql = "SELECT TOP 4 * FROM Films ORDER BY publication_year DESC";
     foreach(krijgData($sql) as $film){
         echo "<div class ='new'>
-        <a href='FilmDetails.php'><img src='/img/posters/".$film['movie_id'].".jpg' alt='Poster'></a>
+        <a href='FilmDetails.php/?movie_id=".$film['movie_id']."'><img src='/img/posters/".$film['movie_id'].".jpg' alt='Poster'></a>
     </div>";
     }
 
