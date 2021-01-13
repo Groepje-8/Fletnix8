@@ -58,4 +58,29 @@ function minutenNaarUur($minuten) {
     return $string;
 }
 
+function haalGenresOp(){
+    $sql = "SELECT * FROM genre";
+     return(krijgData($sql));
+}
+
+function printGenres(){
+    foreach(haalGenresOp()as $genre){
+      echo ' <input type="checkbox" name="Genres" value="'.$genre['genrename'].'" id="'.$genre['genrename'].'">
+                        <label for="'.$genre['genrename'].'">'.$genre['genrename'].'</label>';
+    }
+}
+
+function haalRegisseursOp(){
+    $sql = "SELECT * FROM persoon INNER JOIN regisseur ON persoon.persoon_id = regisseur.persoon_id";
+    return(krijgData($sql));
+}
+
+function printRegisseurs(){
+    foreach(haalRegisseursOp()as $regisseur){
+      echo '<input type="checkbox" name="regisseur" value="'.$regisseur['naam'].'" id="'.$regisseur['naam'].'">
+                      <label for="'.$regisseur['naam'].'">'.$regisseur['naam'].'</label>';
+    }
+}
+
+
 ?>
