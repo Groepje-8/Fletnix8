@@ -61,22 +61,8 @@ maak_header("Registreren");
                 <td>
                     <label for="abonnement">Abonnement:</label>
                 </td>
-<<<<<<< Updated upstream
-                <td>
-                    <select id="abb" name="abb">
-                        <option value="beginner" <?php if ($_GET['abo'] == "beginner") {
-                                                        echo "selected";
-                                                    } ?>>Beginner</option>
-                        <option value="standaard" <?php if ($_GET['abo'] == "standaard") {
-                                                        echo "selected";
-                                                    } ?>>Standaard</option>
-                        <option value="professioneel" <?php if ($_GET['abo'] == "professioneel") {
-                                                            echo "selected";
-                                                        } ?>>Professioneel</option>
-=======
                 <td> 
                 <input pattern="[a-zA-Z]+" type="text" id="abonnement" name="abonnement">
->>>>>>> Stashed changes
                 </td>
             </tr>
             <tr>
