@@ -28,7 +28,7 @@ DELETE FROM persoon
 INSERT INTO content
 VALUES (1,1,'DÉ videostreaming website voor studenten'),
        (1,2,'Registeer je nu en betaal de eerste maand 0 euro!'),
-	   (1,3,'Of log in als je al een account hebt'),
+	(1,3,'Of log in als je al een account hebt'),
        (2,1,'Met het beginner abbonement kun je gemakkelijk en goedkoop de nieuwste films en series van vorig jaar zien!'),
        (2,2,'Met het standaard abbonement kun je alle films zien die niet meer in de bioscoop draaien en series een week voordat ze op tv komen!'),
        (2,3,'Met het professional abbonement kun je alle films zien VOORDAT ze in de bioscoop draaien, voor series geld het zelfde als het standaard abbonement!'),
