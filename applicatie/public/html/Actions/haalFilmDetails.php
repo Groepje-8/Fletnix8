@@ -111,10 +111,11 @@ function printAlleGenres()
 
 function haalAlleRegisseursOp()
 {
-    $sql = "SELECT DISTINCT * 
+    $sql = "SELECT Persoon.naam
             FROM persoon 
             INNER JOIN regisseur 
-            ON persoon.persoon_id = regisseur.persoon_id";
+            ON persoon.persoon_id = regisseur.persoon_id
+            GROUP BY persoon.naam";
     return (krijgData($sql));
 }
 
@@ -122,7 +123,7 @@ function printAlleRegisseurs()
 {
     foreach (haalAlleRegisseursOp() as $regisseur) {
         echo '<input type="checkbox" name="regisseur" value="' . $regisseur['naam'] . '" id="' . $regisseur['naam'] . '">
-                      <label for="' . $regisseur['naam'] . '">' . $regisseur['persoon_id'] . '</label>';
+                      <label for="' . $regisseur['naam'] . '">' . $regisseur['naam'] . '</label>';
     }
 }
 

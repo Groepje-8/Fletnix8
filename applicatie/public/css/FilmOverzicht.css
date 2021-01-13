@@ -125,6 +125,9 @@
   padding: 10px;
   height: auto;
 }
+.flexbox a {
+  padding-Bottom:125px;
+}
 
 .column label {
   opacity: 0.9;
@@ -145,10 +148,11 @@
 }
 img {
   float: left;
-  width:  15vw;
+  width:  20vw;
   height: 40vh;
-  object-fit: cover;
+  /* object-fit: cover; */
   padding-bottom:25px;
+  margin-bottom:25px;
   
 }
 img:hover{
