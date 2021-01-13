@@ -110,7 +110,7 @@ GO
 INSERT INTO persoon (persoon_id, naam)
 VALUES (1, 'Adam Driver'),
        (2, 'Al Pacino'),
-       (3, 'Alan Siegel'),
+       (3, 'Gary Oldman'),
        (4, 'Amanda Schull'),
        (5, 'Amanda Seyfried'),
        (6, 'Anne Hathaway'),
@@ -269,7 +269,7 @@ GO
 (15, Matt Damon, Christian Bale, Jon Bernthal, Caitriona Balfe),
 (16, Robert De Niro, Al Pacino, Joe Pesci, Harvey Keitel),
 (17, Charlton Heston, Jack Hawkins, Haya Harareet, Stephen Boyd),
-(18, Gerard Butler, John Thompson, Toby Jaffe, Alan Siegel ),
+(18, Gerard Butler, John Thompson, Toby Jaffe, Gary Oldman),
 (19, Malcolm McDowell, Anthony Burgess, Patrick Magee, David Prowse),
 (20, Bradley Cooper, Sienna Miller, Luke Grimes, Jason Hall);
 */
