@@ -16,7 +16,7 @@ maak_header("Index");
         <div class="registreerform">
             <p>Registeer je nu en betaal de eerste maand 0 euro!</p>
 
-            <form action="/html/Abbonement.php">
+            <form action="/html/Abonnement.php">
                 <input type="submit" value="Registeer" />
             </form>
         </div>
@@ -41,10 +41,8 @@ maak_header("Index");
 
         
 
-<<<<<<< Updated upstream
-        <?php include "html/Components/footer.php"; ?>
-=======
         <?php 
+        // Maak hier functie van en mooi veld
          if (isset($_GET["error"])) {
              if ($_GET["error"] == "emptyinput") {
                  echo "<p>Vul alle velden in svp</p>";
@@ -56,7 +54,6 @@ maak_header("Index");
         ?>
           
         <?= include "html/Components/footer.php"; ?>
->>>>>>> Stashed changes
     </div>
 </body>
 

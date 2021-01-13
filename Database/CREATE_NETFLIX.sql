@@ -98,7 +98,7 @@ CREATE TABLE [persoon]
 (
  [persoon_id] int NOT NULL ,
  [naam]   varchar(50) NOT NULL ,
- [geslacht]   varchar(50) NOT NULL ,
+ [geslacht]   varchar(50) NULL ,
 
 
  CONSTRAINT [PK_persoon] PRIMARY KEY CLUSTERED ([persoon_id] ASC)
