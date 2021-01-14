@@ -1,12 +1,15 @@
 <?php
+// Connectie oproepen
 require_once $_SERVER["DOCUMENT_ROOT"] . "/html/Components/Connection.php";
 
+
+//Aanmaken benodigde variabelen
 $username = $_POST['username'];
 $wachtwoord = $_POST['wachtwoord'];
 $passwordHashed = password_hash($wachtwoord, PASSWORD_DEFAULT);
 
 
-
+// Login functie Checkt op lege login haalt daarna wachtwoord op met username ne checkt of klopt, 
 function login($username, $wachtwoord)
 {
 
@@ -21,7 +24,7 @@ function login($username, $wachtwoord)
         $res->execute($values);
     } catch (PDOException $e) {
         echo 'Query Error.';
-        header("location: ../../index.php?error=verkeerdegegevens");
+        header("location: ../../../index.php?error=verkeerdegegevens");
         die();
     }
     $row = $res->fetch(PDO::FETCH_ASSOC);
@@ -30,9 +33,11 @@ function login($username, $wachtwoord)
             session_start();
             $_SESSION["username"] = $username;
             header("location: ../FilmOverzicht.php");
+        } else{
+            header("location: ../../../index.php?error=verkeerdegegevens");
         }
     } else {
-        header("location: ../../index.php?error=verkeerdegegevens");
+        header("location: ../../../index.php?error=verkeerdegegevens");
     }
 }
 
