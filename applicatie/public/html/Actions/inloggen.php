@@ -1,6 +1,10 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/html/Components/Connection.php";
 
+$username = $_POST['username'];
+$wachtwoord = $_POST['wachtwoord'];
+$passwordHashed = password_hash($wachtwoord, PASSWORD_DEFAULT);
+
 
 
 function login($username, $wachtwoord)
@@ -41,8 +45,5 @@ function emptyInputLogin($gebruikersnaam, $ww)
     }
     return $result;
 }
-$username = $_POST['username'];
-$wachtwoord = $_POST['wachtwoord'];
-$passwordHashed = password_hash($wachtwoord, PASSWORD_DEFAULT);
 
 login($username, $wachtwoord);

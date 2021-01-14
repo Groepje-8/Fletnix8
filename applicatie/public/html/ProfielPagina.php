@@ -1,20 +1,20 @@
 <?php
 
-include "Components/sessionStart.php";
-// checkOfIsIngelogd();
 
 require_once "Components/sessionStart.php";
 require_once $_SERVER["DOCUMENT_ROOT"]."/html/Actions/haalgebruikergegevensop.php";
 require_once "Components/header.php";
+
+checkOfIsIngelogd();
 maak_header("ProfielPagina");
 
 // Dit hieronder moet in een functie
-if (!isset($_SESSION['usernaam'])){
-    $_SESSION['usernaam'] = 'peer';
-}  
+// if (!isset($_SESSION['usernaam'])){
+//     $_SESSION['usernaam'] = 'peer';
+// }  
 
-if (isset($_SESSION['usernaam'])) {
-    $data = haalGegevensOp($_SESSION['usernaam']);
+if (isset($_SESSION['username'])) {
+    $data = haalGegevensOp($_SESSION['username']);
 } else {
     $data = ["mail", "voornaam", "achternaam", "land", "geboortedatum", "gebruikersnaam", "-", "abonnement"];
 }
@@ -63,7 +63,7 @@ if (isset($_SESSION['usernaam'])) {
                 </ul>
                 <input type="submit" value="Aanpassen">
             </form>
-            <form action="Actions/loguit.php" method="GET">
+            <form action="Actions/uitloggen.php" method="GET">
                 <input type="submit" value="Uitloggen">
             </form>
         </div>

@@ -1,8 +1,7 @@
 <?php
-if (isset($_SESSION['username'])){
+if (isset($_SESSION['username'])) {
     $naam = $_SESSION['username'];
-}
-else {
+} else {
     $naam = "profiel";
 }
 ?>
@@ -10,9 +9,21 @@ else {
     <div class="dropdown">
         <a class="active" href="/index.php">&#9776;</a>
         <div class="dropdown-content">
-            <a href="/html/Abonnement.php">Abonnementen</a>
-            <a href="/html/FilmOverzicht.php">Filmoverzicht</a>                   
+            <a href="/html/<?php
+                if (isset($_SESSION['username'])) {
+                    echo "/Actions/uitloggen";
+                } else {
+                    echo "Abonnementen";
+                } ?>.php">
+                <?php
+                if (isset($_SESSION['username'])) {
+                    echo "Uitloggen";
+                } else {
+                    echo "Abonnementen";
+                } ?>
+            </a>
+            <a href="/html/FilmOverzicht.php">Filmoverzicht</a>
         </div>
     </div>
-    <a id="Profiel" href="/html/ProfielPagina.php"><?php echo $naam?></a>
+    <a id="Profiel" href="/html/ProfielPagina.php"><?php echo $naam ?></a>
 </header>

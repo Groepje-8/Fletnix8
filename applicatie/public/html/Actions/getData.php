@@ -1,5 +1,7 @@
 <?php
-include "/srv/webserver/applicatie/public/html/components/connection.php";
+require_once "/srv/webserver/applicatie/public/html/components/connection.php";
+
+// Databasefunctie die je een query meegeeft en de data teruggeeft.
 function krijgData($sql){
 $query = getConn()->prepare($sql);
     $query->execute();

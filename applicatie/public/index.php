@@ -45,7 +45,7 @@ maak_header("Index");
         <div class="loginform">
             <p><?php haalTekstOp(1, 3); ?></p>
 
-            <form action="/html/Actions/LoginFuncties.php" method="POST">
+            <form action="/html/Actions/Inloggen.php" method="POST">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" pattern="[a-zA-Z]+">
                 <label for="wachtwoord">wachtwoord:</label>
