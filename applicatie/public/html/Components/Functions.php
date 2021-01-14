@@ -80,31 +80,26 @@ function createUser($voornaam, $achternaam, $land, $geboortejaar, $emailadres, $
 //     return $result;
 // }
 
-//----------------------- profielpagina -----------------------
-// function getUserData($username)
-//     {
-//         $query = "SELECT username, wachtwoord FROM gebruikers WHERE gebruikersnaam = '$username'";
-//         return self::getResults($query);
-//     }
-
 //---------------------- profiel pagina -------------------------
 
-function updateUsername($gebruikersnaam)
+function updateGebruikersnaam($gebruikersnaam)
 {
-    // header("location: ../../index.php");
-    // console_log($gebruikersnaam);
     $usernaam = $_SESSION['usernaam'];
     $query = getConn()->prepare("UPDATE gebruikers 
-    SET username = '$gebruikersnaam' 
-    WHERE username = '$usernaam'");
-    $query->execute([$gebruikersnaam]);
+    SET username = '?' 
+    WHERE username = '?'");
+    $query->execute([$gebruikersnaam,$usernaam]);
+    header("location: AccountInstellingen.php");
+    exit();
+}
+
+function updateVoornaam($voornaam)
+{
+    $usernaam = $_SESSION['usernaam'];
+    $query = getConn()->prepare("UPDATE gebruikers 
+    SET voornaam = '?' 
+    WHERE username = '?'");
+    $query->execute([$voornaam,$usernaam]);
     exit();
     header("location: AccountInstellingen.php");
 }
-
-// function console_log($data)
-// {
-//     echo '<script>';
-//     echo 'console.log(' . json_encode($data) . ')';
-//     echo '</script>';
-// }

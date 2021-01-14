@@ -22,10 +22,21 @@ maak_header("AccountInstellingen");
 
         <?php
         if (isset($_POST['gnaamVerander'])) {
-            updateUsername($_POST['gnaamVerander']);
-            echo "Hello";
+            updateGebruikersnaam($_POST['gnaamVerander']);
             unset($_POST['gnaamVerander']);
         }
+        if (isset($_POST['vnaamVerander'])) {
+            updateVoornaam($_POST['vnaamVerander']);
+            unset($_POST['vnaamVerander']);
+        }
+        // if (isset($_POST['anaamVerander'])) {
+        //     updateAchternaam($_POST['anaamVerander']);
+        //     unset($_POST['anaamVerander']);
+        // }
+        // if (isset($_POST['land'])) {
+        //     updateLand($_POST['land']);
+        //     unset($_POST['land']);
+        // }
         ?>
 
         <div class="Accountdetails">
@@ -33,11 +44,6 @@ maak_header("AccountInstellingen");
             <ul>
                 <form method='POST'>
                     <li>
-                     <!-- <?php
-                            if (isset($_POST['gnaamVerander'])) {
-                                echo "Hello";
-                            }
-                            ?>  -->
                         <label for="gnaamVerander">Gebruikersnaam veranderen:</label>
                         <input pattern="[a-zA-Z]+" type="text" id="gnaamVerander" name="gnaamVerander">
                         <input type="submit" value="Update">
@@ -46,6 +52,18 @@ maak_header("AccountInstellingen");
                 <form method='POST'>
                     <li><label for="vnaamVerander">Voornaam veranderen:</label>
                         <input pattern="[a-zA-Z]+" type="text" id="vnaamVerander" name="vnaamVerander">
+                        <input type="submit" value="Update">
+                    </li>
+                </form>
+                <form method='POST'>
+                    <li><label for="anaamVerander">Achternaam veranderen:</label>
+                        <input pattern="[a-zA-Z]+" type="text" id="anaamVerander" name="anaamVerander">
+                        <input type="submit" value="Update">
+                    </li>
+                </form>
+                <form method='POST'>
+                    <li><label for="land">Land veranderen:</label>
+                        <input pattern="[a-zA-Z]+" type="text" id="land" name="land">
                         <input type="submit" value="Update">
                     </li>
                 </form>

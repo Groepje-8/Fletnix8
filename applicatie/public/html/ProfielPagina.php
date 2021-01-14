@@ -8,6 +8,7 @@ require_once "Components/header.php";
 checkOfIsIngelogd();
 maak_header("ProfielPagina");
 
+<<<<<<< Updated upstream
 // Dit hieronder moet in een functie
 // if (!isset($_SESSION['usernaam'])){
 //     $_SESSION['usernaam'] = 'peer';
@@ -15,6 +16,16 @@ maak_header("ProfielPagina");
 
 if (isset($_SESSION['username'])) {
     $data = haalGegevensOp($_SESSION['username']);
+=======
+// Dit is tijdelijk tot login werkt
+if (!isset($_SESSION['usernaam'])){
+    $_SESSION['usernaam'] = 'peer';
+}  
+
+// dit moet blijven
+if (isset($_SESSION['usernaam'])) {
+    $data = haalGegevensOp($_SESSION['usernaam']);
+>>>>>>> Stashed changes
 } else {
     $data = ["mail", "voornaam", "achternaam", "land", "geboortedatum", "gebruikersnaam", "-", "abonnement"];
 }

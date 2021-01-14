@@ -68,7 +68,6 @@ maak_header("Registreren");
                         <option value=1> Beginner </option>
                         <option value=2> Standaard </option>
                         <option value=3> Professional </option>             
-
                 </td>
             </tr>
             <tr>
