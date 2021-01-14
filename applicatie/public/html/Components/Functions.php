@@ -41,7 +41,52 @@ function createUser($voornaam, $achternaam, $land, $geboortejaar, $emailadres, $
     VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
     $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
     //hier eigen waardes invoeren. !!!!
-    $query->execute([$emailadres, $achternaam, $voornaam, abonnement($abonnement), $gebruikersnaam, $passwordHashed, $land, 1990-07-25]);
+    $query->execute([$emailadres, $achternaam, $voornaam, abonnement($abonnement), $gebruikersnaam, $passwordHashed, $land, 2000-07-25]);
     exit();
 }
 
+//-------------------- login ---------------------------
+function login($username, $wachtwoord){
+    $passwordHashed = password_hash($wachtwoord, PASSWORD_DEFAULT);
+    $stmt = getConn()->prepare("SELECT * FROM gebruikers WHERE username = ? AND wachtwoord = ?");
+    $stmt->execute([$username, $passwordHashed]);
+    $count = $stmt->fetchColumn();
+    
+    if ($count == 1){
+       echo "gelukt";
+        // $_SESSION["username"] = $username;
+        header("location: ../FilmOverzicht.php");
+    } else {
+        echo "niet gelukt";
+        header("location: ../../index.php?error=verkeerdegegevens");
+        exit();
+    }
+}
+
+function emptyInputLogin($gebruikersnaam, $ww){
+    if ( empty($gebruikersnaam) || empty($ww) ){
+        $result = true;
+    }
+    else {
+        $result = false;
+    }
+    return $result;
+}
+
+//----------------------- profielpagina -----------------------
+// function getUserData($username)
+//     {
+//         $query = "SELECT username, wachtwoord FROM gebruikers WHERE gebruikersnaam = '$username'";
+//         return self::getResults($query);
+//     }
+
+//---------------------- profiel pagina -------------------------
+
+function updateUser($voornaam, $achternaam, $land, $geboortedatum, $emailadres, $gebruikersnaam, $abonnement){
+    //alles benoemen anders kan de info niet in de database worden opgeslagen. De vraagtekens zijn placeholders. Bij query is wat je er invult. Als tijd over is geslacht toevoegen. 
+        $query = getConn()->prepare('UPDATE INTO gebruikers (emailadres, achternaam, voornaam, abonnement, username, wachtwoord, land, geboortedatum)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
+        //hier eigen waardes invoeren. !!!!
+        $query->execute([$emailadres, $achternaam, $voornaam, abonnement($abonnement), $gebruikersnaam, $land, $geboortedatum]);
+        exit();
+    }

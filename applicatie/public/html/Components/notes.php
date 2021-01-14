@@ -87,6 +87,15 @@ VALUES (?, ?, ?, ?, ?, ?, ?)');
 //hier eigen waardes invoeren. !!!!
 $query->execute(['student', $passwordHashed]);
 
+$data = [
+    'name' => $name,
+    'surname' => $surname,
+    'sex' => $sex,
+    'id' => $id,
+];
+$sql = "UPDATE users SET name=:name, surname=:surname, sex=:sex WHERE id=:id";
+$stmt= $pdo->prepare($sql);
+$stmt->execute($data);
   
     Weet niet zeker of het zo met $conn moet. 
     if (uidExists($conn, $username, $email) !== false) {

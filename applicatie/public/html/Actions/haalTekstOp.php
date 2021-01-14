@@ -1,5 +1,8 @@
 <?php
-require_once "/srv/webserver/applicatie/public/html/components/connection.php";
+
+if (!function_exists('getConn')){
+    require_once "/srv/webserver/applicatie/public/html/components/connection.php";
+}
 
 function haalTekstOp($page_id, $content_id)
 {
