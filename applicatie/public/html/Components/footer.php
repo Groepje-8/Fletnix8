@@ -1,6 +1,6 @@
 <footer>
 <?php
- require_once $_SERVER["DOCUMENT_ROOT"]."/html/Actions/haalTekstOp.php";
+    require_once $_SERVER["DOCUMENT_ROOT"]."/html/Actions/haalTekstOp.php";
  ?>
     <ul>
         <li><a href="/html/OverOns.php">Over ons</a> </li>

@@ -1,7 +1,8 @@
 <?php
 include "Components/sessionStart.php";
-require_once $_SERVER["DOCUMENT_ROOT"]."/html/Actions/haalTekstOp.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/html/Actions/haalTekstOp.php";
 require_once "Components/header.php";
+require_once "Components/Functions.php";
 maak_header("AccountInstellingen");
 // pagina ID 3
 ?>
@@ -19,24 +20,36 @@ maak_header("AccountInstellingen");
             <h1><?php haalTekstOp(3, 1); ?></h1>
         </div>
 
+        <?php
+        if (isset($_POST['gnaamVerander'])) {
+            updateUsername($_POST['gnaamVerander']);
+            echo "Hello";
+            unset($_POST['gnaamVerander']);
+        }
+        ?>
+
         <div class="Accountdetails">
             <h2> Account details </h2>
-            <form action="AccountInstellingen.php" method="GET">
-                <ul>
-                    <li><label for="gnaamVerander">Gebruikersnaam veranderen:</label>
+            <ul>
+                <form method='POST'>
+                    <li>
+                     <!-- <?php
+                            if (isset($_POST['gnaamVerander'])) {
+                                echo "Hello";
+                            }
+                            ?>  -->
+                        <label for="gnaamVerander">Gebruikersnaam veranderen:</label>
                         <input pattern="[a-zA-Z]+" type="text" id="gnaamVerander" name="gnaamVerander">
+                        <input type="submit" value="Update">
                     </li>
-                    <li><label for="nww">Nieuw wachtwoord:</label>
-                        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="text" id="nww" name="nww" title="Moet minimaal een nummer, hoofdletter, kleine letter en 8 of meer characters">
+                </form>
+                <form method='POST'>
+                    <li><label for="vnaamVerander">Voornaam veranderen:</label>
+                        <input pattern="[a-zA-Z]+" type="text" id="vnaamVerander" name="vnaamVerander">
+                        <input type="submit" value="Update">
                     </li>
-                    <li><label for="betaalinfo">Betaalinformatie:</label>
-                        <input pattern="[a-zA-Z0-9]+" type="text" id="betaalinfo" name="betaalinfo">
-                    </li>
-                </ul>
-                <div class="Verzenden">
-                    <input type="submit" value="Update">
-                </div>
-            </form>
+                </form>
+            </ul>
         </div>
 
         <div class="Instellingen">
@@ -80,6 +93,9 @@ maak_header("AccountInstellingen");
             </form>
         </div>
     </main>
+
+
+
 
     <?php include "Components/footer.php"; ?>
 </body>

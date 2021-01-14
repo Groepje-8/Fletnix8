@@ -1,15 +1,18 @@
 <?php
 
 include "Components/sessionStart.php";
-checkOfIsIngelogd();
+// checkOfIsIngelogd();
 
 require_once "Components/sessionStart.php";
 require_once $_SERVER["DOCUMENT_ROOT"]."/html/Actions/haalgebruikergegevensop.php";
 require_once "Components/header.php";
 maak_header("ProfielPagina");
 
-$_SESSION['usernaam'] = 'testpersoon';
 // Dit hieronder moet in een functie
+if (!isset($_SESSION['usernaam'])){
+    $_SESSION['usernaam'] = 'peer';
+}  
+
 if (isset($_SESSION['usernaam'])) {
     $data = haalGegevensOp($_SESSION['usernaam']);
 } else {
@@ -37,28 +40,25 @@ if (isset($_SESSION['usernaam'])) {
             <form action="AccountInstellingen.php" method="POST">
                 <ul>
                     <li><label for="mail">e-mailadres:</label>
-                        <input type="text" id="mail" name="mail" value=<?= $data["emailadres"]; ?> readonly>
+                    <label><?= $data["emailadres"]; ?> </label> 
                     </li>
                     <li><label for="vnaam">Voornaam:</label>
-                        <input type="text" id="vnaam" name="vnaam" value=<?= $data["voornaam"]; ?> readonly>
+                    <label><?= $data["voornaam"]; ?> </label>
                     </li>
                     <li><label for="anaam">Achternaam:</label>
-                        <input type="text" id="anaam" name="anaam" value=<?= $data["achternaam"]; ?> readonly>
+                    <label><?= $data["achternaam"]; ?></label>
                     </li>
                     <li><label for="land">Land:</label>
-                        <input type="text" id="land" name="land" value=<?= $data["land"]; ?> readonly>
+                    <label><?= $data["land"]; ?> </label>
                     </li>
                     <li><label for="gdatum">Geboortedatum:</label>
-                        <input type="text" id="gdatum" name="gdatum" value=<?= $data["geboortedatum"]; ?> readonly>
+                    <label><?= $data["geboortedatum"]; ?> </label>
                     </li>
                     <li><label for="gnaam">Gebruikersnaam:</label>
-                        <input type="text" id="gnaam" name="gnaam" value=<?= $data["username"]; ?> readonly>
-                    </li>
-                    <li><label for="ww">Wachtwoord:</label>
-                        <input type="password" id="ww" name="ww" value=<?= "leeg"; ?> readonly>
+                    <label><?= $data["username"]; ?><label>
                     </li>
                     <li><label for="abb">Abonnement:</label>
-                        <input type="text" id="abb" name="abb" value=<?= $data["abonnement"]; ?> readonly>
+                    <label><?= $data["abonnement"]; ?> </label>
                     </li>
                 </ul>
                 <input type="submit" value="Aanpassen">

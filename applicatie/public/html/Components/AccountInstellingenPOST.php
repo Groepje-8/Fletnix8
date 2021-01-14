@@ -13,4 +13,5 @@ if (isset($_POST["submit"])) {
     $ww = $_POST["ww"]; 
     
     updateUser($voornaam, $achternaam, $land, $geboortejaar, $emailadres, $gebruikersnaam, $abonnement, $ww);
+    
 }
