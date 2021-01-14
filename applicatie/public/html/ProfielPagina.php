@@ -1,34 +1,20 @@
 <?php
 
 
-require_once "Components/sessionStart.php";
-require_once $_SERVER["DOCUMENT_ROOT"]."/html/Actions/haalgebruikergegevensop.php";
+require_once "Components/sessionManager.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/html/Modules/haalgebruikergegevensop.php";
 require_once "Components/header.php";
 
 checkOfIsIngelogd();
-maak_header("ProfielPagina");
+maakHeader("ProfielPagina");
 
-<<<<<<< Updated upstream
-// Dit hieronder moet in een functie
-// if (!isset($_SESSION['usernaam'])){
-//     $_SESSION['usernaam'] = 'peer';
-// }  
 
 if (isset($_SESSION['username'])) {
-    $data = haalGegevensOp($_SESSION['username']);
-=======
-// Dit is tijdelijk tot login werkt
-if (!isset($_SESSION['usernaam'])){
-    $_SESSION['usernaam'] = 'peer';
-}  
-
-// dit moet blijven
-if (isset($_SESSION['usernaam'])) {
-    $data = haalGegevensOp($_SESSION['usernaam']);
->>>>>>> Stashed changes
+    $data = haalGebruikersGegevensOp($_SESSION['username']);
 } else {
     $data = ["mail", "voornaam", "achternaam", "land", "geboortedatum", "gebruikersnaam", "-", "abonnement"];
 }
+
 
 ?>
 
@@ -41,7 +27,7 @@ if (isset($_SESSION['usernaam'])) {
         </div>
         <div class="card">
             <img src="/img/placeholdercard.png" alt="Test" style="width:100%">
-            <h1><?= $data["voornaam"]," ",$data["achternaam"] ?></h1>
+            <h1><?= $data["voornaam"], " ", $data["achternaam"] ?></h1>
             <p class="title"><?= $data["abonnement"] ?></p>
             <p>Standaard</p>
             <p><button>Help</button></p>
@@ -51,30 +37,30 @@ if (isset($_SESSION['usernaam'])) {
             <form action="AccountInstellingen.php" method="POST">
                 <ul>
                     <li><label for="mail">e-mailadres:</label>
-                    <label><?= $data["emailadres"]; ?> </label> 
+                        <label><?= $data["emailadres"]; ?> </label>
                     </li>
                     <li><label for="vnaam">Voornaam:</label>
-                    <label><?= $data["voornaam"]; ?> </label>
+                        <label><?= $data["voornaam"]; ?> </label>
                     </li>
                     <li><label for="anaam">Achternaam:</label>
-                    <label><?= $data["achternaam"]; ?></label>
+                        <label><?= $data["achternaam"]; ?></label>
                     </li>
                     <li><label for="land">Land:</label>
-                    <label><?= $data["land"]; ?> </label>
+                        <label><?= $data["land"]; ?> </label>
                     </li>
                     <li><label for="gdatum">Geboortedatum:</label>
-                    <label><?= $data["geboortedatum"]; ?> </label>
+                        <label><?= $data["geboortedatum"]; ?> </label>
                     </li>
                     <li><label for="gnaam">Gebruikersnaam:</label>
-                    <label><?= $data["username"]; ?><label>
+                        <label><?= $data["username"]; ?><label>
                     </li>
                     <li><label for="abb">Abonnement:</label>
-                    <label><?= $data["abonnement"]; ?> </label>
+                        <label><?= $data["abonnement"]; ?> </label>
                     </li>
                 </ul>
                 <input type="submit" value="Aanpassen">
             </form>
-            <form action="Actions/uitloggen.php" method="GET">
+            <form action="Modules/uitloggen.php" method="GET">
                 <input type="submit" value="Uitloggen">
             </form>
         </div>

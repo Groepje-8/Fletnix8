@@ -50,7 +50,7 @@ CREATE TABLE [gebruikers]
  [geboortedatum] date NOT NULL ,
 
 
- CONSTRAINT [PK_gebruikers] PRIMARY KEY CLUSTERED ([emailadres] ASC)
+ CONSTRAINT [PK_gebruikers] PRIMARY KEY CLUSTERED ([username] ASC)
 );
 GO
 

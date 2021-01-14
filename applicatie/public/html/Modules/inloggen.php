@@ -1,6 +1,6 @@
 <?php
 // Connectie oproepen
-require_once $_SERVER["DOCUMENT_ROOT"] . "/html/Components/Connection.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/html/modules/connection.php";
 
 
 //Aanmaken benodigde variabelen

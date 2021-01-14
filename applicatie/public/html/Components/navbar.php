@@ -11,9 +11,9 @@ if (isset($_SESSION['username'])) {
         <div class="dropdown-content">
             <a href="/html/<?php
                 if (isset($_SESSION['username'])) {
-                    echo "/Actions/uitloggen";
+                    echo "/Modules/uitloggen";
                 } else {
-                    echo "Abonnementen";
+                    echo "abonnement";
                 } ?>.php">
                 <?php
                 if (isset($_SESSION['username'])) {

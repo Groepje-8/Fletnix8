@@ -3,8 +3,6 @@
 if (!function_exists('getConn')) {
     require_once 'Connection.php';
 }
-//test
-// session_start();
 
 //--------------registreren---------------------------
 function emptyInputSignup($voornaam, $achternaam, $land, $geboortejaar, $emailadres, $gebruikersnaam, $abonnement, $ww, $hww)
@@ -50,35 +48,6 @@ function createUser($voornaam, $achternaam, $land, $geboortejaar, $emailadres, $
     $query->execute([$emailadres, $achternaam, $voornaam, abonnement($abonnement), $gebruikersnaam, $passwordHashed, $land, 2000 - 07 - 25]);
     exit();
 }
-
-//-------------------- login ---------------------------
-// function login($username, $wachtwoord)
-// {
-//     $passwordHashed = password_hash($wachtwoord, PASSWORD_DEFAULT);
-//     $stmt = getConn()->prepare("SELECT * FROM gebruikers WHERE username = ? AND wachtwoord = ?");
-//     $stmt->execute([$username, $passwordHashed]);
-//     $count = $stmt->fetchColumn();
-
-//     if ($count == 1) {
-//         echo "gelukt";
-//         // $_SESSION["username"] = $username;
-//         header("location: ../FilmOverzicht.php");
-//     } else {
-//         echo "niet gelukt";
-//         header("location: ../../index.php?error=verkeerdegegevens");
-//         exit();
-//     }
-// }
-
-// function emptyInputLogin($gebruikersnaam, $ww)
-// {
-//     if (empty($gebruikersnaam) || empty($ww)) {
-//         $result = true;
-//     } else {
-//         $result = false;
-//     }
-//     return $result;
-// }
 
 //---------------------- profiel pagina -------------------------
 

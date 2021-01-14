@@ -1,8 +1,8 @@
 <?php
-include "Components/sessionStart.php";
-require_once $_SERVER["DOCUMENT_ROOT"]."/html/Actions/haalTekstOp.php";
+include "Components/sessionManager.php";
+require_once $_SERVER["DOCUMENT_ROOT"]."/html/Modules/haalTekstOp.php";
 require_once "Components/header.php";
-maak_header("Abonnementen");
+maakHeader("Abonnementen");
 // pagina ID 2
 ?>
 

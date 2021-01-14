@@ -50,7 +50,7 @@ Voor het gebruiken van de database moet je:
    1. Index.html
    1. Html
       1. Hierin staan alle html files
-      1. Actions
+      1. Modules
           1. Hier staan alle functies
       1. Components
           1. Hierin staan alle PHP/HTML Componenten

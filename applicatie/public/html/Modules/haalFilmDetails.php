@@ -1,5 +1,5 @@
 <?php
-require_once "/srv/webserver/applicatie/public/html/components/connection.php";
+require_once "/srv/webserver/applicatie/public/html/modules/connection.php";
 
 // Query hulp-functies
 function executeMovieIdQuery($sql, $movie_id)

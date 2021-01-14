@@ -1,8 +1,8 @@
 <?php
-include "Components/sessionStart.php";
-include "Actions/haalFilmDetails.php";
+include "Components/sessionManager.php";
+include "Modules/haalFilmDetails.php";
 require_once "Components/header.php";
-maak_header("FilmDetails");
+maakHeader("FilmDetails");
 // Pagina ID 4
 
 if (!isset($_GET['movie_id'])){

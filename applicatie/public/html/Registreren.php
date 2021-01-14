@@ -1,7 +1,7 @@
 <?php
-include "Actions/haalTekstOp.php";
+include "Modules/haalTekstOp.php";
 require_once "Components/header.php";
-maak_header("Registreren");
+maakHeader("Registreren");
 // pagina ID 9
 ?>
 

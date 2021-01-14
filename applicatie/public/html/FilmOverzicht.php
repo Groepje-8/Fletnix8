@@ -1,10 +1,10 @@
 <?php
 // Pagina ID 5
-require_once "Components/sessionStart.php";
-require_once "Actions/haalFilmsOp.php";
-require_once "Actions/haalFilmDetails.php";
+require_once "Components/sessionManager.php";
+require_once "Modules/haalFilmsOp.php";
+require_once "Modules/haalFilmDetails.php";
 require_once "Components/header.php";
-maak_header("FilmOverzicht");
+maakHeader("FilmOverzicht");
 ?>
 
 <body>

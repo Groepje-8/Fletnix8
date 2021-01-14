@@ -1,7 +1,7 @@
 <?php
-include "Components/sessionStart.php";
+include "Components/sessionManager.php";
 require_once "Components/header.php";
-maak_header("mediaplayer");
+maakHeader("mediaplayer");
 ?>
 
 <body>

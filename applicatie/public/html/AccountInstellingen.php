@@ -1,9 +1,10 @@
 <?php
-include "Components/sessionStart.php";
-require_once $_SERVER["DOCUMENT_ROOT"] . "/html/Actions/haalTekstOp.php";
+require_once "Components/sessionManager.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/html/Modules/haalTekstOp.php";
 require_once "Components/header.php";
 require_once "Components/Functions.php";
-maak_header("AccountInstellingen");
+maakHeader("AccountInstellingen");
+checkOfIsIngelogd();
 // pagina ID 3
 ?>
 

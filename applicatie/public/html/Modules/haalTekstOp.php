@@ -1,7 +1,7 @@
 <?php
 
 if (!function_exists('getConn')){
-    require_once "/srv/webserver/applicatie/public/html/components/connection.php";
+    require_once "/srv/webserver/applicatie/public/html/modules/connection.php";
 }
 
 function haalTekstOp($page_id, $content_id)

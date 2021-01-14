@@ -9,7 +9,7 @@ else {
 
 
 <?php
-function maak_header($Naam)
+function maakHeader($Naam)
 {
     $header = "
 <!DOCTYPE html>

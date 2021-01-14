@@ -1,8 +1,8 @@
 <?php
-require_once "Components/sessionStart.php";
-require_once $_SERVER["DOCUMENT_ROOT"]."/html/Actions/haalTekstOp.php";
+require_once "Components/sessionManager.php";
+require_once $_SERVER["DOCUMENT_ROOT"]."/html/Modules/haalTekstOp.php";
 require_once "Components/header.php";
-maak_header("OverOns");
+maakHeader("OverOns");
 // pagina ID 10
 ?>
 

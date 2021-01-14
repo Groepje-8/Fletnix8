@@ -2,9 +2,9 @@
 
 $username = "testpersoon"; 
 // select queries om alle velden in te vullen. 
-require_once "Components/Connection.php";
+require_once "modules/connection.php";
 
-function haalGegevensOp($gebruikersnaam)
+function haalGebruikersGegevensOp($gebruikersnaam)
 {
     $query = "SELECT username, achternaam, voornaam, abonnement, emailadres, land, geboortedatum
               FROM gebruikers 

@@ -1,5 +1,5 @@
 <?php
-require_once "getData.php";
+require_once "haalGegevensOp.php";
 
 
 //Print alle films die in de database staan zoals ze in het filmoverzicht moeten
@@ -17,7 +17,7 @@ function HaalFilmsMetGenreFilter($genre, $regisseur, $jaar,$titel)
 {
 
 
-    $sql = "SELECT DISTINCT Films.movie_id 
+    $sql = "SELECT TOP 100 Films.movie_id 
     FROM Films 
     INNER JOIN filmgenre 
     ON Films.movie_id = filmgenre.movie_id

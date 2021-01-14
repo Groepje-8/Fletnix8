@@ -1,8 +1,8 @@
 <?php
-include "html/Components/sessionStart.php";
-require_once $_SERVER["DOCUMENT_ROOT"] . "/html/Actions/haalTekstOp.php";
+include "html/Components/sessionManager.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/html/Modules/haalTekstOp.php";
 require_once "html/Components/header.php";
-maak_header("Index");
+maakHeader("Index");
 
 
 // pagina ID 1
@@ -45,7 +45,7 @@ maak_header("Index");
         <div class="loginform">
             <p><?php haalTekstOp(1, 3); ?></p>
 
-            <form action="/html/Actions/Inloggen.php" method="POST">
+            <form action="/html/Modules/Inloggen.php" method="POST">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" pattern="[a-zA-Z]+">
                 <label for="wachtwoord">wachtwoord:</label>
