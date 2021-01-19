@@ -110,6 +110,8 @@ maakHeader("Registreren");
             echo "<p>Gebruikersnaam bestaat al</p>";
         } else if ($_GET["error"] == "none") {
             echo "<p>U heeft succesvol geregistreerd</p>";
+        } else if ($_GET["error"] == "Emailbestaatal") {
+            echo "<p>Email bestaat al</p>";
         }
     }
     ?>

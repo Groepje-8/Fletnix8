@@ -41,11 +41,15 @@ function abonnement($String)
 function createUser($voornaam, $achternaam, $land, $geboortejaar, $emailadres, $gebruikersnaam, $abonnement, $password)
 {
     //alles benoemen anders kan de info niet in de database worden opgeslagen. De vraagtekens zijn placeholders. Bij query is wat je er invult. Als tijd over is geslacht toevoegen. 
-    $query = getConn()->prepare('INSERT INTO gebruikers (emailadres, achternaam, voornaam, abonnement, username, wachtwoord, land, geboortedatum)
+    try {
+        $query = getConn()->prepare('INSERT INTO gebruikers (emailadres, achternaam, voornaam, abonnement, username, wachtwoord, land, geboortedatum)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
-    $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
-    //hier eigen waardes invoeren. !!!!
-    $query->execute([$emailadres, $achternaam, $voornaam, abonnement($abonnement), $gebruikersnaam, $passwordHashed, $land, 2000 - 07 - 25]);
+        $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
+        //hier eigen waardes invoeren. !!!!
+        $query->execute([$emailadres, $achternaam, $voornaam, abonnement($abonnement), $gebruikersnaam, $passwordHashed, $land, 2000 - 07 - 25]);
+    } catch (PDOException $e) {
+        header("location: ../Registreren.php?abo=beginner&error=Emailbestaatal");
+    }
     exit();
 }
 
@@ -57,7 +61,7 @@ function updateGebruikersnaam($gebruikersnaam)
     $query = getConn()->prepare("UPDATE gebruikers 
     SET username = '?' 
     WHERE username = '?'");
-    $query->execute([$gebruikersnaam,$usernaam]);
+    $query->execute([$gebruikersnaam, $usernaam]);
     header("location: AccountInstellingen.php");
     exit();
 }
@@ -68,7 +72,7 @@ function updateVoornaam($voornaam)
     $query = getConn()->prepare("UPDATE gebruikers 
     SET voornaam = '?' 
     WHERE username = '?'");
-    $query->execute([$voornaam,$usernaam]);
+    $query->execute([$voornaam, $usernaam]);
     exit();
     header("location: AccountInstellingen.php");
 }

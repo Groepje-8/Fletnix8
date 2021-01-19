@@ -18,6 +18,7 @@ GO
 
 -- ************************************** [Films]
 
+
 CREATE TABLE [Films]
 (
  [movie_id]         int NOT NULL ,
@@ -149,13 +150,13 @@ GO
 CREATE TABLE [watchhistory]
 (
  [movie_id]   int NOT NULL ,
- [emailadres] varchar(90) NOT NULL ,
+ [username] varchar(50) NOT NULL ,
  [watchdate]  date NOT NULL ,
 
 
- CONSTRAINT [PK_watchhistory] PRIMARY KEY CLUSTERED ([movie_id] ASC, [emailadres] ASC),
+ CONSTRAINT [PK_watchhistory] PRIMARY KEY CLUSTERED ([movie_id] ASC, [username] ASC),
  CONSTRAINT [FK_93] FOREIGN KEY ([movie_id])  REFERENCES [Films]([movie_id]),
- CONSTRAINT [FK_96] FOREIGN KEY ([emailadres])  REFERENCES [gebruikers]([emailadres])
+ CONSTRAINT [FK_96] FOREIGN KEY ([username])  REFERENCES [gebruikers]([username])
 );
 GO
 
@@ -169,7 +170,7 @@ GO
 
 CREATE NONCLUSTERED INDEX [fkIdx_97] ON [watchhistory] 
  (
-  [emailadres] ASC
+  [username] ASC
  )
 
 GO
@@ -199,5 +200,3 @@ CREATE TABLE [content]
  CONSTRAINT [PK_content] PRIMARY KEY CLUSTERED ([content_id] ASC,[pagina_id] ASC)
 );
 GO
-
-
