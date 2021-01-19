@@ -24,4 +24,14 @@ function haalGebruikersGegevensOp($gebruikersnaam)
     return $test;
 }
 
+function abonnementNaarNaam($abonnementInt){
+    switch ($abonnementInt){
+        case 0:
+            return "Beginner";
+        case 1:
+            return "Standaard";
+        case 2:
+            return "Professioneel"; 
+    }
+}
 //updaten van ww en gebruikersnaam. (ander bestand)

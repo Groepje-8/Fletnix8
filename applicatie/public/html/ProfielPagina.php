@@ -1,6 +1,5 @@
 <?php
 
-
 require_once "Components/sessionManager.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/html/Modules/haalgebruikergegevensop.php";
 require_once "Components/header.php";
@@ -14,8 +13,8 @@ if (isset($_SESSION['username'])) {
 } else {
     $data = ["mail", "voornaam", "achternaam", "land", "geboortedatum", "gebruikersnaam", "-", "abonnement"];
 }
-
-
+      
+$abonnementNaam = abonnementNaarNaam($data["abonnement"]);
 ?>
 
 <body>
@@ -28,8 +27,7 @@ if (isset($_SESSION['username'])) {
         <div class="card">
             <img src="/img/placeholdercard.png" alt="Test" style="width:100%">
             <h1><?= $data["voornaam"], " ", $data["achternaam"] ?></h1>
-            <p class="title"><?= $data["abonnement"] ?></p>
-            <p>Standaard</p>
+            <p class="title"><?= $abonnementNaam ?></p>
             <p><button>Help</button></p>
         </div>
 
@@ -55,7 +53,7 @@ if (isset($_SESSION['username'])) {
                         <label><?= $data["username"]; ?><label>
                     </li>
                     <li><label for="abb">Abonnement:</label>
-                        <label><?= $data["abonnement"]; ?> </label>
+                        <label><?= $abonnementNaam; ?> </label>
                     </li>
                 </ul>
                 <input type="submit" value="Aanpassen">

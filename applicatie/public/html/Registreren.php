@@ -65,9 +65,9 @@ maakHeader("Registreren");
                 </td>
                 <td>
                     <select id="Abonnement" name="Abonnement">
-                        <option value=1> Beginner </option>
-                        <option value=2> Standaard </option>
-                        <option value=3> Professional </option>             
+                        <option value=1 <?php if ($_GET["abo"] == 0){echo "selected";} ?> > Beginner </option>
+                        <option value=2 <?php if ($_GET["abo"] == 1){echo "selected";} ?> > Standaard </option>
+                        <option value=3 <?php if ($_GET["abo"] == 2){echo "selected";} ?> > Professional </option>             
                 </td>
             </tr>
             <tr>
