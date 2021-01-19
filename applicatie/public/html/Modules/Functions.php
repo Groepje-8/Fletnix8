@@ -58,22 +58,22 @@ function createUser($voornaam, $achternaam, $land, $geboortejaar, $emailadres, $
 
 function updateGebruikersnaam($gebruikersnaam)
 {
-    $usernaam = $_SESSION['usernaam'];
+    $usernaam = $_SESSION['username'];
     $query = getConn()->prepare("UPDATE gebruikers 
     SET username = '?' 
     WHERE username = '?'");
     $query->execute([$gebruikersnaam, $usernaam]);
-    header("location: AccountInstellingen.php");
-    exit();
+    header("location: profielpagina.php");
+    
 }
 
 function updateVoornaam($voornaam)
 {
-    $usernaam = $_SESSION['usernaam'];
+    $usernaam = $_SESSION['username'];
     $query = getConn()->prepare("UPDATE gebruikers 
     SET voornaam = '?' 
     WHERE username = '?'");
     $query->execute([$voornaam, $usernaam]);
-    exit();
-    header("location: AccountInstellingen.php");
+    
+    header("location: profielpagina.php");
 }
