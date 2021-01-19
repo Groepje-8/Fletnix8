@@ -1,10 +1,12 @@
 <?php
 // Pagina ID 5
-require_once "Components/sessionManager.php";
-require_once "Modules/haalFilmsOp.php";
-require_once "Modules/haalFilmDetails.php";
-require_once "Components/header.php";
+
+require_once  $_SERVER["DOCUMENT_ROOT"]."/html/Components/sessionManager.php";
+require_once  $_SERVER["DOCUMENT_ROOT"]."/html/Modules/haalFilmsOp.php";
+require_once  $_SERVER["DOCUMENT_ROOT"]."/html/Modules/haalFilmDetails.php";
+require_once  $_SERVER["DOCUMENT_ROOT"]."/html/Components/header.php";
 maakHeader("FilmOverzicht");
+
 ?>
 
 <body>

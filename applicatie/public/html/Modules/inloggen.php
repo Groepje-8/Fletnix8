@@ -40,7 +40,7 @@ function login($username, $wachtwoord)
         header("location: ../../../index.php?error=verkeerdegegevens");
     }
 }
-
+// check of de input leeg is
 function emptyInputLogin($gebruikersnaam, $ww)
 {
     if (empty($gebruikersnaam) || empty($ww)) {
@@ -51,4 +51,5 @@ function emptyInputLogin($gebruikersnaam, $ww)
     return $result;
 }
 
+// voer login functie uit.
 login($username, $wachtwoord);

@@ -127,8 +127,4 @@ function printAlleRegisseurs()
     }
 }
 
-function haalPublicatieJaarOp()
-{
-    //waarschijnlijk niet ophalen uit DB maar anders doen
 
-}

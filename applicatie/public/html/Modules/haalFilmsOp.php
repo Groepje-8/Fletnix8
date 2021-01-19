@@ -5,15 +5,15 @@ require_once "haalGegevensOp.php";
 //Print alle films die in de database staan zoals ze in het filmoverzicht moeten
 function printAlleFilms($genre, $regisseur, $jaar,$titel)
 {
-    foreach (HaalFilmsMetGenreFilter($genre, $regisseur, $jaar,$titel) as $film) {
+    foreach (HaalFilmsMetFilter($genre, $regisseur, $jaar,$titel) as $film) {
         echo "<div>
-        <a href='FilmDetails.php/?movie_id=" . $film['movie_id'] . "'><img src='/img/posters/" . $film['movie_id'] . ".jpg' alt='Poster'></a>
-    </div>";
+              <a href='FilmDetails.php/?movie_id=" . $film['movie_id'] . "'><img src='/img/posters/" . $film['movie_id'] . ".jpg' alt='Poster'></a>
+              </div>";
     }
 }
 
 // Dataretrieval functie die werkt met alle filteropties in 1 x (werkt wel met maar max 1 filter optie)
-function HaalFilmsMetGenreFilter($genre, $regisseur, $jaar,$titel)
+function HaalFilmsMetFilter($genre, $regisseur, $jaar,$titel)
 {
 
 

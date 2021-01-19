@@ -1,5 +1,5 @@
 <?php
-require_once 'Functions.php';
+require_once $_SERVER["DOCUMENT_ROOT"]."/html/Modules/Functions.php";
 
 if (isset($_POST["submit"])) {
     

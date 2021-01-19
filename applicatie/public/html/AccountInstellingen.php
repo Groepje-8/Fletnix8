@@ -30,14 +30,6 @@ checkOfIsIngelogd();
             updateVoornaam($_POST['vnaamVerander']);
             unset($_POST['vnaamVerander']);
         }
-        // if (isset($_POST['anaamVerander'])) {
-        //     updateAchternaam($_POST['anaamVerander']);
-        //     unset($_POST['anaamVerander']);
-        // }
-        // if (isset($_POST['land'])) {
-        //     updateLand($_POST['land']);
-        //     unset($_POST['land']);
-        // }
         ?>
 
         <div class="Accountdetails">
