@@ -1,8 +1,8 @@
 <?php
-require_once "Components/sessionManager.php";
+require_once  $_SERVER["DOCUMENT_ROOT"] . "/html/Components/sessionManager.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/html/Modules/haalTekstOp.php";
-require_once "Components/header.php";
-require_once "Components/Functions.php";
+require_once  $_SERVER["DOCUMENT_ROOT"] . "/html/Components/header.php";
+require_once  $_SERVER["DOCUMENT_ROOT"] . "/html/Modules/Functions.php";
 maakHeader("AccountInstellingen");
 checkOfIsIngelogd();
 // pagina ID 3

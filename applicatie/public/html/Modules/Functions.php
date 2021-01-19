@@ -50,6 +50,7 @@ function createUser($voornaam, $achternaam, $land, $geboortejaar, $emailadres, $
     } catch (PDOException $e) {
         header("location: ../Registreren.php?abo=beginner&error=Emailbestaatal");
     }
+    header("location: ../filmOverzicht.php");
     exit();
 }
 

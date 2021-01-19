@@ -29,7 +29,7 @@ if (isset($_POST["submit"])) {
     }
 
     createUser($voornaam, $achternaam, $land, $geboortejaar, $emailadres, $gebruikersnaam, $abonnement, $ww);
-    header("location: ../filmOverzicht.php");
+    
 }
 else {
     header("location: ../ProfielPagina.php");
