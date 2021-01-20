@@ -27,6 +27,9 @@ maakHeader("Index");
                     }
                     if ($_GET['error'] == "emptyinput")
                         echo "Je hebt niet alle gegevens ingevuld!";
+                    if ($_GET['error'] =="JeBentAlIngelogd"){
+                        echo "Je bent al ingelogd";
+                    }
                 }
 
                 ?>

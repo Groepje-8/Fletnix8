@@ -6,4 +6,8 @@ function checkOfIsIngelogd()
         header("location: ../../index.php?error=JeBentNogNietIngelogd");
     }
 }
+
+function booleanIsIngelogd(){
+   return (isset($_SESSION['username']));
+}
 ?>

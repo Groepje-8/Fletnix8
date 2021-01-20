@@ -1,6 +1,10 @@
 <?php
 include "Modules/haalTekstOp.php";
+include "Modules/haalLoginOp.php";
 require_once "Components/header.php";
+if(booleanIsIngelogd()){
+    header("location: ../../index.php?error=JeBentAlIngelogd");
+}
 maakHeader("Registreren");
 // pagina ID 9
 ?>

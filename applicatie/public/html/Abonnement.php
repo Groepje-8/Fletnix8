@@ -1,8 +1,12 @@
 <?php
 include "Components/sessionManager.php";
+
 require_once $_SERVER["DOCUMENT_ROOT"]."/html/Modules/haalTekstOp.php";
 require_once "Components/header.php";
 maakHeader("Abonnementen");
+if(booleanIsIngelogd()){
+    header("location: ../../index.php?error=JeBentAlIngelogd");
+}
 // pagina ID 2
 ?>
 
