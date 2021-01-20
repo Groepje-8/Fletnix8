@@ -16,7 +16,7 @@ if(booleanIsIngelogd()){
 
         <main>
             <h1>Selecteer je gewenste Abonnement</h1>
-            <a href="/html/Registreren.php?abo=beginner">
+            <a href="/html/Registreren.php?abo=0">
                 <div class="Abonnement1">
 
                     <img src="/img/placeholder.png" width="80" height="80" alt="Abbo1">
@@ -24,7 +24,7 @@ if(booleanIsIngelogd()){
                     <p><?php haalTekstOp(2, 1);?></p>
                 </div>
             </a>
-            <a href="/html/Registreren.php?abo=standaard">
+            <a href="/html/Registreren.php?abo=1">
                 <div class="Abonnement2">
 
                     <img src="/img/placeholder.png" width="80" height="80" alt="Abbo2">
@@ -32,7 +32,7 @@ if(booleanIsIngelogd()){
                     <p><?php haalTekstOp(2, 2);?></p>
                 </div>
             </a>
-            <a href="/html/Registreren.php?abo=professioneel">
+            <a href="/html/Registreren.php?abo=2">
                 <div class="Abonnement3">
 
                     <img src="/img/placeholder.png" width="80" height="80" alt="Abbo3">
